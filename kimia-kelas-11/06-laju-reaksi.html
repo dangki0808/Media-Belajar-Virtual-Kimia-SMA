@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Laju Reaksi · Kimia SMA Kelas XI</title>
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body class="t11" data-store="kim11">
+<header class="top"><div class="wrap"><a class="back" href="index.html">← Kelas XI</a><div class="brand">⚗ Kimia SMA <small>· Kelas XI</small></div></div></header>
+<div class="wrap">
+<section class="hero">
+  <span class="chip">Modul 6 · Kinetika <span class="lvl lanjut">LANJUT</span></span>
+  <h1>Laju Reaksi: Seberapa Cepat Zat Berubah?</h1>
+  <div class="tp"><b>Setelah modul ini kamu bisa</b><ul><li>Menjelaskan laju reaksi dan teori tumbukan, termasuk energi aktivasi.</li><li>Menjelaskan pengaruh konsentrasi, luas permukaan, suhu, dan katalis.</li><li>Menentukan orde reaksi dan persamaan laju dari data percobaan.</li><li>Menghitung perubahan laju atau waktu akibat kenaikan suhu.</li></ul></div>
+</section>
+<nav class="tabs"><button data-target="materi">📖 Cerita & Materi</button><button data-target="lab1">💥 Lab Tumbukan</button><button data-target="lab2">📉 Lab Orde Reaksi</button><button data-target="latihan">✏️ Latihan</button><button data-target="kuis">🏆 Kuis</button></nav>
+<main>
+<section id="materi" class="panel"><div class="card"><h2>Mulai dari cerita</h2>
+  <div class="story"><span class="t">Mengapa ikan disimpan di kulkas?</span><p style="margin:.3em 0">Ikan segar di udara terbuka cepat membusuk, tetapi di dalam lemari es bisa bertahan beberapa hari. Gula batu lebih lama larut daripada gula pasir. Ragi membuat adonan roti mengembang lebih cepat. Ketiganya berkaitan dengan <b>laju reaksi</b>: suhu, luas permukaan, dan katalis mengubah seberapa sering partikel bertumbukan dengan energi yang cukup.</p></div>
+</div>
+<div class="card"><h2>1. Pengertian laju reaksi</h2>
+  <div class="eqn">v = −Δ[pereaksi]/Δt = +Δ[hasil]/Δt &nbsp;&nbsp; (satuan M/s)</div>
+  <p>Untuk aA + bB → cC, laju setiap zat sebanding dengan koefisiennya: v<sub>A</sub> : v<sub>B</sub> : v<sub>C</sub> = a : b : c.</p>
+</div>
+<div class="card"><h2>2. Teori tumbukan</h2>
+  <p>Reaksi terjadi jika partikel <b>bertumbukan</b> dengan <b>orientasi tepat</b> dan <b>energi ≥ energi aktivasi (Ea)</b>. Tumbukan seperti ini disebut tumbukan efektif.</p>
+  <div class="grid2"><div class="def"><b>Konsentrasi ↑</b>: partikel makin rapat → tumbukan makin sering.</div><div class="def"><b>Luas permukaan ↑</b> (zat dipotong kecil): lebih banyak bidang sentuh.</div><div class="def"><b>Suhu ↑</b>: partikel lebih cepat dan lebih banyak yang energinya ≥ Ea. Umumnya laju naik 2 kali tiap kenaikan 10 °C.</div><div class="def"><b>Katalis</b>: menyediakan jalan reaksi dengan Ea lebih rendah, tanpa ikut habis. Enzim adalah katalis hayati.</div></div>
+  <div class="ex"><span class="t">Aturan suhu</span>Jika laju naik n kali setiap kenaikan 10 °C: v₂ = v₁ · n<sup>ΔT/10</sup>, dan t₂ = t₁ ÷ n<sup>ΔT/10</sup>.</div>
+</div>
+<div class="card"><h2>3. Persamaan laju dan orde reaksi</h2>
+  <div class="eqn">v = k [A]<sup>m</sup> [B]<sup>n</sup> &nbsp;&nbsp; orde total = m + n</div>
+  <p>Orde reaksi ditentukan dari <b>percobaan</b>, bukan dari koefisien. Caranya: bandingkan dua percobaan dengan [B] tetap untuk mencari m, lalu [A] tetap untuk mencari n.</p>
+  <table class="t"><tr><th>Percobaan</th><th>[A] (M)</th><th>[B] (M)</th><th>v (M/s)</th></tr><tr><td>1</td><td>0,1</td><td>0,1</td><td>2 × 10⁻³</td></tr><tr><td>2</td><td>0,2</td><td>0,1</td><td>8 × 10⁻³</td></tr><tr><td>3</td><td>0,1</td><td>0,2</td><td>4 × 10⁻³</td></tr></table>
+  <p>Percobaan 1 → 2: [A] × 2, v × 4 = 2² → m = 2. Percobaan 1 → 3: [B] × 2, v × 2 → n = 1. Jadi <b>v = k[A]²[B]</b>, orde total 3.</p>
+  <div class="grid3"><div class="def"><b>Orde 0</b>: laju tetap, tidak bergantung konsentrasi. Grafik [A]–t garis lurus turun.</div><div class="def"><b>Orde 1</b>: laju sebanding [A]. Waktu paruh tetap: t½ = 0,693/k.</div><div class="def"><b>Orde 2</b>: laju sebanding [A]². Konsentrasi 2 kali → laju 4 kali.</div></div>
+</div></section>
+<section id="lab1" class="panel"><div class="card"><h2>Lab: Simulasi Tumbukan Partikel</h2>
+  <p>Partikel merah (A) dan biru (B) bergerak acak. Bila A dan B bertumbukan dengan energi ≥ Ea, keduanya berubah menjadi hasil (hijau). Ubah suhu, konsentrasi, dan katalis.</p>
+  <div class="ctrl"><label>Suhu <span class="v" id="T-v"></span><input type="range" id="T" min="250" max="450" step="10" value="300"></label><label>Konsentrasi (jumlah partikel A dan B) <span class="v" id="c-v"></span><input type="range" id="c" min="10" max="60" step="5" value="30"></label></div>
+  <div class="row"><button class="chipbtn" id="kat">⚗️ Katalis: mati</button><button class="btn ghost" id="ulang">↺ Mulai ulang</button></div>
+  <canvas class="viz" id="cv" width="640" height="300" style="margin-top:10px"></canvas>
+  <div class="out" id="o1"></div>
+</div></section>
+<section id="lab2" class="panel"><div class="card"><h2>Lab: Grafik Orde Reaksi</h2>
+  <p>Pilih orde, atur tetapan laju k dan konsentrasi awal. Amati bentuk grafik konsentrasi terhadap waktu dan tabel laju awal.</p>
+  <div class="seg" id="ord"><button data-o="0">Orde 0</button><button data-o="1" class="on">Orde 1</button><button data-o="2">Orde 2</button></div>
+  <div class="ctrl"><label>k <span class="v" id="k-v"></span><input type="range" id="k" min="0.01" max="0.2" step="0.01" value="0.05"></label><label>[A]₀ (M) <span class="v" id="a0-v"></span><input type="range" id="a0" min="0.2" max="2" step="0.1" value="1"></label></div>
+  <svg class="viz" id="g2" viewBox="0 0 640 300"></svg>
+  <div class="out" id="o2"></div>
+</div></section>
+<section id="latihan" class="panel"><div id="prac"></div><p class="muted">Tulis jawaban berupa angka (pakai koma atau titik untuk desimal) atau rumus kimia seperti <code>H2O</code>.</p></section>
+<section id="kuis" class="panel"><p class="muted">12 soal, urutan soal dan pilihan diacak. Nilai terbaik tersimpan di perangkat ini.</p><div id="quiz"></div></section>
+</main>
+</div>
+<footer><div class="wrap">Virtual Chem Lab SMA · Kelas XI · Modul 6 · Rujukan: Buku Siswa Kimia XI Bab VI (Kemendikbudristek 2022)</div></footer>
+<script src="../shared/core.js"></script>
+<script src="../shared/graph.js"></script>
+<script src="../shared/chem.js"></script>
+<script>
+const {$, $$, s, txt, clear, rand, pick, shuffle} = VML; const G=GR, CH=CHEM, f=VML.f, fm=G.fmt;
+/* LAB 1 */
+const cv=$('#cv'), ctx=cv.getContext('2d'); let P=[], kat=false, coll=0, eff=0, t0=performance.now(), raf=null;
+function reset(){ const n=+$('#c').value; P=[]; for(let i=0;i<2*n;i++) P.push({x:Math.random()*620+10,y:Math.random()*280+10,a:Math.random()*6.283,t:i%2?'B':'A'}); coll=0; eff=0; t0=performance.now(); }
+function speedOf(){ return Math.sqrt(+$('#T').value/300)*1.6; }
+function step(){
+  if(!$('#lab1').classList.contains('on')){ raf=requestAnimationFrame(step); return; }
+  const T=+$("#T").value, Ea=kat?1.5:2.3, v0=speedOf();
+  P.forEach(p=>{ if(p.dead) return; const sp=p.sp||(p.sp=v0*(0.4+Math.random()*1.2)); const s2=sp*Math.sqrt(T/300)/(p.T0||1); p.x+=Math.cos(p.a)*s2; p.y+=Math.sin(p.a)*s2; if(p.x<6||p.x>634){ p.a=Math.PI-p.a; p.x=Math.max(6,Math.min(634,p.x)); } if(p.y<6||p.y>294){ p.a=-p.a; p.y=Math.max(6,Math.min(294,p.y)); } });
+  for(let i=0;i<P.length;i++){ const p=P[i]; if(p.t==='C'||p.dead) continue; for(let j=i+1;j<P.length;j++){ const q=P[j]; if(q.t===p.t||q.t==='C'||q.dead) continue; const dx=p.x-q.x, dy=p.y-q.y; if(dx*dx+dy*dy<100){ coll++;
+      const E=(p.sp*p.sp+q.sp*q.sp)*(T/300)*(0.6+Math.random()*0.8);
+      if(E>=Ea*Ea*1.6){ eff++; p.t='C'; p.sp=(p.sp+q.sp)/2; q.dead=true; } else { p.a+=Math.PI*0.7; q.a-=Math.PI*0.7; } break; } } }
+  ctx.fillStyle=getComputedStyle(document.body).getPropertyValue('--card'); ctx.fillRect(0,0,640,300);
+  P.forEach(p=>{ if(p.dead) return; ctx.beginPath(); ctx.arc(p.x,p.y,p.t==='C'?7:5,0,6.283); ctx.fillStyle=p.t==='A'?'#e03131':p.t==='B'?'#1c7ed6':'#2f9e44'; ctx.fill(); });
+  const sec=(performance.now()-t0)/1000, nC=P.filter(p=>p.t==='C').length, nA=P.filter(p=>p.t==='A').length;
+  if(Math.floor(sec*4)!==step._q){ step._q=Math.floor(sec*4);
+    $('#o1').innerHTML=`<div class="kv"><div><small>Waktu</small><b>${fm(sec,1)} s</b></div><div><small>Tumbukan</small><b>${coll}</b></div><div><small>Tumbukan efektif</small><b>${eff}</b></div><div><small>Hasil terbentuk</small><b>${nC}</b></div><div><small>Sisa A</small><b>${nA}</b></div></div>
+     <p>${eff?`Hanya ${fm(eff/Math.max(1,coll)*100,0)}% tumbukan yang efektif.`:'Belum ada tumbukan efektif.'} ${kat?'Katalis menurunkan Ea sehingga lebih banyak tumbukan yang berhasil.':''} ${T>=380?'Suhu tinggi: partikel bergerak cepat dan lebih banyak yang melampaui Ea.':''}</p>`; }
+  raf=requestAnimationFrame(step);
+}
+$('#T').oninput=()=>{ $('#T-v').textContent=$('#T').value+' K ('+(+$('#T').value-273)+' °C)'; };
+$('#c').oninput=()=>{ $('#c-v').textContent=$('#c').value+' + '+$('#c').value; reset(); };
+$('#kat').onclick=()=>{ kat=!kat; $('#kat').classList.toggle('on',kat); $('#kat').textContent='⚗️ Katalis: '+(kat?'hidup':'mati'); };
+$('#ulang').onclick=reset; $('#T').oninput(); $('#c').oninput(); step();
+
+/* LAB 2 */
+let ord=1;
+$$('#ord button').forEach(b=>b.onclick=()=>{ $$('#ord button').forEach(x=>x.classList.toggle('on',x===b)); ord=+b.dataset.o; d2(); });
+function d2(){
+  const k=+$('#k').value, a0=+$('#a0').value; $('#k-v').textContent=fm(k,2)+(ord===0?' M/s':ord===1?' s⁻¹':' M⁻¹s⁻¹'); $('#a0-v').textContent=fm(a0,1)+' M';
+  const A=t=> ord===0?Math.max(0,a0-k*t): ord===1? a0*Math.exp(-k*t) : a0/(1+k*a0*t);
+  const tmax=60;
+  const g=$('#g2'); clear(g); const Ax=G.axes(g,{x0:0,x1:tmax,y0:0,y1:2.1,W:640,H:300,pad:46,padb:30,xs:10,ys:0.5,lx:'t (s)',ly:'[A] (M)'});
+  s('path',{d:G.curve(A,0,tmax,Ax,300),fill:'none',stroke:'var(--acc)','stroke-width':3},g);
+  let th=null; if(ord===0) th=a0/(2*k); else if(ord===1) th=Math.log(2)/k; else th=1/(k*a0);
+  if(th<tmax){ s('line',{x1:Ax.X(th),y1:Ax.Y(0),x2:Ax.X(th),y2:Ax.Y(a0/2),stroke:'var(--b)','stroke-dasharray':'5 4'},g); s('line',{x1:Ax.X(0),y1:Ax.Y(a0/2),x2:Ax.X(th),y2:Ax.Y(a0/2),stroke:'var(--b)','stroke-dasharray':'5 4'},g); txt(g,Ax.X(th)+4,Ax.Y(a0/2)-8,'t½ = '+fm(th,1)+' s',{'font-size':12,fill:'var(--b)','font-weight':700,'text-anchor':'start'}); }
+  const rows=[0.1,0.2,0.4].map(c=>[c,k*Math.pow(c,ord)]);
+  $('#o2').innerHTML=`<p>Persamaan laju: <b>v = k[A]${ord===0?'⁰ = k':ord===1?'':'²'}</b>. ${ord===0?'Laju tetap sampai zat habis; grafik garis lurus.':ord===1?'Waktu paruh selalu sama berapa pun konsentrasi awalnya (seperti peluruhan radioaktif).':'Waktu paruh makin panjang ketika konsentrasi makin kecil.'}</p>
+   <table class="t"><tr><th>[A] awal (M)</th>${rows.map(r=>`<td>${fm(r[0],1)}</td>`).join('')}</tr><tr><th>Laju awal (M/s)</th>${rows.map(r=>`<td>${r[1]<0.01?(()=>{const e=Math.floor(Math.log10(r[1]));return fm(r[1]/Math.pow(10,e),2)+' × 10<sup>'+e+'</sup>';})():fm(r[1],4)}</td>`).join('')}</tr></table>
+   <p class="muted">Saat [A] dijadikan 2 kali, laju menjadi ${Math.pow(2,ord)} kali (2<sup>${ord}</sup>). Inilah cara menentukan orde dari data percobaan.</p>`;
+}
+['k','a0'].forEach(id=>$('#'+id).oninput=d2); d2();
+
+/* LATIHAN */
+VML.practice($('#prac'),[
+ {name:'Aturan suhu (laju)', gen(){ const n=pick([2,3]), dT=pick([10,20,30,40]); return {q:`Laju reaksi naik ${n} kali setiap kenaikan 10 °C. Jika suhu dinaikkan ${dT} °C, laju menjadi … kali semula`, a:String(Math.pow(n,dT/10)), hint:`v₂/v₁ = ${n}^(ΔT/10)`, ex:`${n}<sup>${dT/10}</sup> = ${Math.pow(n,dT/10)}`}; }},
+ {name:'Aturan suhu (waktu)', gen(){ const t=pick([80,96,120,160,240]), dT=pick([10,20,30]); return {q:`Reaksi pada 25 °C berlangsung ${t} detik. Laju naik 2 kali setiap kenaikan 10 °C. Pada ${25+dT} °C reaksi berlangsung … detik`, a:String(t/Math.pow(2,dT/10)), hint:'Waktu berbanding terbalik dengan laju.', ex:`${t} ÷ 2<sup>${dT/10}</sup> = ${t/Math.pow(2,dT/10)} s`}; }},
+ {name:'Orde dari data', gen(){ const m=rand(0,2), x=pick([2,3]); const r=Math.pow(x,m); return {q:`Ketika [A] dinaikkan ${x} kali (zat lain tetap), laju naik ${r} kali. Orde reaksi terhadap A = …`, a:String(m), hint:`${x}^m = ${r}`, ex:`${x}<sup>${m}</sup> = ${r} → m = ${m}`}; }},
+ {name:'Hitung laju', gen(){ const k=pick([0.5,2,4,10]), a=pick([0.1,0.2,0.5]), b=pick([0.1,0.2,0.4]); const v=Math.round(k*a*a*b*1e6)/1e6; return {q:`v = k[A]²[B] dengan k = ${fm(k,1)} M⁻²s⁻¹, [A] = ${fm(a,1)} M, [B] = ${fm(b,1)} M. Laju = … M/s`, a:String(v), hint:'Substitusikan langsung.', ex:`${fm(k,1)} × ${fm(a,1)}² × ${fm(b,1)} = ${fm(v,6)} M/s`}; }}
+]);
+
+/* KUIS */
+VML.quiz($('#quiz'),[
+ {q:'Energi minimum yang harus dimiliki partikel agar tumbukan menghasilkan reaksi disebut …', o:['energi aktivasi','entalpi','energi ikatan','energi kinetik rata-rata'], a:0, ex:'Ea.'},
+ {q:'Katalis mempercepat reaksi dengan cara …', o:['menurunkan energi aktivasi','menaikkan suhu','menambah konsentrasi','mengubah ΔH reaksi'], a:0, ex:'Jalur reaksi alternatif.'},
+ {q:'Serbuk CaCO₃ bereaksi lebih cepat dengan HCl daripada bongkahan karena …', o:['luas permukaan lebih besar','konsentrasi lebih besar','suhu lebih tinggi','ada katalis'], a:0, ex:'Lebih banyak bidang sentuh.'},
+ {q:'Kenaikan suhu mempercepat reaksi terutama karena …', o:['jumlah partikel berenergi ≥ Ea bertambah','Ea turun','partikel bertambah banyak','ΔH berubah'], a:0, ex:'Distribusi energi bergeser.'},
+ {q:'Untuk 2NO + O₂ → 2NO₂, jika laju pembentukan NO₂ = 0,04 M/s, laju berkurangnya O₂ = …', o:['0,02 M/s','0,04 M/s','0,08 M/s','0,01 M/s'], a:0, ex:'Perbandingan koefisien 1 : 2.'},
+ {q:'Orde reaksi ditentukan berdasarkan …', o:['data percobaan','koefisien reaksi','massa molekul','warna larutan'], a:0, ex:'Kecuali reaksi elementer.'},
+ {q:'Jika [A] dinaikkan 2 kali dan laju naik 4 kali, orde terhadap A adalah …', o:['2','1','4','0'], a:0, ex:'2² = 4.'},
+ {q:'Grafik [A] terhadap waktu berupa garis lurus menurun menunjukkan reaksi orde …', o:['nol','satu','dua','tiga'], a:0, ex:'Laju konstan.'},
+ {q:'Reaksi dengan waktu paruh tetap adalah reaksi orde …', o:['satu','nol','dua','tiga'], a:0, ex:'t½ = 0,693/k.'},
+ {q:'Penyimpanan makanan di lemari es memperlambat pembusukan karena …', o:['suhu rendah memperlambat laju reaksi','konsentrasi naik','katalis aktif','luas permukaan bertambah'], a:0, ex:'Partikel lebih lambat.'},
+ {q:'Laju naik 2 kali tiap 10 °C. Dari 20 °C ke 50 °C laju menjadi … kali', input:true, a:['8'], ex:'2³.'},
+ {q:'v = k[A][B]². [B] dijadikan 3 kali, [A] tetap: laju menjadi … kali', input:true, a:['9'], ex:'3².'}
+],'xi6');
+</script>
+<script src="../shared/nav.js"></script>
+</body></html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sifat Koligatif Larutan · Kimia SMA Kelas XII</title>
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body class="t12" data-store="kim12">
+<header class="top"><div class="wrap"><a class="back" href="index.html">← Kelas XII</a><div class="brand">⚗ Kimia SMA <small>· Kelas XII</small></div></div></header>
+<div class="wrap">
+<section class="hero">
+  <span class="chip">Modul 3 · Larutan <span class="lvl menengah">MENENGAH</span></span>
+  <h1>Sifat Koligatif: Bergantung pada Jumlah, Bukan Jenis</h1>
+  <div class="tp"><b>Setelah modul ini kamu bisa</b><ul><li>Menghitung molalitas dan fraksi mol larutan.</li><li>Menghitung penurunan tekanan uap, kenaikan titik didih, penurunan titik beku, dan tekanan osmotik.</li><li>Menerapkan faktor van ’t Hoff untuk larutan elektrolit.</li><li>Menjelaskan penerapan sifat koligatif dalam kehidupan.</li></ul></div>
+</section>
+<nav class="tabs"><button data-target="materi">📖 Cerita & Materi</button><button data-target="lab1">🌡️ Lab Titik Didih & Beku</button><button data-target="lab2">💧 Lab Osmosis</button><button data-target="latihan">✏️ Latihan</button><button data-target="kuis">🏆 Kuis</button></nav>
+<main>
+<section id="materi" class="panel"><div class="card"><h2>Mulai dari cerita</h2>
+  <div class="story"><span class="t">Rahasia es puter</span><p style="margin:.3em 0">Penjual es puter keliling memasukkan tabung adonan ke dalam ember berisi es batu yang ditaburi garam kasar. Es bergaram mencair pada suhu di bawah 0 °C, sehingga campurannya jauh lebih dingin dan adonan cepat membeku. Garam di sini tidak “memberi dingin”; partikel garam yang larut membuat titik beku air turun. Sifat yang hanya bergantung pada <b>banyaknya partikel</b> zat terlarut ini disebut <b>sifat koligatif</b>.</p></div>
+</div>
+<div class="card"><h2>1. Satuan konsentrasi</h2>
+  <div class="grid2"><div class="def"><b>Molalitas</b> m = mol zat terlarut ÷ kg pelarut = (massa/Mr) × (1000/p)</div><div class="def"><b>Fraksi mol</b> X<sub>t</sub> = n<sub>t</sub> ÷ (n<sub>t</sub> + n<sub>p</sub>), X<sub>t</sub> + X<sub>p</sub> = 1</div></div>
+</div>
+<div class="card"><h2>2. Empat sifat koligatif</h2>
+  <table class="t"><tr><th>Sifat</th><th>Rumus (nonelektrolit)</th><th>Contoh penerapan</th></tr>
+  <tr><td>Penurunan tekanan uap</td><td>ΔP = X<sub>t</sub> · P°</td><td>Air laut lebih lambat menguap daripada air tawar</td></tr>
+  <tr><td>Kenaikan titik didih</td><td>ΔT<sub>b</sub> = K<sub>b</sub> · m</td><td>Kuah bergaram mendidih sedikit di atas 100 °C</td></tr>
+  <tr><td>Penurunan titik beku</td><td>ΔT<sub>f</sub> = K<sub>f</sub> · m</td><td>Es puter, antibeku radiator, garam di jalan bersalju</td></tr>
+  <tr><td>Tekanan osmotik</td><td>π = M · R · T</td><td>Cairan infus isotonik, desalinasi osmosis balik, pengawetan dengan garam/gula</td></tr></table>
+  <p>Untuk air: K<sub>b</sub> = 0,52 °C/m, K<sub>f</sub> = 1,86 °C/m. Titik didih larutan = 100 + ΔT<sub>b</sub>; titik beku = 0 − ΔT<sub>f</sub>.</p>
+</div>
+<div class="card"><h2>3. Larutan elektrolit dan faktor van ’t Hoff</h2>
+  <div class="eqn">i = 1 + (n − 1)α &nbsp;&nbsp; ΔT<sub>f</sub> = K<sub>f</sub> · m · i</div>
+  <p>n = jumlah ion dari satu satuan rumus, α = derajat ionisasi. Elektrolit kuat α = 1: NaCl → Na⁺ + Cl⁻ (i = 2), CaCl₂ (i = 3), Al₂(SO₄)₃ (i = 5). Karena itu larutan NaCl 0,1 m membeku pada suhu lebih rendah daripada larutan gula 0,1 m.</p>
+  <div class="ex"><span class="t">Contoh</span>11,7 g NaCl (Mr 58,5) dalam 500 g air: m = 0,2 × 2 = 0,4 m; i = 2; ΔT<sub>f</sub> = 1,86 × 0,4 × 2 = 1,49 °C → membeku pada −1,49 °C.</div>
+</div></section>
+<section id="lab1" class="panel"><div class="card"><h2>Lab: Larutkan, lalu Ukur Titik Didih dan Titik Bekunya</h2>
+  <p>Pilih zat terlarut dan atur massanya. Bandingkan termometer air murni (abu-abu) dan larutan (berwarna).</p>
+  <div class="row" id="zt"></div>
+  <div class="ctrl"><label>Massa zat terlarut <span class="v" id="g-v"></span><input type="range" id="g" min="0" max="100" step="1" value="30"></label><label>Massa air <span class="v" id="p-v"></span><input type="range" id="p" min="100" max="1000" step="50" value="500"></label><label id="la">Derajat ionisasi α <span class="v" id="al-v"></span><input type="range" id="al" min="0" max="1" step="0.05" value="1"></label></div>
+  <svg class="viz" id="g1" viewBox="0 0 640 300"></svg>
+  <div class="out" id="o1"></div>
+</div></section>
+<section id="lab2" class="panel"><div class="card"><h2>Lab: Osmosis dan Osmosis Balik</h2>
+  <p>Tabung U dipisahkan membran semipermeabel: kiri air murni, kanan larutan. Air berpindah ke larutan yang lebih pekat. Beri tekanan luar pada sisi larutan untuk membalik arahnya (desalinasi).</p>
+  <div class="ctrl"><label>Konsentrasi larutan (M) <span class="v" id="M-v"></span><input type="range" id="M" min="0" max="1" step="0.05" value="0.3"></label><label>Faktor van ’t Hoff i <span class="v" id="i-v"></span><input type="range" id="i" min="1" max="3" step="1" value="2"></label><label>Tekanan luar pada larutan (atm) <span class="v" id="Pe-v"></span><input type="range" id="Pe" min="0" max="40" step="1" value="0"></label></div>
+  <svg class="viz" id="g2" viewBox="0 0 640 320"></svg>
+  <div class="out" id="o2"></div>
+</div></section>
+<section id="latihan" class="panel"><div id="prac"></div><p class="muted">Kb air = 0,52 °C/m, Kf air = 1,86 °C/m, R = 0,082 L·atm/(mol·K). Jawab dengan 2 desimal.</p></section>
+<section id="kuis" class="panel"><p class="muted">12 soal, urutan soal dan pilihan diacak. Nilai terbaik tersimpan di perangkat ini.</p><div id="quiz"></div></section>
+</main>
+</div>
+<footer><div class="wrap">Virtual Chem Lab SMA · Kelas XII · Modul 3 · Rujukan: Buku Siswa Kimia XII Bab I D (Kemendikbudristek 2022)</div></footer>
+<script src="../shared/core.js"></script>
+<script src="../shared/graph.js"></script>
+<script src="../shared/chem.js"></script>
+<script>
+const {$, $$, s, txt, clear, rand, pick, shuffle} = VML; const G=GR, CH=CHEM, f=VML.f, fm=G.fmt;
+/* LAB 1 */
+const ZT=[['Glukosa C₆H₁₂O₆',180,1],['Urea CO(NH₂)₂',60,1],['NaCl',58.5,2],['CaCl₂',111,3],['Etilen glikol (antibeku)',62,1]];
+let zi=2;
+$('#zt').innerHTML=ZT.map((z,i)=>`<button class="chipbtn ${i===zi?'on':''}" data-i="${i}">${z[0]}</button>`).join('');
+$$('#zt .chipbtn').forEach(b=>b.onclick=()=>{ $$('#zt .chipbtn').forEach(x=>x.classList.toggle('on',x===b)); zi=+b.dataset.i; d1(); });
+function d1(){
+  const Z=ZT[zi], gr=+$('#g').value, p=+$('#p').value, al=+$('#al').value; $('#g-v').textContent=gr+' g'; $('#p-v').textContent=p+' g'; $('#al-v').textContent=fm(al,2);
+  $('#la').style.display=Z[2]>1?'':'none';
+  const n=gr/Z[1], m=n*1000/p, i=Z[2]>1?1+(Z[2]-1)*al:1, dTb=0.52*m*i, dTf=1.86*m*i;
+  const nw=p/18, X=n*i/(n*i+nw), dP=X*23.76;
+  const g=$('#g1'); clear(g); s('rect',{x:0,y:0,width:640,height:300,fill:'var(--card)'},g);
+  const th=(x,lo,hi,v0,v1,title)=>{ const Y=v=>Math.max(50,Math.min(250,250-(v-lo)/(hi-lo)*200)); txt(g,x+30,22,title,{'font-weight':800,'font-size':13});
+    [[x,v0,'#adb5bd','air'],[x+60,v1,'var(--acc)','larutan']].forEach(([xx,v,c,l])=>{ s('rect',{x:xx-7,y:45,width:14,height:205,rx:7,fill:'var(--card)',stroke:'var(--muted)'},g); s('rect',{x:xx-3,y:Y(v),width:6,height:250-Y(v),fill:c},g); s('circle',{cx:xx,cy:262,r:11,fill:c},g); txt(g,xx,290,l,{'font-size':11,fill:'var(--muted)'}); });
+    for(let t=lo;t<=hi+1e-9;t+=(hi-lo)/5){ s('line',{x1:x-14,y1:Y(t),x2:x-8,y2:Y(t),stroke:'var(--muted)'},g); txt(g,x-17,Y(t)+4,fm(t,1),{'font-size':10,fill:'var(--muted)','text-anchor':'end'}); }
+    s('line',{x1:x+7,y1:Y(v0),x2:x+53,y2:Y(v1),stroke:'var(--b)','stroke-dasharray':'3 3'},g); };
+  th(90,98,Math.max(105,Math.ceil(100+dTb+1)),100,100+dTb,'Titik didih (°C)'); th(420,Math.min(-12,Math.floor(-dTf-1)),2,0,-dTf,'Titik beku (°C)');
+  $('#o1').innerHTML=`<p>mol = ${gr} ÷ ${Z[1]} = ${fm(n,3)} mol; m = ${fm(n,3)} × 1000/${p} = <b>${fm(m,3)} m</b>; i = ${fm(i,2)}${Z[2]>1?` (n = ${Z[2]} ion, α = ${fm(al,2)})`:' (nonelektrolit)'}.</p>
+   <div class="kv"><div><small>ΔT<sub>b</sub> = 0,52 · m · i</small><b>${fm(dTb,2)} °C</b></div><div><small>Titik didih larutan</small><b>${fm(100+dTb,2)} °C</b></div><div><small>ΔT<sub>f</sub> = 1,86 · m · i</small><b>${fm(dTf,2)} °C</b></div><div><small>Titik beku larutan</small><b>${fm(-dTf,2)} °C</b></div><div><small>ΔP pada 25 °C (P° = 23,76 mmHg)</small><b>${fm(dP,2)} mmHg</b></div></div>
+   <p class="muted">${Z[2]>1?'Elektrolit menghasilkan lebih banyak partikel, sehingga pengaruhnya ' + fm(i,1) + ' kali larutan nonelektrolit dengan molalitas sama.':'Nonelektrolit tidak terurai menjadi ion: i = 1.'}</p>`;
+}
+['g','p','al'].forEach(id=>$('#'+id).oninput=d1); d1();
+
+/* LAB 2 */
+function d2(){
+  const M=+$('#M').value, i=+$('#i').value, Pe=+$('#Pe').value; $('#M-v').textContent=fm(M,2)+' M'; $('#i-v').textContent=i; $('#Pe-v').textContent=Pe+' atm';
+  const T=298, pi=M*0.082*T*i, net=pi-Pe;
+  const g=$('#g2'); clear(g); s('rect',{x:0,y:0,width:640,height:320,fill:'var(--card)'},g);
+  const h=Math.max(-70,Math.min(70,net*3)); const yl=150+h, yr=150-h;
+  s('path',{d:'M180,60 V250 A60,60 0 0 0 300,250 V60 M220,60 V250 A20,20 0 0 0 260,250 V60',fill:'none',stroke:'var(--ink)','stroke-width':3},g);
+  s('path',{d:`M182,${yl} H218 V252 A18,18 0 0 0 238,268 V300 H182Z`,fill:'#a5d8ff'},g);
+  s('path',{d:`M242,${yr} H298 V250 A58,58 0 0 1 240,308 V268 A18,18 0 0 0 262,250 V${yr}Z`,fill:`rgba(240,140,0,${0.2+M*0.5})`},g);
+  s('line',{x1:240,y1:262,x2:240,y2:310,stroke:'var(--b)','stroke-width':4,'stroke-dasharray':'3 3'},g); txt(g,240,30,'membran semipermeabel ↓',{'font-size':11,fill:'var(--b)'});
+  txt(g,172,yl+5,'air',{'font-size':12,'font-weight':700,'text-anchor':'end'}); txt(g,308,yr+18,'larutan',{'font-size':12,'font-weight':700,'text-anchor':'start'});
+  if(Pe>0){ s('rect',{x:244,y:yr-30,width:52,height:12,fill:'#868e96'},g); s('line',{x1:270,y1:yr-60,x2:270,y2:yr-30,stroke:'#868e96','stroke-width':6},g); txt(g,308,yr-44,'tekanan '+Pe+' atm',{'font-size':11,fill:'var(--muted)','text-anchor':'start'}); }
+  const dir=net>0.05?1:net<-0.05?-1:0; if(dir){ s('path',{d:dir>0?'M200,290 q40,30 80,0':'M280,290 q-40,30 -80,0',fill:'none',stroke:'#1c7ed6','stroke-width':3},g); s('path',{d:dir>0?'M280,290 l-12,-2 l6,10z':'M200,290 l12,-2 l-6,10z',fill:'#1c7ed6'},g); }
+  txt(g,480,120,'π = M · R · T · i',{'font-size':16,'font-weight':800}); txt(g,480,150,`= ${fm(M,2)} × 0,082 × 298 × ${i}`,{'font-size':13}); txt(g,480,180,`= ${fm(pi,2)} atm`,{'font-size':20,'font-weight':800,fill:'var(--acc)'});
+  $('#o2').innerHTML=`<p>${dir>0?'<b>Osmosis</b>: air bergerak dari air murni ke larutan (dari encer ke pekat), sehingga permukaan larutan naik.':dir<0?'<b>Osmosis balik</b>: tekanan luar melebihi π, sehingga air didorong keluar dari larutan menembus membran. Inilah prinsip desalinasi air laut menjadi air tawar.':'Tidak ada aliran bersih: tekanan luar tepat mengimbangi tekanan osmotik.'}</p>
+   <p class="muted">Tekanan osmotik ${fm(pi,1)} atm setara kolom air setinggi kira-kira ${fm(pi*10.33,0)} m. Cairan infus harus <b>isotonik</b> dengan darah (π ≈ 7,7 atm, kira-kira NaCl 0,9%): larutan hipertonik membuat sel darah mengerut, hipotonik membuatnya menggembung dan pecah.</p>`;
+}
+['M','i','Pe'].forEach(id=>$('#'+id).oninput=d2); d2();
+
+/* LATIHAN */
+VML.practice($('#prac'),[
+ {name:'Molalitas', gen(){ const Z=pick([['urea',60],['glukosa',180],['NaOH',40],['NaCl',58.5]]); const m=pick([0.1,0.2,0.25,0.5,1]), p=pick([200,250,500,1000]); const gr=Math.round(m*Z[1]*p/1000*100)/100; return {q:`${fm(gr,2)} g ${Z[0]} (Mr ${fm(Z[1],1)}) dilarutkan dalam ${p} g air. Molalitas = … m`, a:String(m), hint:'m = (massa/Mr) × (1000/p)', ex:`(${fm(gr,2)}/${fm(Z[1],1)}) × 1000/${p} = ${fm(m,2)} m`}; }},
+ {name:'Titik didih', gen(){ const m=pick([0.1,0.2,0.5,1]), i=pick([1,2,3]); const v=Math.round((100+0.52*m*i)*100)/100; return {q:`Larutan ${i===1?'urea':i===2?'NaCl':'CaCl₂'} ${fm(m,1)} m (terion sempurna). Titik didihnya = … °C (Kb = 0,52)`, a:String(v), hint:'Tb = 100 + Kb · m · i', ex:`100 + 0,52 × ${fm(m,1)} × ${i} = ${fm(v,2)} °C`}; }},
+ {name:'Titik beku', gen(){ const m=pick([0.1,0.2,0.5,1]), i=pick([1,2,3]); const v=-Math.round(1.86*m*i*100)/100; return {q:`Titik beku larutan ${i===1?'glukosa':i===2?'KCl':'MgCl₂'} ${fm(m,1)} m (terion sempurna) = … °C (Kf = 1,86)`, a:String(v), hint:'Tf = 0 − Kf · m · i', ex:`0 − 1,86 × ${fm(m,1)} × ${i} = ${fm(v,2)} °C`}; }},
+ {name:'Tekanan osmotik', gen(){ const M=pick([0.1,0.2,0.3,0.5]), i=pick([1,2]), T=pick([298,300,310]); const v=Math.round(M*0.082*T*i*100)/100; return {q:`Tekanan osmotik larutan ${i===1?'glukosa':'NaCl'} ${fm(M,1)} M pada ${T} K = … atm (R = 0,082)`, a:String(v), hint:'π = M · R · T · i', ex:`${fm(M,1)} × 0,082 × ${T} × ${i} = ${fm(v,2)} atm`}; }}
+]);
+
+/* KUIS */
+VML.quiz($('#quiz'),[
+ {q:'Sifat koligatif larutan bergantung pada …', o:['jumlah partikel zat terlarut','jenis zat terlarut','warna larutan','massa jenis pelarut saja'], a:0, ex:'Bukan pada jenis partikel.'},
+ {q:'Larutan berikut yang titik bekunya paling rendah (sama-sama 0,1 m) adalah …', o:['CaCl₂','NaCl','glukosa','urea'], a:0, ex:'i = 3 terbesar.'},
+ {q:'Faktor van ’t Hoff untuk Al₂(SO₄)₃ yang terion sempurna adalah …', o:['5','2','3','7'], a:0, ex:'2Al³⁺ + 3SO₄²⁻.'},
+ {q:'Penaburan garam pada es puter bertujuan …', o:['menurunkan titik beku campuran','menaikkan titik didih','menambah rasa','menaikkan titik beku'], a:0, ex:'Penurunan titik beku.'},
+ {q:'Proses desalinasi air laut memanfaatkan …', o:['osmosis balik','kenaikan titik didih','efek Tyndall','elektrolisis'], a:0, ex:'Tekanan > π.'},
+ {q:'Cairan infus harus bersifat … terhadap darah.', o:['isotonik','hipertonik','hipotonik','asam'], a:0, ex:'Agar sel tidak rusak.'},
+ {q:'Rumus kenaikan titik didih larutan nonelektrolit adalah …', o:['ΔTb = Kb · m','ΔTb = Kf · m','ΔTb = M · R · T','ΔTb = X · P°'], a:0, ex:'Kb · molalitas.'},
+ {q:'Larutan urea 0,5 m membeku pada (Kf = 1,86) …', o:['−0,93 °C','−1,86 °C','0,93 °C','−0,465 °C'], a:0, ex:'1,86 × 0,5.'},
+ {q:'Jika fraksi mol zat terlarut 0,1 dan P° = 30 mmHg, ΔP = …', o:['3 mmHg','27 mmHg','30 mmHg','0,3 mmHg'], a:0, ex:'0,1 × 30.'},
+ {q:'Mengapa ikan asin awet?', o:['sel bakteri kehilangan air karena larutan garam hipertonik','garam membunuh dengan panas','garam menaikkan pH','garam bersifat radioaktif'], a:0, ex:'Plasmolisis.'},
+ {q:'Titik didih larutan NaCl 0,5 m (α = 1, Kb = 0,52) = … °C', input:true, a:['100,52','100.52'], show:'100,52', ex:'100 + 0,52 × 0,5 × 2.'},
+ {q:'π larutan glukosa 0,1 M pada 300 K (R = 0,082) = … atm', input:true, a:['2,46','2.46'], show:'2,46', ex:'0,1 × 0,082 × 300.'}
+],'xii3');
+</script>
+<script src="../shared/nav.js"></script>
+</body></html>

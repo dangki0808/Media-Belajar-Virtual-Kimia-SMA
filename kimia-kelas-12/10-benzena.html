@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Benzena & Turunannya · Kimia SMA Kelas XII</title>
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body class="t12" data-store="kim12">
+<header class="top"><div class="wrap"><a class="back" href="index.html">← Kelas XII</a><div class="brand">⚗ Kimia SMA <small>· Kelas XII</small></div></div></header>
+<div class="wrap">
+<section class="hero">
+  <span class="chip">Modul 10 · Senyawa Karbon <span class="lvl menengah">MENENGAH</span></span>
+  <h1>Benzena dan Turunannya</h1>
+  <div class="tp"><b>Setelah modul ini kamu bisa</b><ul><li>Menjelaskan struktur benzena (Kekulé dan resonansi) serta sifatnya.</li><li>Memberi nama turunan benzena monosubstitusi dan disubstitusi (orto, meta, para).</li><li>Menuliskan reaksi substitusi benzena: halogenasi, nitrasi, sulfonasi, alkilasi.</li><li>Menjelaskan kegunaan dan bahaya turunan benzena.</li></ul></div>
+</section>
+<nav class="tabs"><button data-target="materi">📖 Cerita & Materi</button><button data-target="lab1">⬡ Lab Monosubstitusi</button><button data-target="lab2">🎯 Lab Orto-Meta-Para</button><button data-target="latihan">✏️ Latihan</button><button data-target="kuis">🏆 Kuis</button></nav>
+<main>
+<section id="materi" class="panel"><div class="card"><h2>Mulai dari cerita</h2>
+  <div class="story"><span class="t">Mimpi ular yang menggigit ekornya</span><p style="margin:.3em 0">Konon, kimiawan August Kekulé (1865) bermimpi melihat ular yang menggigit ekornya sendiri, lalu tersadar bahwa enam atom karbon benzena tersusun melingkar. Turunan benzena kini ada di sekitar kita: aspirin (asam asetilsalisilat), pengawet makanan natrium benzoat, parasetamol, pewarna, dan bahan peledak TNT.</p></div>
+</div>
+<div class="card"><h2>1. Struktur benzena</h2>
+  <p>Benzena C₆H₆ berbentuk cincin datar enam atom C. Kekulé menggambarkan ikatan tunggal dan rangkap berselang-seling; kenyataannya semua ikatan C–C sama panjang karena elektron π terdelokalisasi (<b>resonansi</b>), sehingga sering digambar sebagai segi enam dengan lingkaran di dalamnya. Akibatnya benzena stabil dan lebih mudah mengalami <b>substitusi</b> daripada adisi.</p>
+</div>
+<div class="card"><h2>2. Tata nama turunan benzena</h2>
+  <table class="t"><tr><th>Gugus</th><th>Nama</th><th>Kegunaan</th><th>Gugus</th><th>Nama</th><th>Kegunaan</th></tr>
+  <tr><td>–CH₃</td><td>toluena</td><td>pelarut, bahan TNT</td><td>–OH</td><td>fenol</td><td>desinfektan (karbol)</td></tr>
+  <tr><td>–NH₂</td><td>anilin</td><td>bahan zat warna</td><td>–NO₂</td><td>nitrobenzena</td><td>bahan anilin, pewangi sabun</td></tr>
+  <tr><td>–COOH</td><td>asam benzoat</td><td>pengawet (Na-benzoat)</td><td>–CHO</td><td>benzaldehida</td><td>aroma almon</td></tr>
+  <tr><td>–Cl</td><td>klorobenzena</td><td>pelarut, bahan pestisida</td><td>–CH=CH₂</td><td>stirena</td><td>monomer polistirena</td></tr></table>
+  <p>Disubstitusi: posisi 1,2 = <b>orto (o-)</b>, 1,3 = <b>meta (m-)</b>, 1,4 = <b>para (p-)</b>. Urutan prioritas sebagai induk: –COOH &gt; –SO₃H &gt; –CHO &gt; –OH &gt; –NH₂ &gt; –CH₃; gugus –NO₂ dan halogen selalu menjadi awalan. Contoh: <b>asam o-hidroksibenzoat</b> (asam salisilat), <b>p-nitrotoluena</b>, <b>m-dimetilbenzena</b> (m-xilena).</p>
+</div>
+<div class="card"><h2>3. Reaksi substitusi</h2>
+  <div class="eqn">Halogenasi: C₆H₆ + Cl₂ —(FeCl₃)→ C₆H₅Cl + HCl<br>Nitrasi: C₆H₆ + HNO₃ —(H₂SO₄)→ C₆H₅NO₂ + H₂O<br>Sulfonasi: C₆H₆ + H₂SO₄ → C₆H₅SO₃H + H₂O<br>Alkilasi Friedel-Crafts: C₆H₆ + CH₃Cl —(AlCl₃)→ C₆H₅CH₃ + HCl</div>
+  <div class="note">Benzena bersifat karsinogenik. Banyak turunannya beracun bila berlebihan; misalnya fenol merusak kulit, dan penggunaan pengawet benzoat dibatasi kadarnya oleh BPOM.</div>
+</div></section>
+<section id="lab1" class="panel"><div class="card"><h2>Lab: Ganti Satu Atom H pada Benzena</h2>
+  <p>Pilih gugus pengganti. Lab menggambar strukturnya, memberi nama, dan menunjukkan reaksi pembuatannya.</p>
+  <div class="row" id="gs"></div>
+  <div class="grid2"><svg class="viz" id="g1" viewBox="0 0 300 300" style="max-width:320px"></svg><div id="o1"></div></div>
+</div></section>
+<section id="lab2" class="panel"><div class="card"><h2>Lab: Posisi Orto, Meta, Para</h2>
+  <p>Gugus pertama di posisi 1. Pilih gugus kedua lalu ketuk posisi 2–6 pada cincin.</p>
+  <div class="grid2"><label style="font-weight:700">Gugus 1<select id="s1" style="width:100%"></select></label><label style="font-weight:700">Gugus 2<select id="s2" style="width:100%"></select></label></div>
+  <div class="grid2"><svg class="viz" id="g2" viewBox="0 0 300 300" style="max-width:320px"></svg><div id="o2"></div></div>
+</div></section>
+<section id="latihan" class="panel"><div id="prac"></div><p class="muted">Tulis nama dalam huruf kecil, mis. <code>p-nitrotoluena</code> atau <code>fenol</code>.</p></section>
+<section id="kuis" class="panel"><p class="muted">12 soal, urutan soal dan pilihan diacak. Nilai terbaik tersimpan di perangkat ini.</p><div id="quiz"></div></section>
+</main>
+</div>
+<footer><div class="wrap">Virtual Chem Lab SMA · Kelas XII · Modul 10 · Rujukan: BSE Kimia XII (Benzena dan Turunannya); K13 KD 3.10 Kelas XII</div></footer>
+<script src="../shared/core.js"></script>
+<script src="../shared/graph.js"></script>
+<script src="../shared/chem.js"></script>
+<script>
+const {$, $$, s, txt, clear, rand, pick, shuffle} = VML; const G=GR, CH=CHEM, f=VML.f, fm=G.fmt;
+const SB={CH3:{f:'CH₃',par:'toluena',pre:'metil',pr:3,u:'Pelarut cat dan lem; bahan baku TNT.',rx:'C₆H₆ + CH₃Cl —(AlCl₃)→ C₆H₅CH₃ + HCl (alkilasi)'},OH:{f:'OH',par:'fenol',pre:'hidroksi',pr:5,u:'Desinfektan (karbol), bahan plastik bakelit, obat.',rx:'Dibuat dari kumena atau hidrolisis klorobenzena'},NH2:{f:'NH₂',par:'anilin',pre:'amino',pr:4,u:'Bahan zat warna azo dan obat.',rx:'Reduksi nitrobenzena: C₆H₅NO₂ + 3H₂ → C₆H₅NH₂ + 2H₂O'},NO2:{f:'NO₂',par:'nitrobenzena',pre:'nitro',pr:0,u:'Bahan pembuatan anilin; dahulu pewangi sabun (beracun).',rx:'C₆H₆ + HNO₃ —(H₂SO₄)→ C₆H₅NO₂ + H₂O (nitrasi)'},COOH:{f:'COOH',par:'asam benzoat',pre:'karboksi',pr:7,u:'Garam natriumnya (Na-benzoat) dipakai sebagai pengawet minuman.',rx:'Oksidasi toluena'},CHO:{f:'CHO',par:'benzaldehida',pre:'formil',pr:6,u:'Aroma buah almon/ceri, pewangi.',rx:'Oksidasi toluena terkendali'},Cl:{f:'Cl',par:'klorobenzena',pre:'kloro',pr:0,u:'Pelarut; dahulu bahan DDT.',rx:'C₆H₆ + Cl₂ —(FeCl₃)→ C₆H₅Cl + HCl (halogenasi)'},SO3H:{f:'SO₃H',par:'asam benzenasulfonat',pre:'sulfo',pr:6.5,u:'Bahan deterjen (alkilbenzena sulfonat).',rx:'C₆H₆ + H₂SO₄ → C₆H₅SO₃H + H₂O (sulfonasi)'},CHCH2:{f:'CH=CH₂',par:'stirena',pre:'vinil',pr:2,u:'Monomer polistirena (styrofoam).',rx:'Dehidrogenasi etilbenzena'}};
+const ring=(g,subs,click)=>{ clear(g); s('rect',{x:0,y:0,width:300,height:300,fill:'var(--card)'},g); const cx=150,cy=150,R=62; const P=i=>[cx+R*Math.sin(i*Math.PI/3),cy-R*Math.cos(i*Math.PI/3)];
+  let d=''; for(let i=0;i<6;i++){ const [x,y]=P(i); d+=(i?'L':'M')+x+','+y; } s('path',{d:d+'Z',fill:'none',stroke:'var(--ink)','stroke-width':3},g); s('circle',{cx,cy,r:36,fill:'none',stroke:'var(--ink)','stroke-width':2},g);
+  for(let i=0;i<6;i++){ const [x,y]=P(i), ox=cx+(R+38)*Math.sin(i*Math.PI/3), oy=cy-(R+38)*Math.cos(i*Math.PI/3); const sb=subs[i];
+    s('line',{x1:x,y1:y,x2:cx+(R+18)*Math.sin(i*Math.PI/3),y2:cy-(R+18)*Math.cos(i*Math.PI/3),stroke:sb?'var(--acc)':'var(--muted)','stroke-width':sb?3:1.5},g);
+    const t=txt(g,ox,oy+5,sb?SB[sb].f:'H',{'font-size':sb?15:12,'font-weight':sb?800:500,fill:sb?'var(--acc)':'var(--muted)'});
+    if(click&&i>0){ const c=s('circle',{cx:ox,cy:oy,r:20,fill:'transparent',stroke:'var(--line)','stroke-dasharray':'3 3',style:'cursor:pointer'},g); c.onclick=()=>click(i); t.style.pointerEvents='none'; }
+    txt(g,cx+(R-14)*Math.sin(i*Math.PI/3),cy-(R-14)*Math.cos(i*Math.PI/3)+4,String(i+1),{'font-size':10,fill:'var(--b)','font-weight':800}); } };
+/* LAB 1 */
+let k1='CH3';
+$('#gs').innerHTML=Object.entries(SB).map(([k,v])=>`<button class="chipbtn ${k===k1?'on':''}" data-k="${k}">–${v.f}</button>`).join('');
+$$('#gs .chipbtn').forEach(b=>b.onclick=()=>{ $$('#gs .chipbtn').forEach(x=>x.classList.toggle('on',x===b)); k1=b.dataset.k; d1(); });
+function d1(){ const S=SB[k1]; ring($('#g1'),[k1]); $('#o1').innerHTML=`<div class="huge" style="font-size:1.8rem">${S.par}</div><div class="kv"><div><small>Rumus</small><b>C₆H₅–${S.f}</b></div></div><p><b>Pembuatan:</b> ${S.rx}</p><p><b>Kegunaan:</b> ${S.u}</p>`; }
+d1();
+/* LAB 2 */
+const KS=['CH3','OH','NH2','NO2','COOH','CHO','Cl'];
+$('#s1').innerHTML=$('#s2').innerHTML=KS.map(k=>`<option value="${k}">–${SB[k].f} (${SB[k].pre})</option>`).join(''); $('#s1').value='CH3'; $('#s2').value='NO2';
+let pos=3;
+const ARR=['','','o','m','p','m','o'];
+function name2(a,b,p){ const o=ARR[p+1]||ARR[p]; const op={1:'o',2:'m',3:'p',4:'m',5:'o'}[p];
+  if(a===b){ if(a==='CH3') return `${op}-dimetilbenzena (${op}-xilena)`; if(a==='OH') return `${op}-dihidroksibenzena (${op==='o'?'katekol':op==='m'?'resorsinol':'hidrokuinon'})`; return `${op}-di${SB[a].pre}benzena`; }
+  let A=SB[a].pr>=SB[b].pr?a:b, B=A===a?b:a; if(SB[A].pr===0){ const both=[SB[a].pre,SB[b].pre].sort(); return `${op}-${both[0]}${both[1]}benzena`.replace('kloronitro','kloronitro'); }
+  const par=SB[A].par; if(A==='COOH'&&B==='OH'&&op==='o') return 'asam o-hidroksibenzoat (asam salisilat)';
+  if(par.startsWith('asam ')) return `asam ${op}-${SB[B].pre}${par.slice(5)}`; return `${op}-${SB[B].pre}${par}`; }
+function d2(){ const a=$('#s1').value, b=$('#s2').value; const subs=[a,null,null,null,null,null]; subs[pos]=b; ring($('#g2'),subs,i=>{ pos=i; d2(); });
+  const op={1:'orto (1,2)',2:'meta (1,3)',3:'para (1,4)',4:'meta (1,5 = 1,3)',5:'orto (1,6 = 1,2)'}[pos];
+  $('#o2').innerHTML=`<div class="huge" style="font-size:1.5rem">${name2(a,b,pos)}</div><div class="kv"><div><small>Posisi</small><b>${op}</b></div><div><small>Gugus induk</small><b>${a===b?'benzena':(SB[a].pr>=SB[b].pr?SB[a].par:SB[b].par)}</b></div></div><p class="muted">Posisi 5 dan 6 setara dengan 3 dan 2 karena cincin simetris, jadi hanya ada tiga isomer: orto, meta, para.</p>`; }
+$('#s1').onchange=d2; $('#s2').onchange=d2; d2();
+
+/* LATIHAN */
+VML.practice($('#prac'),[
+ {name:'Nama monosubstitusi', gen(){ const k=pick(Object.keys(SB)); return {q:`Nama senyawa C₆H₅–${SB[k].f} adalah …`, a:[SB[k].par], strict:true, hint:'Banyak turunan benzena memakai nama lazim.', ex:SB[k].par}; }},
+ {name:'Orto/meta/para', gen(){ const a=pick(KS), b=pick(KS), p=pick([1,2,3]); const n=name2(a,b,p); const short=n.replace(/ \(.*\)/,''); return {q:`Nama senyawa benzena dengan gugus –${SB[a].f} dan –${SB[b].f} pada posisi 1,${p+1} adalah …`, a:[n,short], strict:true, hint:'1,2 = o-; 1,3 = m-; 1,4 = p-. Gugus berprioritas tinggi menjadi induk.', ex:n}; }},
+ {name:'Jenis reaksi', gen(){ const R=pick([['C₆H₆ + HNO₃ → C₆H₅NO₂ + H₂O','nitrasi'],['C₆H₆ + Br₂ → C₆H₅Br + HBr','halogenasi'],['C₆H₆ + H₂SO₄ → C₆H₅SO₃H + H₂O','sulfonasi'],['C₆H₆ + C₂H₅Cl → C₆H₅C₂H₅ + HCl','alkilasi']]); return {q:`Reaksi ${R[0]} disebut reaksi … (nitrasi/halogenasi/sulfonasi/alkilasi)`, a:[R[1]], strict:true, hint:'Lihat gugus yang masuk ke cincin.', ex:R[1]}; }}
+]);
+
+/* KUIS */
+VML.quiz($('#quiz'),[
+ {q:'Rumus molekul benzena adalah …', o:['C₆H₆','C₆H₁₂','C₆H₁₄','C₆H₁₀'], a:0, ex:'Cincin aromatis.'},
+ {q:'Benzena lebih mudah mengalami reaksi substitusi daripada adisi karena …', o:['elektron π terdelokalisasi membuat cincin stabil','benzena jenuh','tidak memiliki ikatan rangkap sama sekali','benzena bersifat ion'], a:0, ex:'Resonansi.'},
+ {q:'Nama senyawa C₆H₅OH adalah …', o:['fenol','toluena','anilin','benzaldehida'], a:0, ex:'Gugus hidroksil.'},
+ {q:'Turunan benzena yang dipakai sebagai pengawet makanan dalam bentuk garam natriumnya adalah …', o:['asam benzoat','anilin','nitrobenzena','stirena'], a:0, ex:'Natrium benzoat.'},
+ {q:'Posisi 1,3 pada cincin benzena disebut …', o:['meta','orto','para','ipso'], a:0, ex:'m-.'},
+ {q:'Nama senyawa dengan –CH₃ dan –NO₂ pada posisi 1,4 adalah …', o:['p-nitrotoluena','o-nitrotoluena','m-nitrotoluena','p-metilnitrobenzena-1'], a:0, ex:'Toluena sebagai induk.'},
+ {q:'Reaksi benzena dengan HNO₃ pekat dengan katalis H₂SO₄ disebut …', o:['nitrasi','sulfonasi','alkilasi','halogenasi'], a:0, ex:'Menghasilkan nitrobenzena.'},
+ {q:'Katalis pada alkilasi Friedel-Crafts adalah …', o:['AlCl₃','H₂SO₄','Ni','V₂O₅'], a:0, ex:'Asam Lewis.'},
+ {q:'Bahan peledak TNT dibuat dari …', o:['toluena','fenol','anilin','asam benzoat'], a:0, ex:'Trinitrotoluena.'},
+ {q:'Asam salisilat adalah …', o:['asam o-hidroksibenzoat','asam p-hidroksibenzoat','asam m-aminobenzoat','o-nitrofenol'], a:0, ex:'Bahan aspirin.'},
+ {q:'Nama C₆H₅NH₂ adalah …', input:true, a:['anilin','aminobenzena','fenilamina'], strict:true, show:'anilin', ex:'Gugus amino.'},
+ {q:'Jumlah isomer posisi dimetilbenzena (xilena) adalah …', input:true, a:['3'], ex:'o-, m-, p-.'}
+],'xii10');
+</script>
+<script src="../shared/nav.js"></script>
+</body></html>

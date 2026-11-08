@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sistem Koloid · Kimia SMA Kelas XII</title>
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body class="t12" data-store="kim12">
+<header class="top"><div class="wrap"><a class="back" href="index.html">← Kelas XII</a><div class="brand">⚗ Kimia SMA <small>· Kelas XII</small></div></div></header>
+<div class="wrap">
+<section class="hero">
+  <span class="chip">Modul 4 · Larutan <span class="lvl pemula">PEMULA</span></span>
+  <h1>Sistem Koloid: Di Antara Larutan dan Suspensi</h1>
+  <div class="tp"><b>Setelah modul ini kamu bisa</b><ul><li>Membedakan larutan, koloid, dan suspensi.</li><li>Mengelompokkan jenis koloid berdasarkan fase terdispersi dan medium pendispersi.</li><li>Menjelaskan sifat koloid: efek Tyndall, gerak Brown, adsorpsi, koagulasi, elektroforesis, dialisis.</li><li>Menjelaskan cara pembuatan koloid dan penerapannya.</li></ul></div>
+</section>
+<nav class="tabs"><button data-target="materi">📖 Cerita & Materi</button><button data-target="lab1">🔦 Lab Efek Tyndall</button><button data-target="lab2">🧩 Lab Jenis Koloid</button><button data-target="latihan">✏️ Latihan</button><button data-target="kuis">🏆 Kuis</button></nav>
+<main>
+<section id="materi" class="panel"><div class="card"><h2>Mulai dari cerita</h2>
+  <div class="story"><span class="t">Berkas cahaya di hutan pinus</span><p style="margin:.3em 0">Pagi hari di hutan pinus Puncak, sinar matahari menembus kabut dan tampak seperti tiang-tiang cahaya. Lampu sorot di bioskop yang berdebu juga terlihat berkasnya. Namun cahaya senter yang melewati air gula tidak tampak. Kabut dan udara berdebu adalah <b>koloid</b>: partikelnya cukup besar untuk menghamburkan cahaya, tetapi terlalu kecil untuk mengendap.</p></div>
+</div>
+<div class="card"><h2>1. Larutan, koloid, suspensi</h2>
+  <table class="t"><tr><th>Ciri</th><th>Larutan</th><th>Koloid</th><th>Suspensi</th></tr>
+  <tr><td>Ukuran partikel</td><td>&lt; 1 nm</td><td>1–100 nm</td><td>&gt; 100 nm</td></tr>
+  <tr><td>Fase</td><td>satu fase</td><td>dua fase (tampak satu)</td><td>dua fase</td></tr>
+  <tr><td>Penampilan</td><td>jernih</td><td>keruh-jernih</td><td>keruh</td></tr>
+  <tr><td>Didiamkan</td><td>tidak memisah</td><td>tidak memisah</td><td>mengendap</td></tr>
+  <tr><td>Disaring kertas saring</td><td>lolos</td><td>lolos</td><td>tertahan</td></tr>
+  <tr><td>Efek Tyndall</td><td>tidak</td><td>ya</td><td>ya (keruh)</td></tr>
+  <tr><td>Contoh</td><td>air gula, air garam</td><td>susu, kanji, kabut</td><td>air lumpur, air kopi tubruk</td></tr></table>
+</div>
+<div class="card"><h2>2. Sifat koloid</h2>
+  <div class="grid3"><div class="def"><b>Efek Tyndall</b>: penghamburan cahaya oleh partikel koloid.</div><div class="def"><b>Gerak Brown</b>: gerak acak zig-zag akibat tumbukan dengan molekul medium; membuat koloid stabil.</div><div class="def"><b>Adsorpsi</b>: penyerapan ion atau zat di permukaan partikel, sehingga koloid bermuatan. Dipakai pada norit dan penjernihan air.</div><div class="def"><b>Koagulasi</b>: penggumpalan, misalnya lateks dengan asam formiat, tawas pada air keruh, delta di muara sungai.</div><div class="def"><b>Elektroforesis</b>: gerak partikel koloid bermuatan dalam medan listrik; dipakai pada uji DNA dan alat Cottrell penyaring asap pabrik.</div><div class="def"><b>Dialisis</b>: pemisahan ion pengganggu dengan membran semipermeabel; prinsip cuci darah.</div></div>
+  <p><b>Koloid liofil</b> (suka medium, misalnya kanji, gelatin) stabil dan dapat menjadi <b>koloid pelindung</b>; <b>koloid liofob</b> (sol logam, sol As₂S₃) mudah terkoagulasi.</p>
+</div>
+<div class="card"><h2>3. Pembuatan koloid</h2>
+  <div class="grid2"><div class="def"><b>Kondensasi</b> (partikel kecil → besar): reaksi redoks (sol emas, sol belerang), hidrolisis (FeCl₃ + 3H₂O → Fe(OH)₃ + 3HCl), dekomposisi rangkap (sol As₂S₃), penggantian pelarut.</div><div class="def"><b>Dispersi</b> (partikel besar → kecil): cara mekanik (penggilingan), peptisasi (agar-agar dengan air, endapan dengan elektrolit), busur Bredig (sol logam), homogenisasi (susu).</div></div>
+</div></section>
+<section id="lab1" class="panel"><div class="card"><h2>Lab: Tembakkan Laser ke Gelas</h2>
+  <p>Pilih campuran dan nyalakan laser. Lalu coba didiamkan dan disaring untuk membedakan larutan, koloid, dan suspensi.</p>
+  <div class="row" id="sm"></div>
+  <div class="row"><button class="chipbtn on" id="laser">🔦 Laser: hidup</button><button class="chipbtn" id="diam">⏳ Diamkan</button><button class="chipbtn" id="saring">🧻 Saring</button></div>
+  <svg class="viz" id="g1" viewBox="0 0 640 280" style="margin-top:10px"></svg>
+  <div class="out" id="o1"></div>
+</div></section>
+<section id="lab2" class="panel"><div class="card"><h2>Lab: Peta Jenis Koloid</h2>
+  <p>Baris = fase terdispersi, kolom = medium pendispersi. Ketuk kotak untuk melihat nama dan contoh koloidnya.</p>
+  <div id="grid" style="overflow-x:auto"></div>
+  <div class="out" id="o2"></div>
+</div></section>
+<section id="latihan" class="panel"><div id="prac"></div><p class="muted">Jawab dengan kata, mis. <code>emulsi</code> atau <code>sol</code>.</p></section>
+<section id="kuis" class="panel"><p class="muted">12 soal, urutan soal dan pilihan diacak. Nilai terbaik tersimpan di perangkat ini.</p><div id="quiz"></div></section>
+</main>
+</div>
+<footer><div class="wrap">Virtual Chem Lab SMA · Kelas XII · Modul 4 · Rujukan: Buku Siswa Kimia XII Bab I E (Kemendikbudristek 2022)</div></footer>
+<script src="../shared/core.js"></script>
+<script src="../shared/graph.js"></script>
+<script src="../shared/chem.js"></script>
+<script>
+const {$, $$, s, txt, clear, rand, pick, shuffle} = VML; const G=GR, CH=CHEM, f=VML.f, fm=G.fmt;
+/* LAB 1 */
+const SM=[{n:'Air gula',t:'larutan',col:'rgba(200,230,255,.35)'},{n:'Air garam',t:'larutan',col:'rgba(210,235,255,.35)'},{n:'Susu encer',t:'koloid',col:'rgba(250,250,245,.85)'},{n:'Air kanji',t:'koloid',col:'rgba(235,235,225,.6)'},{n:'Air sabun',t:'koloid',col:'rgba(230,240,255,.55)'},{n:'Air lumpur',t:'suspensi',col:'rgba(160,110,60,.7)'},{n:'Air kopi tubruk',t:'suspensi',col:'rgba(90,55,30,.75)'}];
+let si=2, laser=true, diam=false, saring=false;
+$('#sm').innerHTML=SM.map((x,i)=>`<button class="chipbtn ${i===si?'on':''}" data-i="${i}">${x.n}</button>`).join('');
+$$('#sm .chipbtn').forEach(b=>b.onclick=()=>{ $$('#sm .chipbtn').forEach(x=>x.classList.toggle('on',x===b)); si=+b.dataset.i; diam=false; saring=false; $('#diam').classList.remove('on'); $('#saring').classList.remove('on'); d1(); });
+$('#laser').onclick=()=>{ laser=!laser; $('#laser').classList.toggle('on',laser); $('#laser').textContent='🔦 Laser: '+(laser?'hidup':'mati'); d1(); };
+$('#diam').onclick=()=>{ diam=!diam; $('#diam').classList.toggle('on',diam); d1(); };
+$('#saring').onclick=()=>{ saring=!saring; $('#saring').classList.toggle('on',saring); d1(); };
+function d1(){
+  const S=SM[si], susp=S.t==='suspensi', kol=S.t==='koloid';
+  const g=$('#g1'); clear(g); s('rect',{x:0,y:0,width:640,height:280,fill:'#11151f'},g);
+  s('rect',{x:20,y:120,width:70,height:30,rx:6,fill:'#495057'},g); txt(g,55,170,'laser',{'font-size':11,fill:'#ced4da'});
+  // gelas
+  s('path',{d:'M220,50 V240 Q220,255 235,255 H405 Q420,255 420,240 V50',fill:'none',stroke:'#dee2e6','stroke-width':3},g);
+  let liqCol=S.col; if(susp&&(diam||saring)) liqCol='rgba(200,180,150,.25)';
+  s('rect',{x:222,y:80,width:196,height:173,fill:liqCol},g);
+  if(susp&&diam&&!saring) s('rect',{x:222,y:228,width:196,height:25,fill:S.n.includes('kopi')?'#4a2c17':'#7a5230'},g);
+  if(laser){ s('line',{x1:90,y1:135,x2:222,y2:135,stroke:'#ff2d2d','stroke-width':3},g);
+    const vis=kol||(susp&&!diam&&!saring);
+    if(vis){ s('line',{x1:222,y1:135,x2:418,y2:135,stroke:'#ff6b6b','stroke-width':10,'stroke-opacity':.55},g); for(let i=0;i<60;i++) s('circle',{cx:224+Math.random()*192,cy:135+(Math.random()-0.5)*16,r:1.4,fill:'#ffc9c9'},g); }
+    const passes=!(susp&&!diam&&!saring); if(passes) s('line',{x1:418,y1:135,x2:600,y2:135,stroke:'#ff2d2d','stroke-width':3,'stroke-opacity':kol?.6:1},g); s('circle',{cx:600,cy:135,r:passes?8:3,fill:'#ff2d2d','fill-opacity':passes?(kol?.6:1):.3},g); }
+  if(saring){ s('path',{d:'M470,40 L560,40 L515,100Z',fill:'#f8f9fa',stroke:'#adb5bd'},g); txt(g,515,30,'kertas saring',{'font-size':11,fill:'#ced4da'}); if(susp) s('path',{d:'M490,55 L540,55 L515,85Z',fill:S.n.includes('kopi')?'#4a2c17':'#7a5230'},g); }
+  txt(g,320,40,S.n,{'font-size':15,'font-weight':800,fill:'#fff'});
+  const res={larutan:'Berkas laser <b>tidak tampak</b> di dalam gelas karena partikel terlarut terlalu kecil (&lt; 1 nm) untuk menghamburkan cahaya. Didiamkan tidak memisah, disaring lolos.',koloid:'Berkas laser <b>tampak jelas</b> di dalam gelas: <b>efek Tyndall</b>. Didiamkan tetap stabil (gerak Brown), dan disaring dengan kertas saring tetap lolos karena partikel 1–100 nm.',suspensi:diam||saring?'Partikel besar (&gt; 100 nm) <b>mengendap</b> bila didiamkan dan <b>tertahan</b> kertas saring. Cairan di atasnya menjadi lebih jernih.':'Cahaya terhambur sekaligus terhalang oleh partikel besar sehingga laser hampir tidak tembus. Coba diamkan atau saring.'};
+  $('#o1').innerHTML=`<div class="big">${S.t[0].toUpperCase()+S.t.slice(1)}</div><p>${res[S.t]}</p>`;
+}
+d1();
+
+/* LAB 2 */
+const F=['Padat','Cair','Gas'];
+const JK={'Padat,Padat':['Sol padat','Kaca berwarna, intan hitam, paduan logam tertentu'],'Padat,Cair':['Sol','Cat, tinta, sol emas, sol belerang, putih telur'],'Padat,Gas':['Aerosol padat','Asap, debu di udara'],'Cair,Padat':['Emulsi padat (gel)','Keju, mentega, jeli, agar-agar'],'Cair,Cair':['Emulsi','Susu, santan, mayones, minyak ikan'],'Cair,Gas':['Aerosol cair','Kabut, awan, hairspray, obat semprot'],'Gas,Padat':['Buih padat','Batu apung, karet busa, styrofoam, roti'],'Gas,Cair':['Buih','Busa sabun, krim kocok (whipped cream), buih bir'],'Gas,Gas':[null,'Campuran gas selalu homogen: larutan (udara bersih), bukan koloid.']};
+let sel='Cair,Cair';
+function d2(){
+  let h='<table class="t"><tr><th>Terdispersi ↓ / Medium →</th>'+F.map(m=>`<th>${m}</th>`).join('')+'</tr>';
+  F.forEach(t=>{ h+=`<tr><th>${t}</th>`+F.map(m=>{ const k=t+','+m, J=JK[k]; return `<td><button class="chipbtn ${k===sel?'on':''}" data-k="${k}" style="width:100%">${J[0]||'—'}</button></td>`; }).join('')+'</tr>'; });
+  $('#grid').innerHTML=h+'</table>'; $$('#grid .chipbtn').forEach(b=>b.onclick=()=>{ sel=b.dataset.k; d2(); });
+  const [t,m]=sel.split(','), J=JK[sel];
+  $('#o2').innerHTML=J[0]?`<div class="big">${J[0]}</div><p>Fase terdispersi <b>${t.toLowerCase()}</b> dalam medium <b>${m.toLowerCase()}</b>.</p><p><b>Contoh:</b> ${J[1]}.</p>`:`<div class="big">Bukan koloid</div><p>${J[1]}</p>`;
+}
+d2();
+
+/* LATIHAN */
+const KOL=Object.entries(JK).filter(([k,v])=>v[0]);
+const SIF=[['penjernihan air dengan tawas','koagulasi'],['sorot lampu bioskop tampak berkasnya','tyndall'],['proses cuci darah','dialisis'],['penyerapan racun dengan norit','adsorpsi'],['alat Cottrell di cerobong pabrik','elektroforesis'],['pembentukan delta di muara sungai','koagulasi'],['penggumpalan lateks dengan asam formiat','koagulasi'],['pemutihan gula tebu dengan arang tulang','adsorpsi']];
+VML.practice($('#prac'),[
+ {name:'Jenis koloid', gen(){ const [k,v]=pick(KOL); const ex=pick(v[1].split(', ')); const nm=v[0].toLowerCase(); return {q:`${ex[0].toUpperCase()+ex.slice(1)} termasuk jenis koloid …`, a:[nm,nm.replace(/ \(.*\)/,'')], strict:true, hint:`Fase terdispersi ${k.split(',')[0].toLowerCase()}, medium ${k.split(',')[1].toLowerCase()}.`, ex:`${ex} → ${v[0]}`}; }},
+ {name:'Sifat koloid', gen(){ const S=pick(SIF); return {q:`Peristiwa “${S[0]}” memanfaatkan sifat koloid … (tyndall/koagulasi/adsorpsi/dialisis/elektroforesis)`, a:[S[1],S[1]==='tyndall'?'efek tyndall':S[1]], strict:true, hint:'Ingat enam sifat koloid.', ex:`${S[0]} → ${S[1]}`}; }}
+]);
+
+/* KUIS */
+VML.quiz($('#quiz'),[
+ {q:'Ukuran partikel koloid adalah …', o:['1–100 nm','< 1 nm','> 100 nm','> 1 mm'], a:0, ex:'Di antara larutan dan suspensi.'},
+ {q:'Susu termasuk jenis koloid …', o:['emulsi','sol','buih','aerosol'], a:0, ex:'Cair dalam cair.'},
+ {q:'Asap merupakan koloid jenis …', o:['aerosol padat','aerosol cair','sol','buih'], a:0, ex:'Padat dalam gas.'},
+ {q:'Batu apung adalah contoh …', o:['buih padat','sol padat','emulsi padat','buih'], a:0, ex:'Gas dalam padat.'},
+ {q:'Penghamburan cahaya oleh partikel koloid disebut …', o:['efek Tyndall','gerak Brown','elektroforesis','dialisis'], a:0, ex:'John Tyndall.'},
+ {q:'Gerak zig-zag partikel koloid disebabkan …', o:['tumbukan molekul medium pendispersi','gaya gravitasi','muatan listrik','cahaya'], a:0, ex:'Gerak Brown.'},
+ {q:'Penjernihan air keruh dengan tawas memanfaatkan sifat …', o:['koagulasi','efek Tyndall','dialisis','gerak Brown'], a:0, ex:'Al³⁺ menetralkan muatan partikel.'},
+ {q:'Prinsip mesin cuci darah adalah …', o:['dialisis','elektroforesis','koagulasi','adsorpsi'], a:0, ex:'Membran semipermeabel.'},
+ {q:'Pembuatan sol Fe(OH)₃ dengan meneteskan FeCl₃ ke air mendidih termasuk cara …', o:['kondensasi (hidrolisis)','dispersi mekanik','peptisasi','busur Bredig'], a:0, ex:'Reaksi hidrolisis.'},
+ {q:'Agar-agar yang dilarutkan dalam air panas merupakan pembuatan koloid cara …', o:['peptisasi','redoks','dekomposisi rangkap','penggantian pelarut'], a:0, ex:'Dispersi dengan zat pemeptisasi.'},
+ {q:'Mayones termasuk jenis koloid apa?', input:true, a:['emulsi'], strict:true, ex:'Minyak dalam air dengan kuning telur sebagai pengemulsi.'},
+ {q:'Sifat koloid pada pemutihan gula dengan arang tulang adalah …', input:true, a:['adsorpsi'], strict:true, ex:'Zat warna diserap permukaan arang.'}
+],'xii4');
+</script>
+<script src="../shared/nav.js"></script>
+</body></html>

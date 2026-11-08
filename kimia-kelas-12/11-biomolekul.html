@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Biomolekul: Karbohidrat, Protein, Lemak · Kimia SMA Kelas XII</title>
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body class="t12" data-store="kim12">
+<header class="top"><div class="wrap"><a class="back" href="index.html">← Kelas XII</a><div class="brand">⚗ Kimia SMA <small>· Kelas XII</small></div></div></header>
+<div class="wrap">
+<section class="hero">
+  <span class="chip">Modul 11 · Makromolekul <span class="lvl menengah">MENENGAH</span></span>
+  <h1>Biomolekul: Karbohidrat, Protein, dan Lemak</h1>
+  <div class="tp"><b>Setelah modul ini kamu bisa</b><ul><li>Menggolongkan karbohidrat (monosakarida, disakarida, polisakarida) dan menjelaskan sifatnya.</li><li>Menjelaskan struktur asam amino, ikatan peptida, dan protein.</li><li>Menjelaskan struktur lemak/minyak (trigliserida) dan reaksi penyabunan.</li><li>Mengidentifikasi karbohidrat, protein, dan lemak dalam bahan makanan dengan uji kimia.</li></ul></div>
+</section>
+<nav class="tabs"><button data-target="materi">📖 Cerita & Materi</button><button data-target="lab1">🥚 Lab Uji Makanan</button><button data-target="lab2">🧩 Lab Rakit Biomolekul</button><button data-target="latihan">✏️ Latihan</button><button data-target="kuis">🏆 Kuis</button></nav>
+<main>
+<section id="materi" class="panel"><div class="card"><h2>Mulai dari cerita</h2>
+  <div class="story"><span class="t">Isi piring makan siang</span><p style="margin:.3em 0">Sepiring nasi, tempe goreng, dan segelas susu mengandung tiga biomolekul utama. Nasi kaya amilum (karbohidrat) sebagai sumber energi, tempe kaya protein untuk membangun sel, minyak goreng berisi lemak sebagai cadangan energi, dan susu mengandung laktosa, kasein, serta lemak susu. Bagaimana kita membuktikan kandungan itu di laboratorium?</p></div>
+</div>
+<div class="card"><h2>1. Karbohidrat</h2>
+  <table class="t"><tr><th>Golongan</th><th>Contoh</th><th>Hidrolisis</th><th>Uji Benedict/Fehling</th></tr>
+  <tr><td>Monosakarida</td><td>glukosa, fruktosa, galaktosa (C₆H₁₂O₆)</td><td>tidak dapat</td><td>positif</td></tr>
+  <tr><td>Disakarida</td><td>sukrosa (glukosa + fruktosa), maltosa (glukosa + glukosa), laktosa (glukosa + galaktosa)</td><td>2 monosakarida</td><td>positif, kecuali sukrosa</td></tr>
+  <tr><td>Polisakarida</td><td>amilum, glikogen, selulosa</td><td>banyak glukosa</td><td>negatif</td></tr></table>
+  <p>Ikatan antarmonosakarida disebut <b>ikatan glikosida</b>; pembentukannya melepas H₂O. Amilum memberi warna biru-ungu dengan iodin.</p>
+</div>
+<div class="card"><h2>2. Protein</h2>
+  <p>Protein adalah polimer <b>asam amino</b> (gugus –NH₂ dan –COOH pada atom C yang sama). Asam amino bergabung melalui <b>ikatan peptida</b> (–CO–NH–) dengan melepas H₂O. Asam amino esensial (misalnya lisin, triptofan) harus diperoleh dari makanan. Protein dapat mengalami <b>denaturasi</b> oleh panas, asam/basa kuat, dan logam berat, misalnya telur yang direbus.</p>
+  <div class="eqn">Mr peptida = Σ Mr asam amino − (n − 1) × 18</div>
+</div>
+<div class="card"><h2>3. Lemak dan minyak</h2>
+  <p>Lemak dan minyak adalah <b>trigliserida</b>: ester dari gliserol dan tiga asam lemak. Asam lemak jenuh (stearat, palmitat) membuat lemak padat; asam lemak tak jenuh (oleat, linoleat) membuat minyak cair. Minyak dapat dipadatkan menjadi margarin dengan hidrogenasi (katalis Ni).</p>
+  <div class="eqn">Trigliserida + 3NaOH → gliserol + 3 sabun (garam natrium asam lemak) &nbsp; (saponifikasi)</div>
+</div>
+<div class="card"><h2>4. Uji bahan makanan</h2>
+  <table class="t"><tr><th>Uji</th><th>Untuk</th><th>Hasil positif</th></tr><tr><td>Molisch</td><td>semua karbohidrat</td><td>cincin ungu</td></tr><tr><td>Benedict / Fehling</td><td>gula pereduksi</td><td>endapan merah bata</td></tr><tr><td>Iodin</td><td>amilum</td><td>biru-ungu kehitaman</td></tr><tr><td>Biuret</td><td>protein (ikatan peptida)</td><td>ungu</td></tr><tr><td>Xantoproteat</td><td>protein dengan cincin benzena</td><td>kuning, jingga bila ditambah basa</td></tr><tr><td>Sudan III / kertas</td><td>lemak</td><td>merah / noda transparan</td></tr></table>
+</div></section>
+<section id="lab1" class="panel"><div class="card"><h2>Lab: Uji Kandungan Bahan Makanan</h2>
+  <p>Pilih bahan dan pereaksi uji. Amati warna di tabung, lalu simpulkan kandungannya. Tabel hasil terisi otomatis setiap kali kamu menguji.</p>
+  <div class="row" id="bh"></div>
+  <div class="row" id="uj"></div>
+  <div class="grid2"><svg class="viz" id="g1" viewBox="0 0 300 300" style="max-width:300px"></svg><div id="o1"></div></div>
+  <div id="tbl" style="overflow-x:auto"></div>
+</div></section>
+<section id="lab2" class="panel"><div class="card"><h2>Lab: Rakit Disakarida, Peptida, dan Trigliserida</h2>
+  <div class="seg" id="tp"><button data-t="d" class="on">Disakarida</button><button data-t="p">Peptida</button><button data-t="l">Lemak</button></div>
+  <div id="ctl" style="margin-top:10px"></div>
+  <svg class="viz" id="g2" viewBox="0 0 640 170" style="margin-top:10px"></svg>
+  <div class="out" id="o2"></div>
+</div></section>
+<section id="latihan" class="panel"><div id="prac"></div><p class="muted">Jawab dengan nama, mis. <code>sukrosa</code>, atau angka Mr.</p></section>
+<section id="kuis" class="panel"><p class="muted">12 soal, urutan soal dan pilihan diacak. Nilai terbaik tersimpan di perangkat ini.</p><div id="quiz"></div></section>
+</main>
+</div>
+<footer><div class="wrap">Virtual Chem Lab SMA · Kelas XII · Modul 11 · Rujukan: BSE Kimia XII (Makromolekul); K13 KD 3.11 Kelas XII; BS Kimia XII Bab IV</div></footer>
+<script src="../shared/core.js"></script>
+<script src="../shared/graph.js"></script>
+<script src="../shared/chem.js"></script>
+<script>
+const {$, $$, s, txt, clear, rand, pick, shuffle} = VML; const G=GR, CH=CHEM, f=VML.f, fm=G.fmt;
+/* LAB 1 */
+const BH=['Glukosa','Sukrosa','Tepung (amilum)','Putih telur','Minyak goreng','Susu','Nasi','Madu','Tahu'];
+const UJ=[['Molisch','#7048e8','tidak ada cincin ungu'],['Benedict','#c92a2a','tetap biru'],['Iodin','#212529','tetap kuning-cokelat'],['Biuret','#9c36b5','tetap biru'],['Xantoproteat','#f59f00','tidak berwarna'],['Sudan III','#e03131','merah terpisah di permukaan, larutan tidak bernoda']];
+const NEG=['#ffffff','#4dabf7','#d9a441','#74c0fc','#f1f3f5','#fbe9e7'];
+const RES={Glukosa:[1,1,0,0,0,0],Sukrosa:[1,0,0,0,0,0],'Tepung (amilum)':[1,0,1,0,0,0],'Putih telur':[0,0,0,1,1,0],'Minyak goreng':[0,0,0,0,0,1],Susu:[1,1,0,1,1,1],Nasi:[1,0,1,0,0,0],Madu:[1,1,0,0,0,0],Tahu:[0,0,0,1,1,1]};
+const POS=['cincin ungu di batas larutan','endapan merah bata','biru-ungu kehitaman','ungu','kuning (jingga + basa)','lapisan lemak merah'];
+let bi=0, ui=0; const done={};
+$('#bh').innerHTML=BH.map((b,i)=>`<button class="chipbtn ${i?'':'on'}" data-i="${i}">${b}</button>`).join('');
+$('#uj').innerHTML=UJ.map((u,i)=>`<button class="chipbtn ${i?'':'on'}" data-i="${i}">🧪 ${u[0]}</button>`).join('');
+$$('#bh .chipbtn').forEach(b=>b.onclick=()=>{ $$('#bh .chipbtn').forEach(x=>x.classList.toggle('on',x===b)); bi=+b.dataset.i; d1(); });
+$$('#uj .chipbtn').forEach(b=>b.onclick=()=>{ $$('#uj .chipbtn').forEach(x=>x.classList.toggle('on',x===b)); ui=+b.dataset.i; d1(); });
+function d1(){
+  const B=BH[bi], pos=RES[B][ui]; done[B+'|'+ui]=pos;
+  const g=$('#g1'); clear(g); s('rect',{x:0,y:0,width:300,height:300,fill:'var(--card)'},g);
+  s('path',{d:'M120,30 V240 a30,30 0 0 0 60,0 V30',fill:'none',stroke:'var(--ink)','stroke-width':3},g);
+  const col=pos?UJ[ui][1]:NEG[ui];
+  if(ui===0){ s('path',{d:'M122,120 V240 a28,28 0 0 0 56,0 V120Z',fill:'#e9ecef'},g); s('rect',{x:122,y:180,width:56,height:90,fill:'#fff3bf'},g); if(pos) s('rect',{x:122,y:174,width:56,height:10,fill:col},g); }
+  else if(ui===1&&pos){ s('path',{d:'M122,120 V240 a28,28 0 0 0 56,0 V120Z',fill:'#74c0fc','fill-opacity':.5},g); s('path',{d:'M122,232 V240 a28,28 0 0 0 56,0 V232Z',fill:col},g); }
+  else if(ui===5&&pos){ s('path',{d:'M122,120 V240 a28,28 0 0 0 56,0 V120Z',fill:'#f8f9fa'},g); s('rect',{x:122,y:120,width:56,height:22,fill:col,'fill-opacity':.8},g); }
+  else s('path',{d:'M122,120 V240 a28,28 0 0 0 56,0 V120Z',fill:col,'fill-opacity':pos?.85:.5},g);
+  txt(g,150,22,B,{'font-size':13,'font-weight':800}); txt(g,150,292,'+ '+UJ[ui][0],{'font-size':12,fill:'var(--muted)'});
+  $('#o1').innerHTML=`<div class="fb ${pos?'ok':'hint'}" style="margin-top:0"><b>${pos?'Positif':'Negatif'}</b>: ${pos?POS[ui]:UJ[ui][2]}.</div><p>${['Uji Molisch positif untuk semua karbohidrat.','Benedict positif hanya untuk gula pereduksi (glukosa, fruktosa, maltosa, laktosa). Sukrosa dan amilum negatif.','Iodin positif khusus untuk amilum.','Biuret positif untuk zat yang mempunyai minimal dua ikatan peptida (protein).','Xantoproteat positif untuk protein yang mengandung asam amino bercincin benzena (tirosin, triptofan, fenilalanina).','Sudan III melarut dalam lemak dan memberi warna merah.'][ui]}</p>`;
+  const keys=Object.keys(done); const bs=[...new Set(keys.map(k=>k.split('|')[0]))];
+  $('#tbl').innerHTML=`<table class="t" style="margin-top:12px"><tr><th>Bahan</th>${UJ.map(u=>`<th>${u[0]}</th>`).join('')}</tr>${bs.map(b=>`<tr><td>${b}</td>${UJ.map((u,i)=>{ const v=done[b+'|'+i]; return `<td>${v===undefined?'':v?'<b style="color:var(--ok)">+</b>':'−'}</td>`; }).join('')}</tr>`).join('')}</table>`;
+}
+d1();
+
+/* LAB 2 */
+const MONO=['glukosa','fruktosa','galaktosa'];
+const DIS={'glukosa+glukosa':['maltosa','gula malt (kecambah)','pereduksi'],'glukosa+fruktosa':['sukrosa','gula tebu/pasir','bukan pereduksi'],'fruktosa+glukosa':['sukrosa','gula tebu/pasir','bukan pereduksi'],'glukosa+galaktosa':['laktosa','gula susu','pereduksi'],'galaktosa+glukosa':['laktosa','gula susu','pereduksi']};
+const AA=[['Gly','glisina',75],['Ala','alanina',89],['Ser','serina',105],['Cys','sisteina',121],['Val','valina',117],['Phe','fenilalanina',165],['Tyr','tirosina',181],['Lys','lisina',146]];
+const FA=[['stearat','C₁₇H₃₅COOH','jenuh',284],['palmitat','C₁₅H₃₁COOH','jenuh',256],['oleat','C₁₇H₃₃COOH','tak jenuh',282],['linoleat','C₁₇H₃₁COOH','tak jenuh',280]];
+let tp='d', pep=['Gly','Ala','Phe'];
+$$('#tp button').forEach(b=>b.onclick=()=>{ $$('#tp button').forEach(x=>x.classList.toggle('on',x===b)); tp=b.dataset.t; ctl(); });
+function ctl(){
+  if(tp==='d') $('#ctl').innerHTML=`<div class="grid2"><label style="font-weight:700">Monosakarida 1<select id="m1" style="width:100%">${MONO.map(m=>`<option>${m}</option>`).join('')}</select></label><label style="font-weight:700">Monosakarida 2<select id="m2" style="width:100%">${MONO.map((m,i)=>`<option ${i===1?'selected':''}>${m}</option>`).join('')}</select></label></div>`;
+  else if(tp==='p') $('#ctl').innerHTML=`<div class="row">${AA.map(a=>`<button class="chipbtn" data-a="${a[0]}">+ ${a[0]}</button>`).join('')}<button class="btn ghost" id="pr">↺ Kosongkan</button></div>`;
+  else $('#ctl').innerHTML=`<div class="grid3">${[1,2,3].map(i=>`<label style="font-weight:700">Asam lemak ${i}<select id="f${i}" style="width:100%">${FA.map((f,j)=>`<option value="${j}" ${j===(i===2?2:0)?'selected':''}>${f[0]}</option>`).join('')}</select></label>`).join('')}</div><div class="row"><button class="chipbtn" id="sap">🧼 Saponifikasi dengan NaOH</button></div>`;
+  $$('#ctl select').forEach(x=>x.onchange=d2); $$('#ctl [data-a]').forEach(b=>b.onclick=()=>{ if(pep.length<8) pep.push(b.dataset.a); d2(); });
+  const pr=$('#pr'); if(pr) pr.onclick=()=>{ pep=[]; d2(); }; const sp=$('#sap'); if(sp) sp.onclick=()=>{ sp.classList.toggle('on'); d2(); };
+  d2();
+}
+function d2(){
+  const g=$('#g2'); clear(g); s('rect',{x:0,y:0,width:640,height:170,fill:'var(--card)'},g);
+  const bead=(x,y,t,c,w=70)=>{ s('rect',{x,y,width:w,height:40,rx:12,fill:c,stroke:'var(--ink)'},g); txt(g,x+w/2,y+25,t,{'font-size':12,'font-weight':800,fill:'#1b2236'}); };
+  if(tp==='d'){ const a=$('#m1').value, b=$('#m2').value, D=DIS[a+'+'+b];
+    bead(120,60,a,'#ffd8a8',110); bead(300,60,b,'#ffd8a8',110); s('line',{x1:230,y1:80,x2:300,y2:80,stroke:'var(--ink)','stroke-width':3},g); txt(g,265,72,'–O–',{'font-size':11}); txt(g,265,130,'+ H₂O dilepas',{'font-size':12,fill:'#1c7ed6','font-weight':700});
+    $('#o2').innerHTML=D?`<div class="big">${D[0]} (C₁₂H₂₂O₁₁)</div><p>${a} + ${b} → ${D[0]} + H₂O. Dikenal sebagai ${D[1]}; bersifat <b>${D[2]}</b>. Mr = 180 + 180 − 18 = 342.</p>`:`<div class="big">Disakarida lain</div><p>Gabungan ${a} + ${b} tidak termasuk tiga disakarida utama (maltosa, sukrosa, laktosa) yang dipelajari di SMA.</p>`; }
+  else if(tp==='p'){ const n=pep.length, w=Math.min(70,560/Math.max(1,n)); pep.forEach((k,i)=>{ const x=30+i*(w+6); if(i) txt(g,x-3,55,'–',{'font-size':16}); bead(x,60,k,'#b2f2bb',w); });
+    const Mr=pep.reduce((a,k)=>a+AA.find(x=>x[0]===k)[2],0)-Math.max(0,n-1)*18;
+    if(n>1) txt(g,320,140,`${n-1} ikatan peptida (–CO–NH–), ${n-1} molekul H₂O dilepas`,{'font-size':12,fill:'#1c7ed6','font-weight':700});
+    $('#o2').innerHTML=n?`<div class="big">${n===1?'asam amino':n===2?'dipeptida':n===3?'tripeptida':n+'-peptida (polipeptida)'}: ${pep.join('–')}</div><p>Mr = ${pep.map(k=>AA.find(x=>x[0]===k)[2]).join(' + ')} − ${Math.max(0,n-1)} × 18 = <b>${Mr}</b>. ${n>=2?'Uji biuret positif bila ada minimal dua ikatan peptida (tripeptida ke atas).':''} ${pep.some(k=>['Phe','Tyr'].includes(k))?'Mengandung cincin benzena: uji xantoproteat positif.':''}</p>`:'<p>Tambahkan asam amino.</p>'; }
+  else { const F=[1,2,3].map(i=>FA[+$('#f'+i).value]); const sap=$('#sap').classList.contains('on');
+    bead(30,60,'gliserol','#ffe066',90); F.forEach((f,i)=>{ s('line',{x1:120,y1:80,x2:200,y2:30+i*50,stroke:'var(--ink)','stroke-width':2},g); bead(200,12+i*50,f[0],f[2]==='jenuh'?'#ffc9c9':'#a5d8ff',110); if(sap) bead(380,12+i*50,'Na-'+f[0],'#e9ecef',130); });
+    const Mr=92+F.reduce((a,f)=>a+f[3],0)-54; const uns=F.filter(f=>f[2]==='tak jenuh').length;
+    $('#o2').innerHTML=`<div class="big">Trigliserida (Mr ≈ ${Mr})</div><p>${uns===0?'Semua asam lemak jenuh → cenderung <b>padat</b> (lemak hewani, mentega).':uns===3?'Semua asam lemak tak jenuh → <b>cair</b> (minyak nabati).':'Campuran jenuh dan tak jenuh.'} Mr = 92 (gliserol) + ${F.map(f=>f[3]).join(' + ')} − 3 × 18.</p>${sap?'<p><b>Saponifikasi:</b> trigliserida + 3NaOH → gliserol + 3 garam natrium asam lemak (sabun). Inilah dasar pembuatan sabun dari minyak kelapa sawit.</p>':''}`; }
+}
+ctl();
+
+/* LATIHAN */
+VML.practice($('#prac'),[
+ {name:'Mr peptida', gen(){ const n=rand(2,4); const P=Array.from({length:n},()=>pick(AA)); const Mr=P.reduce((a,x)=>a+x[2],0)-(n-1)*18; return {q:`Mr peptida ${P.map(x=>x[0]).join('–')} (Mr: ${[...new Set(P.map(x=>x[0]+' '+x[2]))].join(', ')}) = …`, a:String(Mr), hint:'Jumlahkan Mr, lalu kurangi 18 untuk setiap ikatan peptida.', ex:`${P.map(x=>x[2]).join(' + ')} − ${n-1}×18 = ${Mr}`}; }},
+ {name:'Disakarida', gen(){ const K=pick(Object.keys(DIS)); const [a,b]=K.split('+'); return {q:`Disakarida yang tersusun atas ${a} dan ${b} adalah …`, a:[DIS[K][0]], strict:true, hint:'Maltosa, sukrosa, atau laktosa.', ex:DIS[K][0]}; }},
+ {name:'Uji makanan', gen(){ const P=pick([['Bahan menghasilkan warna biru-ungu dengan iodin. Bahan mengandung …','amilum',['amilum','pati','karbohidrat']],['Uji biuret memberi warna ungu. Bahan mengandung …','protein',['protein']],['Uji Benedict menghasilkan endapan merah bata. Bahan mengandung …','gula pereduksi',['gula pereduksi','glukosa','monosakarida']],['Sudan III memberi warna merah. Bahan mengandung …','lemak',['lemak','minyak']]]); return {q:P[0], a:P[2], strict:true, show:P[1], hint:'Ingat pasangan uji dan zatnya.', ex:P[1]}; }}
+]);
+
+/* KUIS */
+VML.quiz($('#quiz'),[
+ {q:'Karbohidrat yang tidak dapat dihidrolisis menjadi yang lebih sederhana adalah …', o:['monosakarida','disakarida','polisakarida','oligosakarida'], a:0, ex:'Glukosa, fruktosa, galaktosa.'},
+ {q:'Sukrosa tersusun atas …', o:['glukosa dan fruktosa','glukosa dan glukosa','glukosa dan galaktosa','fruktosa dan galaktosa'], a:0, ex:'Gula tebu.'},
+ {q:'Disakarida yang tidak memberikan endapan merah bata dengan Fehling adalah …', o:['sukrosa','maltosa','laktosa','semua disakarida'], a:0, ex:'Bukan gula pereduksi.'},
+ {q:'Uji iodin positif menunjukkan adanya …', o:['amilum','glukosa','protein','lemak'], a:0, ex:'Biru-ungu.'},
+ {q:'Ikatan yang menghubungkan asam amino dalam protein disebut ikatan …', o:['peptida','glikosida','ester','hidrogen'], a:0, ex:'–CO–NH–.'},
+ {q:'Pereaksi untuk mengidentifikasi protein adalah …', o:['biuret','Benedict','iodin','Molisch'], a:0, ex:'Warna ungu.'},
+ {q:'Telur yang direbus menjadi padat karena protein mengalami …', o:['denaturasi','hidrolisis','saponifikasi','esterifikasi'], a:0, ex:'Struktur protein rusak oleh panas.'},
+ {q:'Lemak dan minyak termasuk golongan senyawa …', o:['ester (trigliserida)','eter','keton','amina'], a:0, ex:'Gliserol + asam lemak.'},
+ {q:'Minyak nabati umumnya cair karena mengandung banyak asam lemak …', o:['tak jenuh','jenuh','rantai pendek saja','aromatis'], a:0, ex:'Ikatan rangkap membuat rantai bengkok.'},
+ {q:'Reaksi lemak dengan NaOH menghasilkan sabun dan …', o:['gliserol','glukosa','asam amino','etanol'], a:0, ex:'Saponifikasi.'},
+ {q:'Mr dipeptida Gly–Ala (Mr Gly = 75, Ala = 89) = …', input:true, a:['146'], ex:'75 + 89 − 18.'},
+ {q:'Disakarida yang terdapat dalam susu adalah …', input:true, a:['laktosa'], strict:true, ex:'Glukosa + galaktosa.'}
+],'xii11');
+</script>
+<script src="../shared/nav.js"></script>
+</body></html>

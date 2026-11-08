@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kimia SMA Kelas XI · Virtual Chem Lab SMA</title>
+<link rel="stylesheet" href="../shared/style.css">
+<style>
+  .home-hero{padding:44px 0 14px;display:grid;grid-template-columns:1.25fr 1fr;gap:28px;align-items:center;color:var(--onbg)}
+  .home-hero .chip{background:rgba(255,255,255,.14);color:color-mix(in srgb,var(--bg4) 60%,#fff)}
+  .home-hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.1rem,6vw,3.5rem);letter-spacing:-.5px;margin:.25em 0}
+  .home-hero h1 em{font-style:normal;background:linear-gradient(90deg,#fff,var(--bg4) 55%,var(--glow));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .home-hero p.lead{font-size:1.1rem;color:var(--onbg-soft);max-width:600px}
+  .stat{display:flex;gap:24px;flex-wrap:wrap;margin-top:16px}
+  .stat div{font-size:.9rem;color:var(--onbg-soft)} .stat b{display:block;font-size:1.7rem;color:#fff}
+  .board{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:26px;padding:12px;backdrop-filter:blur(6px)}
+  .prog{height:6px;background:var(--line);border-radius:9px;margin-top:8px;overflow:hidden}.prog i{display:block;height:100%}
+  .route{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .route div{border-radius:16px;padding:14px;border:1px solid var(--line);background:var(--card)}
+  .route b{display:block;font-size:1.05rem;margin-bottom:4px}
+  .life{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+  .life div{border:1px solid var(--line);border-radius:14px;padding:12px;background:color-mix(in srgb,var(--acc) 5%,var(--card))}
+  .life span{font-size:1.6rem;display:block}
+  .mod .ic{box-shadow:0 6px 14px rgba(0,0,0,.2)}
+  @media (max-width:760px){.home-hero{grid-template-columns:1fr}.board{display:none}.route{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="t11" data-store="kim11">
+<header class="top"><div class="wrap"><a class="back" href="../index.html">← Beranda</a><div class="brand">⚗ Kimia SMA <small>· Kelas XI · Biru Nyala</small></div></div></header>
+<div class="wrap">
+<section class="home-hero">
+  <div>
+    <span class="chip">Fase F · Merdeka + K13 + KTSP · 7 modul</span>
+    <h1>Kimia Kelas XI: <em>dari orbital sampai kesetimbangan.</em></h1>
+    <p class="lead">Tujuh bab Buku Siswa Kimia Kelas XI dalam bentuk lab: menyusun elektron di orbital, merakit molekul, menghitung mol seperti resep kue, menamai hidrokarbon, mengukur kalor reaksi, menyaksikan tumbukan partikel, dan menggeser kesetimbangan.</p>
+    <div class="stat"><div><b>7</b>modul</div><div><b>14</b>lab interaktif</div><div><b>84</b>soal kuis</div><div><b id="avg">–</b>rata-rata nilaimu</div></div>
+  </div>
+  <div class="board"><svg viewBox="0 0 360 280" width="100%" aria-hidden="true"><rect width="360" height="280" rx="18" fill="rgba(255,255,255,.04)"/><g fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="3"><path d="M180 60l52 30v60l-52 30-52-30V90z"/><circle cx="180" cy="120" r="26"/></g><circle cx="70" cy="70" r="12" fill="#ffb020"/><circle cx="110" cy="210" r="10" fill="#7fb2ff"/><circle cx="290" cy="80" r="9" fill="#7fb2ff"/><circle cx="300" cy="200" r="13" fill="#ffb020"/><path d="M82 74l40 20M120 206l40-30M282 86l-40 18M290 196l-46-30" stroke="#fff" stroke-opacity=".5" stroke-width="2" stroke-dasharray="5 5"/><text x="180" y="262" text-anchor="middle" font-size="22" font-family="Georgia,serif" font-style="italic" fill="#fff" fill-opacity=".85">N₂ + 3H₂ ⇌ 2NH₃</text></svg></div>
+</section>
+<div class="card"><h2>Peta belajar</h2><p>Modul bisa dipelajari berurutan sesuai bab buku siswa, atau dipilih sesuai kebutuhan kelas.</p><div class="route"><div style="border-left:5px solid #2a62d4"><b>⚛ Struktur & Ikatan</b>Konfigurasi elektron, sistem periodik, ikatan kimia, bentuk molekul (Modul 1–2).</div><div style="border-left:5px solid #e8590c"><b>🧮 Kuantitas & Karbon</b>Stoikiometri dan hidrokarbon (Modul 3–4).</div><div style="border-left:5px solid #c92a2a"><b>🔥 Energi & Dinamika</b>Termokimia, laju reaksi, dan kesetimbangan (Modul 5–7).</div></div></div>
+<h2 class="onbg">Modul Kelas XI</h2>
+<div class="mods" id="mods"></div>
+<div class="card"><h2>Kimia Kelas XI di sekitar kita</h2><div class="life"><div><span>🎆</span><b>Kembang api</b><br>Warna nyala berasal dari elektron yang berpindah kulit</div><div><span>🧂</span><b>Garam dapur</b><br>Ikatan ion Na⁺ dan Cl⁻</div><div><span>🥞</span><b>Kue pancong</b><br>Resep = perbandingan mol</div><div><span>⛽</span><b>SPBU</b><br>Bensin hasil distilasi minyak bumi</div><div><span>🎈</span><b>Balon udara</b><br>Pembakaran gas melepas kalor</div><div><span>🥩</span><b>Kulkas</b><br>Suhu rendah memperlambat pembusukan</div><div><span>🌾</span><b>Pupuk urea</b><br>Amonia dari proses Haber-Bosch</div><div><span>🥤</span><b>Minuman bersoda</b><br>CO₂ larut dalam kesetimbangan</div></div></div>
+<div class="card"><h2>Kamus kecil</h2><div class="glos"><div><b>Orbital</b>Daerah kebolehjadian menemukan elektron.</div><div><b>Keelektronegatifan</b>Kemampuan atom menarik pasangan elektron ikatan.</div><div><b>PEB</b>Pasangan elektron bebas.</div><div><b>Mol</b>6,02 × 10²³ partikel.</div><div><b>Pereaksi pembatas</b>Pereaksi yang habis lebih dahulu.</div><div><b>Isomer</b>Rumus molekul sama, struktur berbeda.</div><div><b>Entalpi (H)</b>Kandungan kalor sistem pada tekanan tetap.</div><div><b>Kc</b>Tetapan kesetimbangan berdasarkan konsentrasi.</div></div></div>
+<div class="card"><h2>Cara memakai</h2>
+  <p>Setiap modul berisi <b>📖 Cerita &amp; Materi</b>, dua <b>🧪 Lab</b> virtual, <b>✏️ Latihan</b> dengan soal acak tak terbatas (dua kali kesempatan menjawab, ada petunjuk), dan <b>🏆 Kuis</b> 12 soal dengan pembahasan. Ukur kesiapan ujian di menu <b>📝 Tryout</b>, buka <b>📘 Rumus</b> untuk ringkasan, dan pakai <b>⚛️ Lab Unsur</b> untuk tabel periodik, kalkulator Mr, dan penyetara reaksi.</p>
+  <p class="muted">Semua berkas berjalan tanpa internet. Nilai tersimpan di perangkat masing-masing pengguna.</p>
+  <div class="row"><button class="btn ghost" id="reset">Hapus nilai Kelas XI di perangkat ini</button></div>
+</div>
+</div>
+<footer><div class="wrap">Virtual Chem Lab SMA · Kimia Kelas XI · Kurikulum Merdeka · Bahan: Buku Siswa Kimia Kemendikbudristek 2022 &amp; BSE Kimia SMA</div></footer>
+<script src="../shared/core.js"></script>
+<script src="../shared/catalog.js"></script>
+<script>
+const CAT=VCL_CATALOG.find(g=>g.folder==='kimia-kelas-11'), M=CAT.mods;
+const C2=getComputedStyle(document.body).getPropertyValue('--acc').trim(), C3=getComputedStyle(document.body).getPropertyValue('--bg4').trim();
+function card(m,i){ const b=VML.store.get(m.k); if(b!=null){window._s+=b;window._c++;}
+  return `<a class="mod" href="${m.f}"><div class="ic" style="background:linear-gradient(135deg,${m.c},${i%2?C2:C3})">${m.i}</div><span class="muted" style="font-size:.8rem;font-weight:700">MODUL ${i+1} · ${m.l.toUpperCase()}</span><h3>${m.t}</h3><p>${m.d}</p>
+    <div style="font-size:.75rem;font-weight:700;color:var(--muted);margin-top:8px">${(window.VCL_KUR&&VCL_KUR[m.k])?'Merdeka '+VCL_KUR[m.k][0]+' · K13 '+VCL_KUR[m.k][1]+' · KTSP '+VCL_KUR[m.k][2]:''}</div><div class="best" style="color:${m.c}">${b!=null?'Nilai kuis terbaik: '+b:'Belum mengerjakan kuis'}</div><div class="prog"><i style="width:${b||0}%;background:linear-gradient(90deg,${C2},${C3})"></i></div></a>`; }
+function render(){ window._s=0; window._c=0; document.getElementById('mods').innerHTML=M.map(card).join('');
+  document.getElementById('avg').textContent = window._c ? Math.round(window._s/window._c) : '–'; }
+render();
+document.getElementById('reset').onclick=()=>{ if(confirm('Hapus semua nilai kuis Kelas XI yang tersimpan di perangkat ini?')){ M.forEach(m=>{ try{localStorage.removeItem(CAT.pref+m.k);}catch(e){} }); render(); } };
+window.addEventListener('pageshow',render);
+</script>
+<script src="../shared/nav.js"></script>
+</body></html>

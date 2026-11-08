@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lab Unsur · Virtual Chem Lab SMA</title>
+<link rel="stylesheet" href="../shared/style.css">
+<style>
+.ptab.full{grid-template-columns:repeat(18,minmax(0,1fr))}
+.ptab .el .z{font-size:.55em;font-weight:700;opacity:.75;align-self:flex-start;margin-left:3px}
+.ptab .lbl{font-size:clamp(7px,1.1vw,11px);color:var(--muted);display:flex;align-items:center;justify-content:center;font-weight:800}
+.frow{margin-top:8px}
+.legend button{font:inherit;font-size:.82rem;font-weight:700;border:1.5px solid var(--line);border-radius:999px;padding:4px 10px;background:var(--card);color:var(--ink);cursor:pointer}
+.legend button.on{border-color:var(--ink)}
+.det{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:start}
+.det .big-el{border-radius:18px;padding:12px;text-align:center;color:#1b2236}
+.det .big-el b{display:block;font-size:3rem;line-height:1.1;font-family:Georgia,serif}
+@media (max-width:560px){.det{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="tlab" data-store="kimlab">
+<header class="top"><div class="wrap"><a class="back" href="../index.html">← Beranda</a><div class="brand">⚛️ Lab Unsur <small>· Virtual Chem Lab SMA</small></div></div></header>
+<div class="wrap">
+<section class="hero">
+  <span class="chip">Pendalaman · Kelas X–XII · 118 unsur</span>
+  <h1>Lab Unsur: tabel periodik dan alat hitung kimia</h1>
+  <div class="tp"><b>Empat alat dalam satu halaman</b><ul>
+    <li><b>Tabel periodik interaktif</b>: konfigurasi elektron, letak, dan sifat setiap unsur.</li>
+    <li><b>Kalkulator Mr</b>: massa molekul relatif dan persen massa unsur dalam senyawa.</li>
+    <li><b>Penyetara reaksi</b>: koefisien otomatis untuk persamaan apa pun.</li>
+    <li><b>Tantangan unsur</b>: latihan cepat lambang dan nama unsur.</li></ul></div>
+</section>
+<nav class="tabs"><button data-target="tabel">🧪 Tabel Periodik</button><button data-target="mr">⚖️ Kalkulator Mr</button><button data-target="setara">⇄ Penyetara Reaksi</button><button data-target="game">🎯 Tantangan Unsur</button></nav>
+<main>
+<section id="tabel" class="panel">
+  <div class="card"><h2>Tabel Periodik Interaktif</h2>
+    <div class="row"><input type="search" id="cari" placeholder="🔍 Cari nama, lambang, atau nomor atom" aria-label="Cari unsur" style="flex:1;min-width:200px"><select id="warna"><option value="cat">Warna: kategori</option><option value="block">Warna: blok s/p/d/f</option><option value="en">Warna: keelektronegatifan</option></select></div>
+    <div class="legend" id="leg" style="margin:10px 0"></div>
+    <div class="ptab full" id="pt"></div>
+    <div class="ptab full frow" id="pf"></div>
+  </div>
+  <div class="card" id="detail"></div>
+</section>
+<section id="mr" class="panel">
+  <div class="card"><h2>Kalkulator Mr dan Persen Massa</h2>
+    <p>Ketik rumus kimia. Kurung dan hidrat didukung, misalnya <code>Ca(OH)2</code>, <code>Al2(SO4)3</code>, <code>CuSO4.5H2O</code>.</p>
+    <div class="row"><input type="text" id="mrx" value="CuSO4.5H2O" aria-label="Rumus kimia" style="flex:1;min-width:200px;font-family:var(--mono)"><div class="seg" id="ars"><button data-a="s" class="on">Ar sekolah</button><button data-a="p">Ar IUPAC</button></div></div>
+    <div class="row" id="mrq"></div>
+    <div class="out" id="mro"></div>
+    <svg class="viz" id="mrg" viewBox="0 0 640 60" style="margin-top:8px"></svg>
+  </div>
+</section>
+<section id="setara" class="panel">
+  <div class="card"><h2>Penyetara Reaksi Otomatis</h2>
+    <p>Tulis persamaan dengan tanda <code>-&gt;</code> atau <code>=</code>, misalnya <code>KMnO4 + HCl -&gt; KCl + MnCl2 + H2O + Cl2</code>. Penyetara memakai metode aljabar (sistem persamaan linear jumlah atom).</p>
+    <div class="row"><input type="text" id="eqx" value="C3H8 + O2 -> CO2 + H2O" aria-label="Persamaan reaksi" style="flex:1;min-width:240px;font-family:var(--mono)"></div>
+    <div class="row" id="eqq"></div>
+    <div class="out" id="eqo"></div>
+  </div>
+</section>
+<section id="game" class="panel">
+  <div class="card"><h2>Tantangan Unsur</h2>
+    <p>Jawab sebanyak mungkin dalam 60 detik. Pilih tingkat: 20 unsur pertama, 36 unsur pertama, atau unsur populer lain.</p>
+    <div class="seg" id="lvl"><button data-l="20" class="on">Z 1–20</button><button data-l="36">Z 1–36</button><button data-l="pop">Unsur populer</button></div>
+    <div class="row"><button class="btn" id="mulai">▶ Mulai</button><span class="muted" id="best"></span></div>
+    <div id="gbox" style="margin-top:12px"></div>
+  </div>
+</section>
+</main>
+</div>
+<footer><div class="wrap">Virtual Chem Lab SMA · Lab Unsur · Data massa atom IUPAC (dibulatkan), keelektronegatifan Pauling, energi ionisasi dan jari-jari kovalen dari tabel data standar.</div></footer>
+<script src="../shared/core.js"></script>
+<script src="../shared/chem.js"></script>
+<script>
+const {$, $$, s, txt, clear, rand, pick, shuffle} = VML; const CH=CHEM, f=VML.f;
+const fm=(x,d=2)=>{ const r=Math.round(x*10**d)/10**d; return r.toLocaleString('id-ID',{maximumFractionDigits:d}).replace('-','−'); };
+/* TABEL */
+let sel=26, mode='cat', filt=null;
+const BCOL={s:'#ffc9c9',p:'#ffec99',d:'#a5d8ff',f:'#b2f2bb'};
+function colorOf(e){ if(mode==='cat') return CH.CATCOL[e.cat]; if(mode==='block') return BCOL[CH.block(e.z)]; if(e.en==null) return '#e9ecef'; const t=(e.en-0.7)/(4-0.7); return `hsl(220,75%,${88-t*55}%)`; }
+function legend(){
+  if(mode==='cat') $('#leg').innerHTML=Object.entries(CH.CAT).map(([k,v])=>`<button data-k="${k}" class="${filt===k?'on':''}" style="background:${CH.CATCOL[k]};color:#1b2236">${v}</button>`).join(' ');
+  else if(mode==='block') $('#leg').innerHTML=Object.entries(BCOL).map(([k,v])=>`<button data-k="${k}" class="${filt===k?'on':''}" style="background:${v};color:#1b2236">Blok ${k}</button>`).join(' ');
+  else $('#leg').innerHTML='<span class="muted">Makin gelap = makin elektronegatif. Abu-abu = tidak umum ditentukan.</span>';
+  $$('#leg button').forEach(b=>b.onclick=()=>{ filt=filt===b.dataset.k?null:b.dataset.k; draw(); });
+}
+function match(e){ const q=($('#cari').value||'').trim().toLowerCase(); let ok=true; if(q) ok=e.s.toLowerCase()===q||e.n.toLowerCase().includes(q)||String(e.z)===q; if(filt){ ok=ok&&(mode==='cat'?e.cat===filt:CH.block(e.z)===filt); } return ok; }
+const cell=e=>{ const dim=!match(e); const t=colorOf(e); const dark=mode==='en'&&e.en!=null&&e.en>2.6; return `<button class="el ${e.z===sel?'on':''} ${dim?'dim':''}" data-z="${e.z}" style="background:${t};color:${dark?'#fff':'#1b2236'}" title="${e.n}"><span class="z">${e.z}</span>${e.s}<small>${fm(e.m,e.m<100?2:1)}</small></button>`; };
+function draw(){
+  legend(); let h=''; for(let per=1;per<=7;per++) for(let g=1;g<=18;g++){ const e=CH.E.find(x=>x.per===per&&x.g===g&&!x.f); if(e) h+=cell(e); else if(g===3&&per>=6) h+=`<div class="lbl">${per===6?'57–71':'89–103'}</div>`; else h+='<div class="gap"></div>'; }
+  $('#pt').innerHTML=h;
+  let h2=''; [6,7].forEach(per=>{ h2+=`<div class="lbl">${per===6?'La':'Ac'}</div><div class="gap"></div>`; CH.E.filter(x=>x.f&&x.per===per).forEach(e=>h2+=cell(e)); h2+='<div class="gap"></div>'; });
+  $('#pf').innerHTML=h2;
+  $$('.ptab .el').forEach(b=>b.onclick=()=>{ sel=+b.dataset.z; draw(); });
+  detail();
+}
+function detail(){
+  const e=CH.el(sel), sh=CH.shells(sel);
+  let svg=`<svg viewBox="0 0 220 220" width="100%" style="max-width:220px">`; const R0=22, dr=Math.min(13,90/Math.max(1,sh.length));
+  sh.forEach((k,i)=>{ const r=R0+(i+1)*dr; svg+=`<circle cx="110" cy="110" r="${r}" fill="none" stroke="var(--line)" stroke-width="1.5"/>`; for(let j=0;j<k;j++){ const a=j/k*6.283-1.571; svg+=`<circle cx="${110+r*Math.cos(a)}" cy="${110+r*Math.sin(a)}" r="${k>18?2.2:3.2}" fill="var(--acc)"/>`; } });
+  svg+=`<circle cx="110" cy="110" r="${R0-4}" fill="#e03131"/><text x="110" y="115" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">${e.z}+</text></svg>`;
+  $('#detail').innerHTML=`<div class="det"><div class="big-el" style="background:${CH.CATCOL[e.cat]}"><small>${e.z}</small><b>${e.s}</b>${e.n}<br><small>${fm(e.m,3)}</small></div>
+   <div><h2 style="margin-top:0">${e.n} (${e.s})</h2>
+   <div class="kv"><div><small>Nomor atom</small><b>${e.z}</b></div><div><small>Massa atom relatif</small><b>${fm(e.m,3)}</b></div><div><small>Periode / golongan</small><b>${e.per} / ${CH.golLabel(e.z)}</b></div><div><small>Blok</small><b>${CH.block(e.z)}</b></div><div><small>Kategori</small><b>${CH.CAT[e.cat]}</b></div><div><small>Keelektronegatifan</small><b>${e.en==null?'–':fm(e.en,2)}</b></div><div><small>Energi ionisasi I</small><b>${e.ie==null?'–':e.ie+' kJ/mol'}</b></div><div><small>Jari-jari kovalen</small><b>${e.r==null?'–':e.r+' pm'}</b></div></div>
+   <div class="eqn" style="text-align:left;font-size:1rem"><b>Konfigurasi:</b> ${CH.cfgShort(e.z)}<br><span class="muted">${e.z<=36?CH.cfgStr(e.z):''}</span><br><b>Elektron per kulit:</b> ${sh.join(', ')}</div></div></div>
+   <div style="text-align:center">${svg}</div>
+   <p class="muted" style="font-size:.88rem">${e.f||e.z>103?'Konfigurasi lantanida, aktinida, dan unsur superberat ditulis menurut aturan Aufbau ideal; beberapa unsur memiliki konfigurasi nyata yang sedikit berbeda.':''}</p>`;
+}
+$('#cari').oninput=draw; $('#warna').onchange=()=>{ mode=$('#warna').value; filt=null; draw(); };
+draw();
+
+/* MR */
+let arsch=true;
+const MRQ=['H2O','CO2','NaCl','H2SO4','CaCO3','C6H12O6','Ca(OH)2','Al2(SO4)3','CuSO4.5H2O','NH4NO3','CO(NH2)2','KMnO4'];
+$('#mrq').innerHTML=MRQ.map(x=>`<button class="chipbtn" data-x="${x}">${f(x)}</button>`).join('');
+$$('#mrq .chipbtn').forEach(b=>b.onclick=()=>{ $('#mrx').value=b.dataset.x; mr(); });
+$$('#ars button').forEach(b=>b.onclick=()=>{ $$('#ars button').forEach(x=>x.classList.toggle('on',x===b)); arsch=b.dataset.a==='s'; mr(); });
+const COLS=['#e8590c','#1c7ed6','#2f9e44','#ae3ec9','#f59f00','#0ca678','#e64980','#495057'];
+function mr(){
+  const x=$('#mrx').value.trim(); let p, M; try{ p=CH.parse(x); M=CH.Mr(x,arsch); }catch(e){ $('#mro').innerHTML='<div class="fb no">Rumus tidak dikenali. Periksa huruf besar-kecil lambang unsur, misalnya Co (kobalt) berbeda dengan CO.</div>'; clear($('#mrg')); return; }
+  const rows=Object.keys(p).map((k,i)=>{ const a=CH.Ar(k,arsch), sub=a*p[k]; return {k,n:p[k],a,sub,pc:sub/M*100,c:COLS[i%COLS.length]}; });
+  $('#mro').innerHTML=`<div class="huge">${f(x)}</div><div class="big">Mr = ${fm(M,arsch?2:3)}</div>
+   <table class="t"><tr><th>Unsur</th><th>Jumlah atom</th><th>Ar</th><th>Jumlah × Ar</th><th>% massa</th></tr>${rows.map(r=>`<tr><td><b style="color:${r.c}">${r.k}</b> ${CH.el(r.k).n}</td><td>${r.n}</td><td>${fm(r.a,3)}</td><td>${fm(r.sub,3)}</td><td>${fm(r.pc,2)}%</td></tr>`).join('')}</table>
+   <p class="muted">Mr = ${rows.map(r=>`${r.n} × ${fm(r.a,3)}`).join(' + ')} = ${fm(M,3)}. Massa molar = ${fm(M,3)} g/mol.</p>`;
+  const g=$('#mrg'); clear(g); let xx=0; rows.forEach(r=>{ const w=r.pc/100*640; s('rect',{x:xx,y:10,width:w,height:40,fill:r.c},g); if(w>40) txt(g,xx+w/2,36,r.k+' '+fm(r.pc,1)+'%',{'font-size':12,'font-weight':800,fill:'#fff'}); xx+=w; });
+}
+$('#mrx').oninput=mr; mr();
+
+/* SETARA */
+const EQQ=['Fe + O2 -> Fe2O3','C3H8 + O2 -> CO2 + H2O','Al + H2SO4 -> Al2(SO4)3 + H2','KMnO4 + HCl -> KCl + MnCl2 + H2O + Cl2','Cu + HNO3 -> Cu(NO3)2 + NO + H2O','C6H12O6 + O2 -> CO2 + H2O','Ca3(PO4)2 + SiO2 + C -> CaSiO3 + P4 + CO','NH3 + O2 -> NO + H2O'];
+$('#eqq').innerHTML=EQQ.map(x=>`<button class="chipbtn" data-x="${x}">${x.replace('->','→')}</button>`).join('');
+$$('#eqq .chipbtn').forEach(b=>b.onclick=()=>{ $('#eqx').value=b.dataset.x; eq(); });
+function eq(){
+  let r; try{ r=CH.balance($('#eqx').value); }catch(e){ $('#eqo').innerHTML=`<div class="fb no">${e.message==='panah'?'Tambahkan tanda -> di antara pereaksi dan hasil.':e.message==='tak tunggal'?'Persamaan ini memiliki lebih dari satu cara penyetaraan atau ada zat yang tidak terlibat. Periksa kembali rumus zatnya.':'Persamaan tidak dapat disetarakan. Periksa rumus kimia dan pastikan semua unsur muncul di kedua ruas.'}</div>`; return; }
+  const sp=r.L.concat(r.R), nL=r.L.length;
+  const cnt=side=>{ const o={}; sp.forEach((x,i)=>{ if((i<nL)===side){ const p=CH.parse(x); for(const e in p) o[e]=(o[e]||0)+p[e]*r.k[i]; } }); return o; };
+  const A=cnt(true), B=cnt(false);
+  $('#eqo').innerHTML=`<div class="eqn" style="font-size:1.3rem">${CH.eqHTML(r.L,r.R,r.k)}</div>
+   <table class="t"><tr><th>Unsur</th>${r.els.map(e=>`<th>${e}</th>`).join('')}</tr><tr><td>Kiri</td>${r.els.map(e=>`<td>${A[e]}</td>`).join('')}</tr><tr><td>Kanan</td>${r.els.map(e=>`<td>${B[e]}</td>`).join('')}</tr></table>
+   <p class="muted">Massa kiri = ${fm(r.L.reduce((a,x,i)=>a+r.k[i]*CH.Mr(x),0),2)} = massa kanan ${fm(r.R.reduce((a,x,i)=>a+r.k[i+nL]*CH.Mr(x),0),2)} (Hukum Lavoisier).</p>`;
+}
+$('#eqx').oninput=eq; eq();
+
+/* GAME */
+const POP=[26,29,30,47,79,80,82,50,53,35,15,16,13,12,11,19,20,6,7,8,1,17,9,10,2,18,36,54,86,92,78,28,24,25,27,22,14,5,3,55,56,38];
+let lvl='20', timer=null, score=0, total=0, cur=null, left=0;
+$$('#lvl button').forEach(b=>b.onclick=()=>{ $$('#lvl button').forEach(x=>x.classList.toggle('on',x===b)); lvl=b.dataset.l; showBest(); });
+function showBest(){ const b=VML.store.get('game'+lvl); $('#best').textContent=b!=null?'Rekor di perangkat ini: '+b:'Belum ada rekor.'; }
+function pool(){ return lvl==='pop'?POP:Array.from({length:+lvl},(_,i)=>i+1); }
+function nextQ(){
+  const P=pool(), z=pick(P), e=CH.el(z), t=rand(0,2);
+  let q, opts, ans;
+  if(t===0){ q=`Lambang unsur <b>${e.n}</b> adalah …`; ans=e.s; opts=shuffle([e.s,...shuffle(P.filter(x=>x!==z)).slice(0,3).map(x=>CH.el(x).s)]); }
+  else if(t===1){ q=`Unsur dengan lambang <b>${e.s}</b> adalah …`; ans=e.n; opts=shuffle([e.n,...shuffle(P.filter(x=>x!==z)).slice(0,3).map(x=>CH.el(x).n)]); }
+  else { q=`Nomor atom <b>${e.n}</b> (${e.s}) adalah …`; ans=String(z); const o=new Set([z]); while(o.size<4){ const d=z+rand(-4,4); if(d>0&&d<=118) o.add(d); } opts=shuffle([...o].map(String)); }
+  cur={ans};
+  $('#gbox').innerHTML=`<div class="qbox"><div class="qhead"><span>⏱ ${left} s</span><span>Skor: <span class="counter">${score}</span> / ${total}</span></div><div class="qtext">${q}</div><div class="opts">${opts.map((o,i)=>`<button class="opt" data-o="${o}"><b>${'ABCD'[i]}</b><span>${o}</span></button>`).join('')}</div></div>`;
+  $$('#gbox .opt').forEach(b=>b.onclick=()=>{ total++; const ok=b.dataset.o===cur.ans; if(ok) score++; b.classList.add(ok?'ok':'no'); setTimeout(()=>{ if(left>0) nextQ(); },ok?250:700); });
+}
+$('#mulai').onclick=()=>{ clearInterval(timer); score=0; total=0; left=60; nextQ(); timer=setInterval(()=>{ left--; const h=$('#gbox .qhead span'); if(h) h.textContent='⏱ '+left+' s'; if(left<=0){ clearInterval(timer); const b=VML.store.get('game'+lvl)||0; if(score>b) VML.store.set('game'+lvl,score);
+  $('#gbox').innerHTML=`<div class="qbox" style="text-align:center"><div class="huge">${score}</div><p>jawaban benar dari ${total} soal dalam 60 detik.</p><p class="muted">${score>b?'🎉 Rekor baru di perangkat ini!':'Rekor: '+b}</p></div>`; showBest(); } },1000); };
+showBest();
+</script>
+<script src="../shared/nav.js"></script>
+</body></html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hukum Dasar Kimia · Kimia SMA Kelas X</title>
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body class="t10" data-store="kim10">
+<header class="top"><div class="wrap"><a class="back" href="index.html">← Kelas X</a><div class="brand">⚗ Kimia SMA <small>· Kelas X</small></div></div></header>
+<div class="wrap">
+<section class="hero">
+  <span class="chip">Modul 6 · Reaksi <span class="lvl menengah">MENENGAH</span></span>
+  <h1>Hukum-Hukum Dasar Kimia</h1>
+  <div class="tp"><b>Setelah modul ini kamu bisa</b><ul><li>Membuktikan Hukum Kekekalan Massa (Lavoisier) pada sistem tertutup dan terbuka.</li><li>Menghitung massa hasil dan sisa pereaksi dengan Hukum Perbandingan Tetap (Proust).</li><li>Menerapkan Hukum Perbandingan Berganda (Dalton), Hukum Gay-Lussac, dan Hipotesis Avogadro.</li></ul></div>
+</section>
+<nav class="tabs"><button data-target="materi">📖 Cerita & Materi</button><button data-target="lab1">⚖️ Lab Lavoisier</button><button data-target="lab2">🧱 Lab Proust</button><button data-target="latihan">✏️ Latihan</button><button data-target="kuis">🏆 Kuis</button></nav>
+<main>
+<section id="materi" class="panel"><div class="card"><h2>Mulai dari cerita</h2>
+  <div class="story"><span class="t">Kertas yang dibakar menjadi ringan?</span><p style="margin:.3em 0">Selembar kertas dibakar dan yang tersisa hanya sedikit abu. Apakah massa bisa hilang? Sebaliknya, paku yang berkarat justru bertambah berat. Pada abad ke-18 Antoine Lavoisier menimbang reaksi dengan teliti di dalam wadah tertutup dan menemukan jawabannya: massa tidak hilang dan tidak muncul begitu saja. Pada kertas yang terbakar, sebagian massa pergi sebagai gas CO₂ dan uap air; pada paku berkarat, massa oksigen dari udara ikut terikat.</p></div>
+</div>
+<div class="card"><h2>1. Hukum Kekekalan Massa (Lavoisier)</h2>
+  <div class="note" style="font-size:1.05rem">Dalam sistem tertutup, <b>massa zat sebelum reaksi = massa zat sesudah reaksi</b>.</div>
+  <div class="ex"><span class="t">Contoh</span>12 g magnesium dibakar habis dengan 8 g oksigen menghasilkan 20 g magnesium oksida.</div>
+</div>
+<div class="card"><h2>2. Hukum Perbandingan Tetap (Proust)</h2>
+  <div class="note" style="font-size:1.05rem">Perbandingan massa unsur-unsur dalam suatu senyawa <b>selalu tetap</b>, dari mana pun asalnya.</div>
+  <p>Dalam besi(II) sulfida FeS, Fe : S = 56 : 32 = <b>7 : 4</b>. Dalam air H₂O, H : O = 2 : 16 = <b>1 : 8</b>.</p>
+  <div class="ex"><span class="t">Contoh</span>10 g Fe direaksikan dengan 4 g S. Dengan perbandingan 7 : 4, 4 g S tepat bereaksi dengan 7 g Fe. Terbentuk 11 g FeS dan <b>tersisa 3 g Fe</b>.</div>
+</div>
+<div class="card"><h2>3. Hukum Perbandingan Berganda (Dalton)</h2>
+  <p>Jika dua unsur membentuk lebih dari satu senyawa, dan massa salah satu unsur dibuat sama, maka perbandingan massa unsur yang lain merupakan <b>bilangan bulat sederhana</b>.</p>
+  <table class="t"><tr><th>Senyawa</th><th>Massa C</th><th>Massa O</th></tr><tr><td>CO</td><td>12</td><td>16</td></tr><tr><td>CO₂</td><td>12</td><td>32</td></tr></table>
+  <p>Untuk massa C yang sama, perbandingan O dalam CO : CO₂ = 16 : 32 = <b>1 : 2</b>.</p>
+</div>
+<div class="card"><h2>4. Hukum Perbandingan Volume (Gay-Lussac) dan Hipotesis Avogadro</h2>
+  <div class="grid2"><div class="def"><b>Gay-Lussac</b>: pada suhu dan tekanan sama, perbandingan volume gas-gas yang bereaksi dan hasil reaksi merupakan bilangan bulat sederhana, <b>sama dengan perbandingan koefisien</b>.</div><div class="def"><b>Avogadro</b>: pada suhu dan tekanan sama, gas-gas bervolume sama mengandung <b>jumlah molekul yang sama</b>.</div></div>
+  <div class="eqn">N₂(g) + 3H₂(g) → 2NH₃(g) &nbsp;&nbsp; volume 1 : 3 : 2</div>
+  <div class="ex"><span class="t">Contoh</span>Untuk membuat 10 L NH₃ diperlukan 5 L N₂ dan 15 L H₂ (diukur pada P dan T sama).</div>
+</div></section>
+<section id="lab1" class="panel"><div class="card"><h2>Lab: Menimbang Reaksi</h2>
+  <p>Pilih reaksi dan jenis wadah, lalu tekan <b>Reaksikan</b>. Perhatikan angka timbangan sebelum dan sesudah reaksi.</p>
+  <div class="row" id="lv"></div>
+  <div class="seg" id="wadah" style="margin-top:10px"><button data-w="t" class="on">🔒 Wadah tertutup</button><button data-w="b">🔓 Wadah terbuka</button></div>
+  <div class="row"><button class="btn" id="go">⚗️ Reaksikan</button><button class="btn ghost" id="rs">↺ Ulang</button></div>
+  <svg class="viz" id="g1" viewBox="0 0 640 300" style="margin-top:10px"></svg>
+  <div class="out" id="o1"></div>
+</div></section>
+<section id="lab2" class="panel"><div class="card"><h2>Lab: Perbandingan Tetap</h2>
+  <p>Pilih senyawa dan atur massa kedua unsur. Senyawa selalu terbentuk dengan perbandingan massa yang sama; kelebihan unsur akan tersisa.</p>
+  <div class="row" id="pc"></div>
+  <div class="ctrl"><label id="la">Unsur A <span class="v" id="a-v"></span><input type="range" id="a" min="0" max="30" step="0.5" value="10"></label><label id="lb">Unsur B <span class="v" id="b-v"></span><input type="range" id="b" min="0" max="30" step="0.5" value="4"></label></div>
+  <svg class="viz" id="g2" viewBox="0 0 640 230"></svg>
+  <div class="out" id="o2"></div>
+</div></section>
+<section id="latihan" class="panel"><div id="prac"></div><p class="muted">Tulis jawaban berupa angka (pakai koma atau titik untuk desimal) atau rumus kimia seperti <code>H2O</code>.</p></section>
+<section id="kuis" class="panel"><p class="muted">12 soal, urutan soal dan pilihan diacak. Nilai terbaik tersimpan di perangkat ini.</p><div id="quiz"></div></section>
+</main>
+</div>
+<footer><div class="wrap">Virtual Chem Lab SMA · Kelas X · Modul 6 · Rujukan: BSE Kimia X (Hukum Dasar Kimia); CP Fase E</div></footer>
+<script src="../shared/core.js"></script>
+<script src="../shared/graph.js"></script>
+<script src="../shared/chem.js"></script>
+<script>
+const {$, $$, s, txt, clear, rand, pick, shuffle} = VML; const G=GR, CH=CHEM, f=VML.f, fm=G.fmt;
+/* LAB 1 */
+const LV=[
+ {n:'Batu kapur + asam klorida',eq:'CaCO3(s) + 2HCl(aq) -> CaCl2(aq) + H2O(l) + CO2(g)',m0:155,gas:-2.2,txt:'Gas CO₂ (2,2 g) terbentuk dari 5 g CaCO₃.'},
+ {n:'Pembakaran pita magnesium',eq:'2Mg(s) + O2(g) -> 2MgO(s)',m0:42.4,gas:1.6,txt:'2,4 g Mg mengikat 1,6 g O₂ dari udara menjadi 4,0 g MgO.'},
+ {n:'Perak nitrat + natrium klorida',eq:'AgNO3(aq) + NaCl(aq) -> AgCl(s) + NaNO3(aq)',m0:120.5,gas:0,txt:'Terbentuk endapan putih AgCl; tidak ada gas.'}];
+let lvi=0, wd='t', reacted=false;
+$('#lv').innerHTML=LV.map((r,i)=>`<button class="chipbtn ${i?'':'on'}" data-i="${i}">${r.n}</button>`).join('');
+$$('#lv .chipbtn').forEach(b=>b.onclick=()=>{ $$('#lv .chipbtn').forEach(x=>x.classList.toggle('on',x===b)); lvi=+b.dataset.i; reacted=false; d1(); });
+$$('#wadah button').forEach(b=>b.onclick=()=>{ $$('#wadah button').forEach(x=>x.classList.toggle('on',x===b)); wd=b.dataset.w; reacted=false; d1(); });
+$('#go').onclick=()=>{ reacted=true; d1(); }; $('#rs').onclick=()=>{ reacted=false; d1(); };
+function d1(){
+  const r=LV[lvi], closed=wd==='t', dm=reacted&&!closed?r.gas:0, m=r.m0+dm;
+  const g=$('#g1'); clear(g); s('rect',{x:0,y:0,width:640,height:300,fill:'var(--card)'},g);
+  s('rect',{x:200,y:230,width:240,height:40,rx:8,fill:'#495057'},g); s('rect',{x:260,y:240,width:120,height:22,rx:4,fill:'#c3fae8'},g);
+  txt(g,320,257,fm(m,1)+' g',{'font-size':16,'font-weight':800,'font-family':'var(--mono)',fill:'#0b7285'}); s('rect',{x:180,y:222,width:280,height:10,rx:4,fill:'#adb5bd'},g);
+  // wadah
+  if(lvi===1){ s('path',{d:'M270,222 L280,185 L360,185 L370,222Z',fill:'#dee2e6',stroke:'var(--ink)'},g); if(closed) s('path',{d:'M250,186 Q320,60 390,186',fill:'color-mix(in srgb,var(--a) 8%,transparent)',stroke:'var(--a)','stroke-width':2},g);
+    if(reacted){ s('rect',{x:290,y:174,width:60,height:11,rx:3,fill:'#f8f9fa',stroke:'#adb5bd'},g); txt(g,320,165,'MgO',{'font-size':11,fill:'var(--muted)'}); for(let i=0;i<6;i++) txt(g,290+i*12,140-i%2*14,'✦',{'font-size':12,fill:'#ffd43b'}); }
+    else { s('path',{d:'M290,180 q15,-12 30,0 t30,0',fill:'none',stroke:'#adb5bd','stroke-width':4},g); txt(g,320,165,'Mg',{'font-size':11,fill:'var(--muted)'}); } }
+  else { s('path',{d:'M295,222 L295,150 L285,110 L355,110 L345,150 L345,222Z',fill:'color-mix(in srgb,var(--a) 10%,transparent)',stroke:'var(--ink)','stroke-width':2},g);
+    s('path',{d:'M297,220 L297,175 L343,175 L343,220Z',fill:lvi===2&&reacted?'#f1f3f5':'color-mix(in srgb,var(--a) 30%,transparent)'},g);
+    if(closed){ s('path',{d:'M282,110 Q320,40 358,110',fill:'color-mix(in srgb,#ffd43b 25%,transparent)',stroke:'#e8590c','stroke-width':2},g); txt(g,320,60,'balon',{'font-size':11,fill:'var(--muted)'}); }
+    if(reacted&&lvi===0){ for(let i=0;i<10;i++) s('circle',{cx:300+((i*13)%44),cy:215-i*5,r:3,fill:'#fff',stroke:'var(--a)'},g); if(!closed) for(let i=0;i<5;i++) txt(g,330+i*22,90-i*12,'CO₂',{'font-size':11,fill:'var(--muted)'}); else s('path',{d:'M282,110 Q320,20 358,110',fill:'color-mix(in srgb,#ffd43b 40%,transparent)',stroke:'#e8590c','stroke-width':2},g); }
+    if(reacted&&lvi===2) for(let i=0;i<12;i++) s('circle',{cx:302+((i*11)%38),cy:214-((i*7)%10),r:3,fill:'#fff',stroke:'#868e96'},g); }
+  txt(g,320,30,r.n,{'font-weight':800});
+  const ch=dm===0?'tetap':(dm>0?'bertambah '+fm(dm,1)+' g':'berkurang '+fm(-dm,1)+' g');
+  $('#o1').innerHTML=`<div class="eqn">${f(r.eq)}</div><div class="kv"><div><small>Massa awal</small><b>${fm(r.m0,1)} g</b></div><div><small>Massa ${reacted?'sesudah':'(belum bereaksi)'}</small><b>${fm(m,1)} g</b></div><div><small>Perubahan</small><b>${reacted?ch:'–'}</b></div></div>
+   <p>${!reacted?'Tekan <b>Reaksikan</b>.':r.txt+' '+(closed?'Karena wadah <b>tertutup</b>, tidak ada zat yang keluar atau masuk: <b>massa tetap</b>. Hukum Lavoisier terbukti.':r.gas<0?'Wadah <b>terbuka</b>: gas CO₂ lepas ke udara sehingga timbangan berkurang. Massa tidak hilang, hanya pindah ke udara.':r.gas>0?'Wadah <b>terbuka</b>: oksigen dari udara ikut bereaksi sehingga timbangan bertambah. Massa O₂ itu sebelumnya tidak ikut ditimbang.':'Tidak ada gas yang terlibat, jadi wadah terbuka pun massanya tetap.')}</p>`;
+}
+d1();
+
+/* LAB 2 */
+const PC=[{n:'FeS',A:'Fe',B:'S',ra:7,rb:4},{n:'H2O',A:'H',B:'O',ra:1,rb:8},{n:'CO2',A:'C',B:'O',ra:3,rb:8},{n:'MgO',A:'Mg',B:'O',ra:3,rb:2},{n:'CaO',A:'Ca',B:'O',ra:5,rb:2}];
+let pci=0;
+$('#pc').innerHTML=PC.map((p,i)=>`<button class="chipbtn ${i?'':'on'}" data-i="${i}">${f(p.n)} (${p.A} : ${p.B} = ${p.ra} : ${p.rb})</button>`).join('');
+$$('#pc .chipbtn').forEach(b=>b.onclick=()=>{ $$('#pc .chipbtn').forEach(x=>x.classList.toggle('on',x===b)); pci=+b.dataset.i; d2(); });
+function d2(){
+  const p=PC[pci], a=+$('#a').value, b=+$('#b').value; $('#la').firstChild.textContent='Massa '+p.A+' '; $('#lb').firstChild.textContent='Massa '+p.B+' ';
+  $('#a-v').textContent=fm(a,1)+' g'; $('#b-v').textContent=fm(b,1)+' g';
+  const k=Math.min(a/p.ra,b/p.rb), ua=k*p.ra, ub=k*p.rb, prod=ua+ub, sa=a-ua, sb=b-ub;
+  const g=$('#g2'); clear(g); s('rect',{x:0,y:0,width:640,height:230,fill:'var(--card)'},g);
+  const W=v=>v*480/60;
+  const bar=(y,label,parts)=>{ txt(g,20,y+18,label,{'text-anchor':'start','font-weight':700,'font-size':13}); let x=130; parts.forEach(([v,c,t])=>{ if(v<=0) return; s('rect',{x,y,width:W(v),height:26,rx:4,fill:c},g); if(W(v)>34) txt(g,x+W(v)/2,y+18,t,{'font-size':11,fill:'#fff','font-weight':700}); x+=W(v); }); };
+  bar(30,'Sebelum',[[a,'#e8590c',p.A+' '+fm(a,1)],[b,'#f59f00',p.B+' '+fm(b,1)]]);
+  bar(100,'Sesudah',[[prod,'#2f9e44',p.n.replace(/\d/g,d=>'₀₁₂₃₄₅₆₇₈₉'[d])+' '+fm(prod,1)],[sa,'#e8590c','sisa '+p.A],[sb,'#f59f00','sisa '+p.B]]);
+  txt(g,320,190,`Massa total sebelum = ${fm(a+b,1)} g = sesudah`,{'font-size':13,fill:'var(--muted)'});
+  $('#o2').innerHTML=`<p>Perbandingan ${p.A} : ${p.B} = ${p.ra} : ${p.rb}. ${prod===0?'Tambahkan kedua unsur.':`Pereaksi yang habis: <b>${sa<1e-9&&sb<1e-9?'keduanya':sa<1e-9?p.A:p.B}</b>. ${f(p.n)} terbentuk = ${fm(ua,2)} + ${fm(ub,2)} = <b>${fm(prod,2)} g</b>. ${sa>1e-9?`Sisa ${p.A} = ${fm(sa,2)} g.`:''}${sb>1e-9?`Sisa ${p.B} = ${fm(sb,2)} g.`:''}`}</p>`;
+}
+['a','b'].forEach(id=>$('#'+id).oninput=d2); d2();
+
+/* LATIHAN */
+VML.practice($('#prac'),[
+ {name:'Lavoisier', gen(){ const mg=rand(2,12)*1.2, o=mg*2/3; return {q:`${fm(mg,1)} g magnesium dibakar sempurna dan menghasilkan ${fm(mg+o,1)} g MgO. Massa oksigen yang bereaksi = … g`, a:String(Math.round(o*10)/10), hint:'Massa sebelum = massa sesudah.', ex:`${fm(mg+o,1)} − ${fm(mg,1)} = ${fm(o,1)} g`}; }},
+ {name:'Proust (sisa)', gen(){ const k=rand(1,4), fe=7*k+rand(1,6); return {q:`${fe} g Fe direaksikan dengan ${4*k} g S (Fe : S = 7 : 4). Massa Fe yang tersisa = … g`, a:String(fe-7*k), hint:`${4*k} g S bereaksi dengan (7/4) × ${4*k} g Fe.`, ex:`Fe bereaksi = ${7*k} g, sisa = ${fe} − ${7*k} = ${fe-7*k} g`}; }},
+ {name:'Proust (hasil)', gen(){ const k=rand(1,6); return {q:`${k} g hidrogen bereaksi dengan oksigen berlebih (H : O = 1 : 8). Massa air yang terbentuk = … g`, a:String(9*k), hint:'Air = H + O yang bereaksi.', ex:`O = 8 × ${k} = ${8*k} g; air = ${9*k} g`}; }},
+ {name:'Gay-Lussac', gen(){ const R=pick([['N2 + 3H2 -> 2NH3',[1,3,2],['N₂','H₂','NH₃']],['2H2 + O2 -> 2H2O',[2,1,2],['H₂','O₂','H₂O']],['CH4 + 2O2 -> CO2 + 2H2O',[1,2,1,2],['CH₄','O₂','CO₂','H₂O']]]); const v=rand(1,8)*5; const i=0, j=rand(1,R[1].length-1); return {q:`Reaksi gas: ${f(R[0])}. Jika ${R[2][i]} yang bereaksi ${v} L, volume ${R[2][j]} = … L (P, T sama)`, a:String(v*R[1][j]/R[1][i]), hint:'Perbandingan volume = perbandingan koefisien.', ex:`${v} × ${R[1][j]}/${R[1][i]} = ${v*R[1][j]/R[1][i]} L`}; }}
+]);
+
+/* KUIS */
+VML.quiz($('#quiz'),[
+ {q:'“Massa zat sebelum dan sesudah reaksi sama” adalah hukum …', o:['Lavoisier','Proust','Dalton','Gay-Lussac'], a:0, ex:'Hukum Kekekalan Massa.'},
+ {q:'Kertas dibakar di udara terbuka, abunya lebih ringan. Hal ini karena …', o:['sebagian massa menjadi gas yang lepas ke udara','massa musnah saat dibakar','Hukum Lavoisier tidak berlaku','abu tidak bermassa'], a:0, ex:'CO₂ dan uap air lepas.'},
+ {q:'Perbandingan massa unsur dalam senyawa selalu tetap dikemukakan oleh …', o:['Proust','Lavoisier','Avogadro','Dalton'], a:0, ex:'Hukum Perbandingan Tetap.'},
+ {q:'Perbandingan massa H : O dalam air adalah …', o:['1 : 8','2 : 1','1 : 16','8 : 1'], a:0, ex:'2 : 16 = 1 : 8.'},
+ {q:'Data CO dan CO₂ (massa C sama, O = 1 : 2) mendukung hukum …', o:['perbandingan berganda (Dalton)','perbandingan tetap','kekekalan massa','perbandingan volume'], a:0, ex:'Dua senyawa dari unsur yang sama.'},
+ {q:'Pada P dan T sama, gas bervolume sama mengandung jumlah molekul sama. Pernyataan ini adalah …', o:['hipotesis Avogadro','hukum Gay-Lussac','hukum Proust','hukum Boyle'], a:0, ex:'Avogadro (1811).'},
+ {q:'Pada N₂ + 3H₂ → 2NH₃, 6 L H₂ menghasilkan NH₃ sebanyak …', o:['4 L','2 L','6 L','9 L'], a:0, ex:'6 × 2/3.'},
+ {q:'Sebanyak 14 g Fe + 8 g S (Fe : S = 7 : 4) menghasilkan FeS sebanyak …', o:['22 g','11 g','14 g','16 g'], a:0, ex:'Tepat habis keduanya.'},
+ {q:'Pita Mg dibakar di cawan terbuka; massa cawan dan isinya …', o:['bertambah','berkurang','tetap','menjadi nol'], a:0, ex:'Oksigen dari udara terikat.'},
+ {q:'Perbandingan volume pada 2H₂ + O₂ → 2H₂O (gas) adalah …', o:['2 : 1 : 2','1 : 1 : 1','2 : 2 : 1','1 : 2 : 2'], a:0, ex:'Sama dengan koefisien.'},
+ {q:'10 g Fe + 4 g S (Fe : S = 7 : 4). Massa Fe yang tersisa = … g', input:true, a:['3'], ex:'4 g S butuh 7 g Fe.'},
+ {q:'Untuk 10 L NH₃ diperlukan gas N₂ sebanyak … L', input:true, a:['5'], ex:'Koefisien N₂ : NH₃ = 1 : 2.'}
+],'x6');
+</script>
+<script src="../shared/nav.js"></script>
+</body></html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kimia SMA Kelas X · Virtual Chem Lab SMA</title>
+<link rel="stylesheet" href="../shared/style.css">
+<style>
+  .home-hero{padding:44px 0 14px;display:grid;grid-template-columns:1.25fr 1fr;gap:28px;align-items:center;color:var(--onbg)}
+  .home-hero .chip{background:rgba(255,255,255,.14);color:color-mix(in srgb,var(--bg4) 60%,#fff)}
+  .home-hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.1rem,6vw,3.5rem);letter-spacing:-.5px;margin:.25em 0}
+  .home-hero h1 em{font-style:normal;background:linear-gradient(90deg,#fff,var(--bg4) 55%,var(--glow));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .home-hero p.lead{font-size:1.1rem;color:var(--onbg-soft);max-width:600px}
+  .stat{display:flex;gap:24px;flex-wrap:wrap;margin-top:16px}
+  .stat div{font-size:.9rem;color:var(--onbg-soft)} .stat b{display:block;font-size:1.7rem;color:#fff}
+  .board{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:26px;padding:12px;backdrop-filter:blur(6px)}
+  .prog{height:6px;background:var(--line);border-radius:9px;margin-top:8px;overflow:hidden}.prog i{display:block;height:100%}
+  .route{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .route div{border-radius:16px;padding:14px;border:1px solid var(--line);background:var(--card)}
+  .route b{display:block;font-size:1.05rem;margin-bottom:4px}
+  .life{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+  .life div{border:1px solid var(--line);border-radius:14px;padding:12px;background:color-mix(in srgb,var(--acc) 5%,var(--card))}
+  .life span{font-size:1.6rem;display:block}
+  .mod .ic{box-shadow:0 6px 14px rgba(0,0,0,.2)}
+  @media (max-width:760px){.home-hero{grid-template-columns:1fr}.board{display:none}.route{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="t10" data-store="kim10">
+<header class="top"><div class="wrap"><a class="back" href="../index.html">← Beranda</a><div class="brand">⚗ Kimia SMA <small>· Kelas X · Hijau Laboratorium</small></div></div></header>
+<div class="wrap">
+<section class="home-hero">
+  <div>
+    <span class="chip">Fase E · Merdeka + K13 + KTSP · 8 modul</span>
+    <h1>Kimia Kelas X: <em>dari jas lab sampai reaksi redoks.</em></h1>
+    <p class="lead">Belajar bekerja aman dan ilmiah di laboratorium, memahami pemanasan global dan kimia hijau, menjelajah isi atom, melihat keajaiban skala nano, menulis dan menyetarakan reaksi dengan hukum-hukum dasar kimia, menguji larutan elektrolit, serta mengenali reaksi redoks. Materi menggabungkan Kurikulum Merdeka, K13, dan KTSP. Setiap topik dimulai dari cerita sehari-hari, lalu dibuktikan sendiri lewat lab virtual.</p>
+    <div class="stat"><div><b>8</b>modul</div><div><b>16</b>lab interaktif</div><div><b>96</b>soal kuis</div><div><b id="avg">–</b>rata-rata nilaimu</div></div>
+  </div>
+  <div class="board"><svg viewBox="0 0 360 280" width="100%" aria-hidden="true"><rect width="360" height="280" rx="18" fill="rgba(255,255,255,.04)"/><text x="40" y="70" font-family="Georgia,serif" font-size="40" font-style="italic" fill="#fff" fill-opacity=".9">H₂O</text><path d="M210 40h40M218 40v60l-40 110a12 12 0 0 0 11 16h82a12 12 0 0 0 11-16l-40-110V40" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="4"/><path d="M190 190h100l12 30a12 12 0 0 1-11 16h-102a12 12 0 0 1-11-16z" fill="#f5b041" fill-opacity=".75"/><circle cx="230" cy="170" r="6" fill="#3fd0a0"/><circle cx="250" cy="150" r="4" fill="#3fd0a0"/><circle cx="90" cy="180" r="44" fill="none" stroke="#3fd0a0" stroke-width="3"/><ellipse cx="90" cy="180" rx="44" ry="14" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2" transform="rotate(60 90 180)"/><circle cx="90" cy="180" r="8" fill="#f5b041"/></svg></div>
+</section>
+<div class="card"><h2>Peta belajar</h2><p>Modul bisa dipelajari berurutan sesuai bab buku siswa, atau dipilih sesuai kebutuhan kelas.</p><div class="route"><div style="border-left:5px solid #11885f"><b>🧪 Kerja Ilmiah</b>Metode ilmiah, keselamatan kerja, dan peran kimia untuk lingkungan (Modul 1–2).</div><div style="border-left:5px solid #1971c2"><b>⚛ Partikel Materi</b>Struktur atom dan nanoteknologi: dari inti atom sampai nanopartikel (Modul 3–4).</div><div style="border-left:5px solid #d9480f"><b>⇄ Reaksi & Larutan</b>Tata nama, persamaan reaksi, hukum dasar, larutan elektrolit, dan konsep redoks (Modul 5–8).</div></div></div>
+<h2 class="onbg">Modul Kelas X</h2>
+<div class="mods" id="mods"></div>
+<div class="card"><h2>Kimia Kelas X di sekitar kita</h2><div class="life"><div><span>🧯</span><b>Laboratorium</b><br>Membaca label bahaya sebelum memakai bahan</div><div><span>🌡️</span><b>Iklim</b><br>CO₂ dan metana memerangkap panas bumi</div><div><span>♻️</span><b>Industri hijau</b><br>Ekonomi atom menekan limbah pabrik</div><div><span>📱</span><b>Gawai</b><br>Layar dan baterai memakai nanomaterial</div><div><span>🧴</span><b>Tabir surya</b><br>Nano-ZnO dan TiO₂ yang bening</div><div><span>🔥</span><b>Kompor gas</b><br>Pembakaran elpiji: C₃H₈ + 5O₂</div><div><span>🍞</span><b>Dapur</b><br>Perbandingan tetap seperti resep kue</div><div><span>🎈</span><b>Balon</b><br>Volume gas sebanding dengan jumlah mol</div></div></div>
+<div class="card"><h2>Kamus kecil</h2><div class="glos"><div><b>Hipotesis</b>Dugaan sementara yang dapat diuji dengan percobaan.</div><div><b>Variabel bebas</b>Faktor yang sengaja diubah peneliti.</div><div><b>Gas rumah kaca</b>Gas yang menyerap radiasi inframerah, misalnya CO₂, CH₄, N₂O.</div><div><b>Nomor atom (Z)</b>Jumlah proton dalam inti.</div><div><b>Isotop</b>Atom sejenis dengan jumlah neutron berbeda.</div><div><b>Nanometer</b>10⁻⁹ meter, sepersejuta milimeter.</div><div><b>Koefisien</b>Angka di depan rumus pada persamaan reaksi.</div><div><b>Hukum Proust</b>Perbandingan massa unsur dalam senyawa selalu tetap.</div></div></div>
+<div class="card"><h2>Cara memakai</h2>
+  <p>Setiap modul berisi <b>📖 Cerita &amp; Materi</b>, dua <b>🧪 Lab</b> virtual, <b>✏️ Latihan</b> dengan soal acak tak terbatas (dua kali kesempatan menjawab, ada petunjuk), dan <b>🏆 Kuis</b> 12 soal dengan pembahasan. Ukur kesiapan ujian di menu <b>📝 Tryout</b>, buka <b>📘 Rumus</b> untuk ringkasan, dan pakai <b>⚛️ Lab Unsur</b> untuk tabel periodik, kalkulator Mr, dan penyetara reaksi.</p>
+  <p class="muted">Semua berkas berjalan tanpa internet. Nilai tersimpan di perangkat masing-masing pengguna.</p>
+  <div class="row"><button class="btn ghost" id="reset">Hapus nilai Kelas X di perangkat ini</button></div>
+</div>
+</div>
+<footer><div class="wrap">Virtual Chem Lab SMA · Kimia Kelas X · Kurikulum Merdeka · Bahan: Buku Siswa Kimia Kemendikbudristek 2022 &amp; BSE Kimia SMA</div></footer>
+<script src="../shared/core.js"></script>
+<script src="../shared/catalog.js"></script>
+<script>
+const CAT=VCL_CATALOG.find(g=>g.folder==='kimia-kelas-10'), M=CAT.mods;
+const C2=getComputedStyle(document.body).getPropertyValue('--acc').trim(), C3=getComputedStyle(document.body).getPropertyValue('--bg4').trim();
+function card(m,i){ const b=VML.store.get(m.k); if(b!=null){window._s+=b;window._c++;}
+  return `<a class="mod" href="${m.f}"><div class="ic" style="background:linear-gradient(135deg,${m.c},${i%2?C2:C3})">${m.i}</div><span class="muted" style="font-size:.8rem;font-weight:700">MODUL ${i+1} · ${m.l.toUpperCase()}</span><h3>${m.t}</h3><p>${m.d}</p>
+    <div style="font-size:.75rem;font-weight:700;color:var(--muted);margin-top:8px">${(window.VCL_KUR&&VCL_KUR[m.k])?'Merdeka '+VCL_KUR[m.k][0]+' · K13 '+VCL_KUR[m.k][1]+' · KTSP '+VCL_KUR[m.k][2]:''}</div><div class="best" style="color:${m.c}">${b!=null?'Nilai kuis terbaik: '+b:'Belum mengerjakan kuis'}</div><div class="prog"><i style="width:${b||0}%;background:linear-gradient(90deg,${C2},${C3})"></i></div></a>`; }
+function render(){ window._s=0; window._c=0; document.getElementById('mods').innerHTML=M.map(card).join('');
+  document.getElementById('avg').textContent = window._c ? Math.round(window._s/window._c) : '–'; }
+render();
+document.getElementById('reset').onclick=()=>{ if(confirm('Hapus semua nilai kuis Kelas X yang tersimpan di perangkat ini?')){ M.forEach(m=>{ try{localStorage.removeItem(CAT.pref+m.k);}catch(e){} }); render(); } };
+window.addEventListener('pageshow',render);
+</script>
+<script src="../shared/nav.js"></script>
+</body></html>

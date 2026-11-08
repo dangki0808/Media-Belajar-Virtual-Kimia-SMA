@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kimia SMA Kelas XII · Virtual Chem Lab SMA</title>
+<link rel="stylesheet" href="../shared/style.css">
+<style>
+  .home-hero{padding:44px 0 14px;display:grid;grid-template-columns:1.25fr 1fr;gap:28px;align-items:center;color:var(--onbg)}
+  .home-hero .chip{background:rgba(255,255,255,.14);color:color-mix(in srgb,var(--bg4) 60%,#fff)}
+  .home-hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.1rem,6vw,3.5rem);letter-spacing:-.5px;margin:.25em 0}
+  .home-hero h1 em{font-style:normal;background:linear-gradient(90deg,#fff,var(--bg4) 55%,var(--glow));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .home-hero p.lead{font-size:1.1rem;color:var(--onbg-soft);max-width:600px}
+  .stat{display:flex;gap:24px;flex-wrap:wrap;margin-top:16px}
+  .stat div{font-size:.9rem;color:var(--onbg-soft)} .stat b{display:block;font-size:1.7rem;color:#fff}
+  .board{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:26px;padding:12px;backdrop-filter:blur(6px)}
+  .prog{height:6px;background:var(--line);border-radius:9px;margin-top:8px;overflow:hidden}.prog i{display:block;height:100%}
+  .route{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .route div{border-radius:16px;padding:14px;border:1px solid var(--line);background:var(--card)}
+  .route b{display:block;font-size:1.05rem;margin-bottom:4px}
+  .life{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+  .life div{border:1px solid var(--line);border-radius:14px;padding:12px;background:color-mix(in srgb,var(--acc) 5%,var(--card))}
+  .life span{font-size:1.6rem;display:block}
+  .mod .ic{box-shadow:0 6px 14px rgba(0,0,0,.2)}
+  @media (max-width:760px){.home-hero{grid-template-columns:1fr}.board{display:none}.route{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="t12" data-store="kim12">
+<header class="top"><div class="wrap"><a class="back" href="../index.html">← Beranda</a><div class="brand">⚗ Kimia SMA <small>· Kelas XII · Ungu Indikator</small></div></div></header>
+<div class="wrap">
+<section class="home-hero">
+  <div>
+    <span class="chip">Fase F · Merdeka + K13 + KTSP · 11 modul</span>
+    <h1>Kimia Kelas XII: <em>larutan, listrik, unsur, dan molekul kehidupan.</em></h1>
+    <p class="lead">Mengikuti Buku Siswa Kimia Kelas XII: asam basa dan pH, kesetimbangan dalam larutan, sifat koligatif, koloid, elektrokimia dari sel volta hingga mobil listrik, gugus fungsi senyawa karbon, dan polimer. Ditambah materi K13/KTSP: kimia unsur, unsur transisi dan radioaktif, benzena, serta biomolekul.</p>
+    <div class="stat"><div><b>11</b>modul</div><div><b>22</b>lab interaktif</div><div><b>132</b>soal kuis</div><div><b id="avg">–</b>rata-rata nilaimu</div></div>
+  </div>
+  <div class="board"><svg viewBox="0 0 360 280" width="100%" aria-hidden="true"><rect width="360" height="280" rx="18" fill="rgba(255,255,255,.04)"/><rect x="40" y="40" width="40" height="190" rx="10" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="3"/><rect x="44" y="120" width="32" height="106" rx="7" fill="#ff6fae" fill-opacity=".8"/><path d="M120 220 C170 215 180 200 190 140 S210 60 320 55" fill="none" stroke="#ffa3d3" stroke-width="4"/><circle cx="190" cy="140" r="7" fill="#fff"/><text x="250" y="200" font-family="Georgia,serif" font-size="40" font-style="italic" fill="#fff" fill-opacity=".9">pH</text><text x="120" y="262" font-size="14" font-weight="700" fill="#fff" fill-opacity=".8">kurva titrasi · indikator PP</text></svg></div>
+</section>
+<div class="card"><h2>Peta belajar</h2><p>Modul bisa dipelajari berurutan sesuai bab buku siswa, atau dipilih sesuai kebutuhan kelas.</p><div class="route"><div style="border-left:5px solid #a23a8f"><b>🧪 Larutan</b>Asam basa, penyangga, hidrolisis, titrasi, Ksp, sifat koligatif, koloid (Modul 1–4).</div><div style="border-left:5px solid #2f9e44"><b>⚡ Elektrokimia</b>Redoks, sel volta, elektrolisis, dan Hukum Faraday (Modul 5–6).</div><div style="border-left:5px solid #5f3dc4"><b>🧬 Unsur & Senyawa Karbon</b>Gugus fungsi, polimer, kimia unsur, transisi-radioaktif, benzena, biomolekul (Modul 7–11).</div></div></div>
+<h2 class="onbg">Modul Kelas XII</h2>
+<div class="mods" id="mods"></div>
+<div class="card"><h2>Kimia Kelas XII di sekitar kita</h2><div class="life"><div><span>🌱</span><b>Kebun</b><br>Dolomit menaikkan pH tanah yang asam</div><div><span>🩸</span><b>Darah</b><br>Penyangga karbonat menjaga pH 7,4</div><div><span>🧊</span><b>Es puter</b><br>Garam menurunkan titik beku es</div><div><span>🥛</span><b>Susu</b><br>Contoh emulsi (koloid cair dalam cair)</div><div><span>🔋</span><b>Baterai</b><br>Sel volta mengubah energi kimia jadi listrik</div><div><span>🚗</span><b>Mobil listrik</b><br>Baterai ion litium dan elektrolisis</div><div><span>🍶</span><b>Cuka</b><br>Asam asetat, gugus karboksil</div><div><span>🧴</span><b>Botol PET</b><br>Polimer kondensasi, kode daur ulang 1</div></div></div>
+<div class="card"><h2>Kamus kecil</h2><div class="glos"><div><b>pH</b>−log[H⁺]; ukuran keasaman.</div><div><b>Basa konjugasi</b>Spesi yang tersisa setelah asam melepas H⁺.</div><div><b>Penyangga</b>Larutan yang mempertahankan pH.</div><div><b>Ksp</b>Hasil kali kelarutan garam sukar larut.</div><div><b>Molalitas</b>Mol zat terlarut per kg pelarut.</div><div><b>Efek Tyndall</b>Hamburan cahaya oleh partikel koloid.</div><div><b>Anode</b>Elektrode tempat oksidasi.</div><div><b>Monomer</b>Satuan kecil penyusun polimer.</div></div></div>
+<div class="card"><h2>Cara memakai</h2>
+  <p>Setiap modul berisi <b>📖 Cerita &amp; Materi</b>, dua <b>🧪 Lab</b> virtual, <b>✏️ Latihan</b> dengan soal acak tak terbatas (dua kali kesempatan menjawab, ada petunjuk), dan <b>🏆 Kuis</b> 12 soal dengan pembahasan. Ukur kesiapan ujian di menu <b>📝 Tryout</b>, buka <b>📘 Rumus</b> untuk ringkasan, dan pakai <b>⚛️ Lab Unsur</b> untuk tabel periodik, kalkulator Mr, dan penyetara reaksi.</p>
+  <p class="muted">Semua berkas berjalan tanpa internet. Nilai tersimpan di perangkat masing-masing pengguna.</p>
+  <div class="row"><button class="btn ghost" id="reset">Hapus nilai Kelas XII di perangkat ini</button></div>
+</div>
+</div>
+<footer><div class="wrap">Virtual Chem Lab SMA · Kimia Kelas XII · Kurikulum Merdeka · Bahan: Buku Siswa Kimia Kemendikbudristek 2022 &amp; BSE Kimia SMA</div></footer>
+<script src="../shared/core.js"></script>
+<script src="../shared/catalog.js"></script>
+<script>
+const CAT=VCL_CATALOG.find(g=>g.folder==='kimia-kelas-12'), M=CAT.mods;
+const C2=getComputedStyle(document.body).getPropertyValue('--acc').trim(), C3=getComputedStyle(document.body).getPropertyValue('--bg4').trim();
+function card(m,i){ const b=VML.store.get(m.k); if(b!=null){window._s+=b;window._c++;}
+  return `<a class="mod" href="${m.f}"><div class="ic" style="background:linear-gradient(135deg,${m.c},${i%2?C2:C3})">${m.i}</div><span class="muted" style="font-size:.8rem;font-weight:700">MODUL ${i+1} · ${m.l.toUpperCase()}</span><h3>${m.t}</h3><p>${m.d}</p>
+    <div style="font-size:.75rem;font-weight:700;color:var(--muted);margin-top:8px">${(window.VCL_KUR&&VCL_KUR[m.k])?'Merdeka '+VCL_KUR[m.k][0]+' · K13 '+VCL_KUR[m.k][1]+' · KTSP '+VCL_KUR[m.k][2]:''}</div><div class="best" style="color:${m.c}">${b!=null?'Nilai kuis terbaik: '+b:'Belum mengerjakan kuis'}</div><div class="prog"><i style="width:${b||0}%;background:linear-gradient(90deg,${C2},${C3})"></i></div></a>`; }
+function render(){ window._s=0; window._c=0; document.getElementById('mods').innerHTML=M.map(card).join('');
+  document.getElementById('avg').textContent = window._c ? Math.round(window._s/window._c) : '–'; }
+render();
+document.getElementById('reset').onclick=()=>{ if(confirm('Hapus semua nilai kuis Kelas XII yang tersimpan di perangkat ini?')){ M.forEach(m=>{ try{localStorage.removeItem(CAT.pref+m.k);}catch(e){} }); render(); } };
+window.addEventListener('pageshow',render);
+</script>
+<script src="../shared/nav.js"></script>
+</body></html>

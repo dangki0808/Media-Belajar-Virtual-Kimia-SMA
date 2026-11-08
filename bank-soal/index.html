@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bank Soal Kimia SMA · Virtual Chem Lab</title>
+<style>
+:root{--bg:#eef1f7;--bg2:#f2f7ee;--card:#fff;--ink:#1b2236;--muted:#5d6479;--line:#dfe3ee;--navy:#0f3b30;--coral:#c2410c;--ok:#1f8a5b;--no:#c2412b;--x:#11885f;--xi:#2a62d4;--xii:#a23a8f}
+@media (prefers-color-scheme:dark){:root{--bg:#11151f;--bg2:#141c18;--card:#1c2231;--ink:#eef1f8;--muted:#a8afc4;--line:#2e364b;--navy:#6fe0b5;--coral:#ffa36b;--ok:#52c48f;--no:#f07a64;--x:#4fd1a0;--xi:#8fb4ff;--xii:#f08bd6}}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;color:var(--ink);font-size:16px;line-height:1.55;background:linear-gradient(160deg,var(--bg),var(--bg2));background-attachment:fixed;min-height:100vh}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;letter-spacing:-.3px}
+.hero{padding:28px 0 6px}.hero h1{font-size:clamp(1.9rem,5vw,2.8rem);margin:.2em 0}.hero p{color:var(--muted);max-width:720px}
+.eyebrow{font-size:.75rem;font-weight:900;letter-spacing:1.4px;text-transform:uppercase;color:var(--coral)}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}.stats div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px 14px}.stats b{font-family:Georgia,serif;font-size:1.5rem;display:block;line-height:1.1}.stats small{color:var(--muted);font-weight:700}
+.bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:12px 0;position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);padding:8px 0}
+.bar input,.bar select{font:inherit;padding:9px 12px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);min-height:44px;max-width:100%}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0}
+.btn{font:inherit;font-weight:800;border-radius:12px;cursor:pointer;min-height:44px;padding:8px 16px;border:0;background:var(--navy);color:#fff}
+@media (prefers-color-scheme:dark){.btn{color:#0d1a15}}
+.btn.ghost{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+.q{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:16px;padding:14px 16px;margin:10px 0;break-inside:avoid}
+.q .meta{display:flex;gap:6px;flex-wrap:wrap;font-size:.75rem;font-weight:800;color:var(--muted);margin-bottom:6px}
+.q .meta span{background:color-mix(in srgb,var(--c) 12%,transparent);color:var(--c);padding:2px 8px;border-radius:99px}
+.q .meta span.lv{background:var(--line);color:var(--ink)}
+.q .tx{font-weight:600}
+.q ol{margin:8px 0 0;padding-left:0;list-style:none;display:grid;gap:6px}
+.q ol li{border:1.5px solid var(--line);border-radius:10px;padding:6px 10px;cursor:pointer;display:flex;gap:8px}
+.q ol li b{color:var(--muted)}
+.q ol li.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 12%,var(--card))}
+.q ol li.no{border-color:var(--no);background:color-mix(in srgb,var(--no) 10%,var(--card))}
+.key{margin-top:8px;padding:8px 12px;border-radius:10px;background:color-mix(in srgb,var(--coral) 10%,var(--card));border-left:4px solid var(--coral);font-size:.95rem}
+.hide{display:none!important}
+.muted{color:var(--muted)}
+sub,sup{line-height:0}
+.pager{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:16px 0}
+.pager button{font:inherit;font-weight:800;min-width:40px;height:40px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.pager button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px 18px;margin:14px 0}
+#paket{display:none}
+footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding:18px 0 30px;margin-top:20px}
+@media print{body{background:#fff;color:#000}.vnav,.hero,.bar,.card.tools,.pager,footer,#list,.stats{display:none!important}#paket{display:block!important}.q{border:1px solid #999;border-left:4px solid #555;page-break-inside:avoid}.pb{page-break-before:always}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero"><span class="eyebrow">Bank soal · Kelas X–XII · Merdeka + K13 + KTSP</span><h1>Bank Soal Kimia SMA</h1>
+<p>Semua soal dari 26 modul: pilihan ganda, isian singkat, dan uraian, lengkap dengan kunci dan pembahasan. Saring menurut kelas, modul, jenis, dan tingkat (Dasar, Menengah, HOTS). Ketuk pilihan jawaban untuk langsung memeriksa. Guru dapat menyusun paket soal acak lalu mencetaknya beserta kunci.</p>
+<div class="stats" id="stats"></div></section>
+<div class="bar">
+  <input type="search" id="q" placeholder="🔍 Cari kata kunci, mis. titrasi" aria-label="Cari soal">
+  <select id="fk" aria-label="Kelas"><option value="">Semua kelas</option><option value="x">Kelas X</option><option value="xi">Kelas XI</option><option value="xii">Kelas XII</option></select>
+  <select id="fm" aria-label="Modul"><option value="">Semua modul</option></select>
+  <select id="ft" aria-label="Jenis soal"><option value="">Semua jenis</option><option value="pg">Pilihan ganda</option><option value="is">Isian singkat</option><option value="ur">Uraian</option></select>
+  <select id="fl" aria-label="Tingkat"><option value="">Semua tingkat</option><option value="D">Dasar</option><option value="M">Menengah</option><option value="H">HOTS</option></select>
+</div>
+<div class="row"><label style="font-weight:700"><input type="checkbox" id="showkey"> Tampilkan semua kunci &amp; pembahasan</label><span class="muted" id="count"></span></div>
+<div id="list"></div>
+<div class="pager" id="pager"></div>
+<div class="card tools"><h2 style="margin-top:0">🖨️ Susun paket soal acak</h2>
+  <p class="muted">Paket diambil acak dari soal yang sedang tersaring di atas. Hasilnya dicetak sebagai lembar soal, diikuti lembar kunci dan pembahasan di halaman terpisah.</p>
+  <div class="row"><label>Judul <input type="text" id="pj" value="Ulangan Harian Kimia" style="font:inherit;padding:8px;border-radius:10px;border:1.5px solid var(--line);min-width:220px;max-width:100%"></label>
+  <label>PG <input type="number" id="npg" value="20" min="0" max="60" style="width:70px;font:inherit;padding:8px;border-radius:10px;border:1.5px solid var(--line)"></label>
+  <label>Isian <input type="number" id="nis" value="5" min="0" max="20" style="width:70px;font:inherit;padding:8px;border-radius:10px;border:1.5px solid var(--line)"></label>
+  <label>Uraian <input type="number" id="nur" value="3" min="0" max="10" style="width:70px;font:inherit;padding:8px;border-radius:10px;border:1.5px solid var(--line)"></label>
+  <button class="btn" id="cetak">Buat &amp; cetak paket</button></div>
+</div>
+<div id="paket"></div>
+<footer>Virtual Chem Lab SMA · Bank Soal · Soal disusun berdasarkan Buku Siswa Kimia Kurikulum Merdeka, K13, dan BSE KTSP. Soal asli ujian tidak disalin.</footer>
+</div>
+<script src="../shared/catalog.js"></script>
+<script src="../shared/banksoal.js"></script>
+<script src="../shared/nav.js"></script>
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const F=x=>String(x);
+const MOD={}; VCL_CATALOG.forEach(g=>g.mods.forEach((m,i)=>MOD[m.k]={t:m.t,kel:g.name,cls:g.folder.endsWith('10')?'x':g.folder.endsWith('11')?'xi':'xii',f:g.folder+'/'+m.f,no:i+1}));
+const COL={x:'var(--x)',xi:'var(--xi)',xii:'var(--xii)'}, LV={D:'Dasar',M:'Menengah',H:'HOTS'}, TP={pg:'Pilihan ganda',is:'Isian',ur:'Uraian'};
+const B=VCL_BANK.map((q,i)=>Object.assign({id:i},q));
+// urutan opsi stabil per soal (acak semu)
+const ord=q=>{ let s=q.id*9301+49297; const a=[0,1,2,3]; for(let i=3;i>0;i--){ s=(s*9301+49297)%233280; const j=Math.floor(s/233280*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+$('#stats').innerHTML=`<div><b>${B.length}</b><small>soal</small></div><div><b>${B.filter(q=>q.t==='pg').length}</b><small>pilihan ganda</small></div><div><b>${B.filter(q=>q.t==='is').length}</b><small>isian</small></div><div><b>${B.filter(q=>q.t==='ur').length}</b><small>uraian</small></div><div><b>${B.filter(q=>q.lv==='H').length}</b><small>soal HOTS</small></div><div><b>26</b><small>modul</small></div>`;
+function fillMod(){ const k=$('#fk').value; $('#fm').innerHTML='<option value="">Semua modul</option>'+Object.entries(MOD).filter(([key,m])=>!k||m.cls===k).map(([key,m])=>`<option value="${key}">${m.kel} · ${m.no}. ${m.t}</option>`).join(''); }
+let page=0; const PER=20;
+function filt(){ const q=$('#q').value.trim().toLowerCase(), k=$('#fk').value, m=$('#fm').value, t=$('#ft').value, l=$('#fl').value;
+  return B.filter(x=>(!k||MOD[x.k].cls===k)&&(!m||x.k===m)&&(!t||x.t===t)&&(!l||x.lv===l)&&(!q||(x.q+' '+(x.o||[]).join(' ')+' '+x.ex).toLowerCase().includes(q))); }
+const keyHTML=x=>x.t==='pg'?`<b>Kunci:</b> ${'ABCD'[ord(x).indexOf(0)]}. ${x.o[0]}<br>${x.ex}`:x.t==='is'?`<b>Jawaban:</b> ${x.sh}<br>${x.ex}`:`<b>Jawaban model:</b> ${x.ex}`;
+function card(x,n,interactive){ const m=MOD[x.k]; const c=COL[m.cls];
+  return `<div class="q" style="--c:${c}" data-id="${x.id}"><div class="meta"><span>${m.kel}</span><span>${m.no}. ${m.t}</span><span class="lv">${TP[x.t]} · ${LV[x.lv]}</span></div><div class="tx">${n}. ${x.q}</div>
+   ${x.t==='pg'?`<ol>${ord(x).map((oi,j)=>`<li data-c="${oi===0?1:0}"><b>${'ABCD'[j]}.</b><span>${x.o[oi]}</span></li>`).join('')}</ol>`:x.t==='is'?'<p class="muted" style="margin:.4em 0 0">Jawab: ……………………</p>':'<p class="muted" style="margin:.4em 0 0">Jawab secara uraian.</p>'}
+   ${interactive?`<div class="key ${$('#showkey').checked?'':'hide'}">${keyHTML(x)}</div>${x.t!=='pg'?'<button class="btn ghost sk" style="margin-top:8px;min-height:36px;padding:4px 12px">Lihat jawaban</button>':''}`:''}</div>`; }
+function render(){ const L=filt(); const pages=Math.ceil(L.length/PER); if(page>=pages) page=0;
+  $('#count').textContent=`${L.length} soal ditemukan`;
+  $('#list').innerHTML=L.slice(page*PER,page*PER+PER).map((x,i)=>card(x,page*PER+i+1,true)).join('')||'<p class="muted">Tidak ada soal yang cocok.</p>';
+  document.querySelectorAll('#list .q').forEach(el=>{ el.querySelectorAll('li').forEach(li=>li.onclick=()=>{ if(el.dataset.done) return; el.dataset.done=1; li.classList.add(li.dataset.c==='1'?'ok':'no'); el.querySelector('li[data-c="1"]').classList.add('ok'); el.querySelector('.key').classList.remove('hide'); });
+    const b=el.querySelector('.sk'); if(b) b.onclick=()=>{ el.querySelector('.key').classList.toggle('hide'); }; });
+  $('#pager').innerHTML=pages>1?Array.from({length:pages},(_,i)=>`<button class="${i===page?'on':''}" data-p="${i}">${i+1}</button>`).join(''):'';
+  document.querySelectorAll('#pager button').forEach(b=>b.onclick=()=>{ page=+b.dataset.p; render(); window.scrollTo({top:document.querySelector('#list').offsetTop-80,behavior:'smooth'}); });
+}
+['#q','#fm','#ft','#fl'].forEach(s=>$(s).addEventListener('input',()=>{ page=0; render(); }));
+$('#fk').addEventListener('input',()=>{ fillMod(); page=0; render(); });
+$('#showkey').onchange=render;
+const shuf=a=>{ a=a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+$('#cetak').onclick=()=>{ const L=filt(); const pick=(t,n)=>shuf(L.filter(x=>x.t===t)).slice(0,Math.max(0,n));
+  const P=pick('pg',+$('#npg').value), I=pick('is',+$('#nis').value), U=pick('ur',+$('#nur').value);
+  if(!P.length&&!I.length&&!U.length){ alert('Tidak ada soal pada saringan ini.'); return; }
+  let n=0; const sec=(ttl,arr)=>arr.length?`<h3>${ttl}</h3>`+arr.map(x=>card(x,++n,false)).join(''):'';
+  const body=sec('A. Pilihan Ganda',P)+sec('B. Isian Singkat',I)+sec('C. Uraian',U);
+  n=0; const keys=[...P,...I,...U].map(x=>`<div class="q" style="--c:#555"><div class="tx">${++n}. ${x.q.length>90?x.q.slice(0,90)+'…':x.q}</div><div class="key">${keyHTML(x)}</div></div>`).join('');
+  $('#paket').innerHTML=`<h2>${$('#pj').value}</h2><p>Nama: ______________________ &nbsp; Kelas: ________ &nbsp; Tanggal: ____________</p>${body}<div class="pb"></div><h2>Kunci dan Pembahasan — ${$('#pj').value}</h2>${keys}`;
+  window.print(); };
+fillMod(); render();
+})();
+</script>
+</body></html>

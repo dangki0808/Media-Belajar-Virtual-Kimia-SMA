@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stoikiometri · Kimia SMA Kelas XI</title>
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body class="t11" data-store="kim11">
+<header class="top"><div class="wrap"><a class="back" href="index.html">← Kelas XI</a><div class="brand">⚗ Kimia SMA <small>· Kelas XI</small></div></div></header>
+<div class="wrap">
+<section class="hero">
+  <span class="chip">Modul 3 · Kuantitas <span class="lvl menengah">MENENGAH</span></span>
+  <h1>Stoikiometri: Menghitung Zat seperti Menakar Resep</h1>
+  <div class="tp"><b>Setelah modul ini kamu bisa</b><ul><li>Mengubah massa, jumlah partikel, dan volume gas menjadi mol dan sebaliknya.</li><li>Menentukan rumus empiris dan rumus molekul dari data massa atau persen.</li><li>Menentukan pereaksi pembatas dan massa hasil reaksi.</li><li>Menghitung persen hasil dan persen kemurnian.</li></ul></div>
+</section>
+<nav class="tabs"><button data-target="materi">📖 Cerita & Materi</button><button data-target="lab1">🥞 Lab Pereaksi Pembatas</button><button data-target="lab2">🌉 Lab Jembatan Mol</button><button data-target="latihan">✏️ Latihan</button><button data-target="kuis">🏆 Kuis</button></nav>
+<main>
+<section id="materi" class="panel"><div class="card"><h2>Mulai dari cerita</h2>
+  <div class="story"><span class="t">Resep kue pancong</span><p style="margin:.3em 0">Resep: 2 gelas tepung, 1 butir kelapa parut, dan 3 gelas santan untuk 20 kue pancong. Jika di dapur ada 10 gelas tepung tetapi hanya 2 butir kelapa, berapa kue yang bisa dibuat? Kelapa habis lebih dahulu dan membatasi jumlah kue, sedangkan tepung bersisa. Kimiawan berpikir dengan cara yang sama, hanya saja bahan dihitung dalam <b>mol</b> dan resepnya adalah <b>koefisien reaksi</b>.</p></div>
+</div>
+<div class="card"><h2>1. Konsep mol</h2>
+  <div class="note" style="font-size:1.05rem">1 mol = 6,02 × 10²³ partikel (bilangan Avogadro, L).</div>
+  <div class="grid2"><div class="def"><b>Massa ↔ mol</b><br>n = massa ÷ Mr<br>Mr H₂O = 2(1) + 16 = 18, jadi 36 g air = 2 mol.</div><div class="def"><b>Partikel ↔ mol</b><br>jumlah partikel = n × 6,02 × 10²³</div><div class="def"><b>Volume gas ↔ mol</b><br>STP (0 °C, 1 atm): V = n × 22,4 L<br>RTP (25 °C, 1 atm): V = n × 24 L<br>Keadaan lain: PV = nRT, R = 0,082 L·atm/(mol·K)</div><div class="def"><b>Molaritas</b><br>M = n ÷ V(L)<br>0,5 mol NaOH dalam 250 mL → 2 M</div></div>
+</div>
+<div class="card"><h2>2. Rumus empiris dan rumus molekul</h2>
+  <p><b>Rumus empiris</b> = perbandingan mol paling sederhana. <b>Rumus molekul</b> = (rumus empiris)ₙ dengan n = Mr ÷ Mr empiris.</p>
+  <div class="ex"><span class="t">Contoh</span>Senyawa mengandung 40% C, 6,7% H, 53,3% O dan Mr = 180. Mol C : H : O = 40/12 : 6,7/1 : 53,3/16 = 3,33 : 6,7 : 3,33 = 1 : 2 : 1 → rumus empiris CH₂O (Mr 30). n = 180/30 = 6 → rumus molekul <b>C₆H₁₂O₆</b>.</div>
+</div>
+<div class="card"><h2>3. Pereaksi pembatas</h2>
+  <ol class="steps"><li>Ubah semua pereaksi menjadi mol.</li><li>Bagi mol setiap pereaksi dengan koefisiennya.</li><li>Hasil bagi terkecil = <b>pereaksi pembatas</b> (habis bereaksi).</li><li>Hitung zat lain dari pereaksi pembatas memakai perbandingan koefisien.</li></ol>
+  <div class="ex"><span class="t">Contoh</span>4 mol H₂ + 3 mol O₂ → H₂O. H₂: 4/2 = 2; O₂: 3/1 = 3. Pembatas H₂. H₂O = 4 mol, O₂ bereaksi 2 mol, sisa O₂ 1 mol.</div>
+</div>
+<div class="card"><h2>4. Persen hasil dan kemurnian</h2>
+  <div class="grid2"><div class="def"><b>Persen hasil</b> = hasil nyata ÷ hasil teoretis × 100%</div><div class="def"><b>Persen kemurnian</b> = massa zat murni ÷ massa sampel × 100%</div></div>
+  <p>Hasil nyata biasanya lebih kecil karena reaksi tidak sempurna, ada reaksi samping, atau zat hilang saat penyaringan.</p>
+</div></section>
+<section id="lab1" class="panel"><div class="card"><h2>Lab: Siapa yang Habis Duluan?</h2>
+  <p>Pilih reaksi dan atur jumlah mol kedua pereaksi. Setiap bulatan mewakili 0,5 mol.</p>
+  <div class="row" id="rx"></div>
+  <div class="eqn" id="rxe"></div>
+  <div class="ctrl"><label id="la">Pereaksi A <span class="v" id="a-v"></span><input type="range" id="a" min="0" max="10" step="0.5" value="4"></label><label id="lb">Pereaksi B <span class="v" id="b-v"></span><input type="range" id="b" min="0" max="10" step="0.5" value="3"></label></div>
+  <svg class="viz" id="g1" viewBox="0 0 640 260"></svg>
+  <div class="out" id="o1"></div>
+</div></section>
+<section id="lab2" class="panel"><div class="card"><h2>Lab: Jembatan Mol</h2>
+  <p>Tulis rumus zat, pilih besaran yang diketahui, dan isi nilainya. Semua besaran lain dihitung lewat “jembatan” mol.</p>
+  <div class="row"><input type="text" id="fx" value="CO2" aria-label="Rumus zat" style="width:140px"><select id="kind"><option value="m">massa (g)</option><option value="n">mol</option><option value="N">jumlah partikel (× 10²³)</option><option value="V">volume gas STP (L)</option></select><input type="text" id="val" value="11" inputmode="decimal" aria-label="Nilai" style="width:120px"></div>
+  <svg class="viz" id="g2" viewBox="0 0 640 280" style="margin-top:12px"></svg>
+  <div class="out" id="o2"></div>
+</div></section>
+<section id="latihan" class="panel"><div id="prac"></div><p class="muted">Ar sekolah: H = 1, C = 12, N = 14, O = 16, Na = 23, Mg = 24, Al = 27, S = 32, Cl = 35,5, Ca = 40, Fe = 56. Jawab dengan angka; desimal boleh pakai koma.</p></section>
+<section id="kuis" class="panel"><p class="muted">12 soal, urutan soal dan pilihan diacak. Nilai terbaik tersimpan di perangkat ini.</p><div id="quiz"></div></section>
+</main>
+</div>
+<footer><div class="wrap">Virtual Chem Lab SMA · Kelas XI · Modul 3 · Rujukan: Buku Siswa Kimia XI Bab III (Kemendikbudristek 2022)</div></footer>
+<script src="../shared/core.js"></script>
+<script src="../shared/graph.js"></script>
+<script src="../shared/chem.js"></script>
+<script>
+const {$, $$, s, txt, clear, rand, pick, shuffle} = VML; const G=GR, CH=CHEM, f=VML.f, fm=G.fmt;
+/* LAB 1 */
+const RX=[{e:'2H2 + O2 -> 2H2O',A:'H2',B:'O2',P:'H2O',k:[2,1,2]},{e:'N2 + 3H2 -> 2NH3',A:'N2',B:'H2',P:'NH3',k:[1,3,2]},{e:'C3H8 + 5O2 -> 3CO2 + 4H2O',A:'C3H8',B:'O2',P:'CO2',k:[1,5,3]},{e:'Zn + 2HCl -> ZnCl2 + H2',A:'Zn',B:'HCl',P:'ZnCl2',k:[1,2,1]},{e:'2Al + 3Cl2 -> 2AlCl3',A:'Al',B:'Cl2',P:'AlCl3',k:[2,3,2]}];
+let ri=0; const U=x=>x.replace(/\d/g,d=>'₀₁₂₃₄₅₆₇₈₉'[d]);
+$('#rx').innerHTML=RX.map((r,i)=>`<button class="chipbtn ${i?'':'on'}" data-i="${i}">${f(r.e)}</button>`).join('');
+$$('#rx .chipbtn').forEach(b=>b.onclick=()=>{ $$('#rx .chipbtn').forEach(x=>x.classList.toggle('on',x===b)); ri=+b.dataset.i; d1(); });
+function d1(){
+  const r=RX[ri], a=+$('#a').value, b=+$('#b').value; $('#rxe').innerHTML=f(r.e);
+  $('#la').firstChild.textContent='mol '+r.A.replace(/\d/g,d=>'₀₁₂₃₄₅₆₇₈₉'[d])+' '; $('#lb').firstChild.textContent='mol '+r.B.replace(/\d/g,d=>'₀₁₂₃₄₅₆₇₈₉'[d])+' ';
+  $('#a-v').textContent=fm(a,1); $('#b-v').textContent=fm(b,1);
+  const ra=a/r.k[0], rb=b/r.k[1], x=Math.min(ra,rb), ua=x*r.k[0], ub=x*r.k[1], p=x*r.k[2], sa=a-ua, sb=b-ub;
+  const g=$('#g1'); clear(g); s('rect',{x:0,y:0,width:640,height:260,fill:'var(--card)'},g);
+  const dots=(x0,y0,n,col,label,used)=>{ txt(g,x0,y0-12,label,{'text-anchor':'start','font-weight':700,'font-size':13}); const k=Math.round(n*2), u=Math.round(used*2); for(let i=0;i<k;i++){ const cx=x0+8+(i%10)*17, cy=y0+8+Math.floor(i/10)*17; s('circle',{cx,cy,r:7,fill:col,'fill-opacity':i<u?.25:1,stroke:i<u?col:'none','stroke-dasharray':i<u?'2 2':''},g); } };
+  txt(g,110,22,'SEBELUM',{'font-size':12,fill:'var(--muted)','font-weight':800}); txt(g,500,22,'SESUDAH',{'font-size':12,fill:'var(--muted)','font-weight':800});
+  dots(20,60,a,'#e8590c',U(r.A)+' : '+fm(a,1)+' mol',0); dots(20,160,b,'#1c7ed6',U(r.B)+' : '+fm(b,1)+' mol',0);
+  s('path',{d:'M215,130 h40 l-8,-8 m8,8 l-8,8',stroke:'var(--muted)','stroke-width':3,fill:'none'},g);
+  dots(280,60,sa,'#e8590c','sisa '+U(r.A)+' '+fm(sa,2),0); dots(280,160,sb,'#1c7ed6','sisa '+U(r.B)+' '+fm(sb,2),0); dots(470,60,p,'#2f9e44',U(r.P)+' : '+fm(p,2)+' mol',0);
+  const lim=a===0&&b===0?'–':ra<rb?f(r.A):rb<ra?f(r.B):'keduanya habis';
+  $('#o1').innerHTML=`<p>${f(r.A)}: ${fm(a,1)} ÷ ${r.k[0]} = <b>${fm(ra,2)}</b> &nbsp;·&nbsp; ${f(r.B)}: ${fm(b,1)} ÷ ${r.k[1]} = <b>${fm(rb,2)}</b></p>
+   <div class="kv"><div><small>Pereaksi pembatas</small><b>${lim}</b></div><div><small>${f(r.P)} terbentuk</small><b>${fm(p,2)} mol = ${fm(p*CH.Mr(r.P),1)} g</b></div><div><small>Sisa ${f(r.A)}</small><b>${fm(sa,2)} mol</b></div><div><small>Sisa ${f(r.B)}</small><b>${fm(sb,2)} mol</b></div></div>
+   <p class="muted">Seperti kelapa pada resep kue pancong: zat dengan hasil bagi mol/koefisien terkecil menentukan banyaknya hasil.</p>`;
+}
+['a','b'].forEach(id=>$('#'+id).oninput=d1); d1();
+
+/* LAB 2 */
+function sci(x){ if(x===0) return '0'; const e=Math.floor(Math.log10(Math.abs(x))), m=x/Math.pow(10,e); return fm(m,3)+' × 10<sup>'+e+'</sup>'; }
+function d2(){
+  const g=$('#g2'); clear(g); s('rect',{x:0,y:0,width:640,height:280,fill:'var(--card)'},g);
+  let Mr; try{ Mr=CH.Mr($('#fx').value.trim()); }catch(e){ $('#o2').innerHTML='<div class="fb no">Rumus tidak dikenali. Contoh: H2O, CO2, Ca(OH)2, C6H12O6.</div>'; return; }
+  const v=Number(VML.norm($('#val').value)); if(isNaN(v)){ $('#o2').innerHTML='<div class="fb no">Isi nilai berupa angka.</div>'; return; }
+  const k=$('#kind').value; const n= k==='m'?v/Mr : k==='n'?v : k==='N'?v*1e23/6.02e23 : v/22.4;
+  const box=(x,y,w,t,val,c)=>{ s('rect',{x,y,width:w,height:70,rx:14,fill:`color-mix(in srgb,${c} 14%,var(--card))`,stroke:c,'stroke-width':2},g); txt(g,x+w/2,y+26,t,{'font-size':13,'font-weight':700,fill:'var(--muted)'}); const tt=s('text',{x:x+w/2,y:y+52,'text-anchor':'middle','font-size':16,'font-weight':800},g); tt.innerHTML=val; };
+  box(240,105,160,'MOL (n)',fm(n,4)+' mol','var(--acc)');
+  box(20,20,170,'MASSA',fm(n*Mr,3)+' g','#e8590c'); box(450,20,170,'PARTIKEL',sci(n*6.02e23).replace('<sup>','<tspan baseline-shift="super" font-size="11">').replace('</sup>','</tspan>'),'#7048e8'); box(20,190,170,'VOLUME STP',fm(n*22.4,3)+' L','#1098ad'); box(450,190,170,'VOLUME RTP',fm(n*24,3)+' L','#2f9e44');
+  const arr=(x1,y1,x2,y2,t,tx,ty)=>{ s('line',{x1,y1,x2,y2,stroke:'var(--muted)','stroke-width':2,'marker-end':''},g); txt(g,tx,ty,t,{'font-size':11,fill:'var(--muted)','font-weight':700}); };
+  arr(190,70,240,120,'÷ Mr ('+fm(Mr,1)+')',190,104); arr(450,70,400,120,'÷ 6,02×10²³',452,104); arr(190,215,240,165,'÷ 22,4',196,184); arr(450,215,400,165,'÷ 24',446,184);
+  $('#o2').innerHTML=`<p>Mr ${f($('#fx').value.trim())} = ${CH.MrSteps($('#fx').value.trim())} = <b>${fm(Mr,2)}</b> g/mol.</p><p>Massa ${fm(n*Mr,3)} g · ${sci(n*6.02e23)} partikel · ${fm(n*22.4,3)} L (STP) · ${fm(n*24,3)} L (RTP)${/^[A-Z][a-z]?2?$|O2|CO2|NH3|CH4|N2|H2|Cl2|SO2|NO2/.test($('#fx').value.trim())?'':' <span class="muted">(volume hanya bermakna bila zatnya gas)</span>'}.</p>`;
+}
+['fx','val'].forEach(id=>$('#'+id).oninput=d2); $('#kind').onchange=d2; d2();
+
+/* LATIHAN */
+const ZAT=['H2O','CO2','NH3','CH4','NaOH','HCl','H2SO4','CaCO3','NaCl','C6H12O6','O2','N2','C2H5OH','Mg(OH)2','Al2O3'];
+VML.practice($('#prac'),[
+ {name:'Massa → mol', gen(){ const z=pick(ZAT), Mr=CH.Mr(z), n=pick([0.1,0.2,0.25,0.5,1,1.5,2,3]); return {q:`Berapa mol ${f(z)} dalam ${fm(n*Mr,2)} g?`, a:String(n), hint:`n = massa ÷ Mr; Mr ${f(z)} = ${fm(Mr,1)}`, ex:`${fm(n*Mr,2)} ÷ ${fm(Mr,1)} = ${fm(n,2)} mol`}; }},
+ {name:'Mol → massa', gen(){ const z=pick(ZAT), Mr=CH.Mr(z), n=pick([0.1,0.2,0.5,2,3,4]); return {q:`Massa ${fm(n,1)} mol ${f(z)} = … g`, a:String(Math.round(n*Mr*100)/100), hint:'massa = n × Mr', ex:`${fm(n,1)} × ${fm(Mr,1)} = ${fm(n*Mr,2)} g`}; }},
+ {name:'Volume STP', gen(){ const z=pick(['O2','CO2','N2','NH3','CH4','H2']), n=pick([0.1,0.25,0.5,2,3]); const t=rand(0,1); if(t) return {q:`Volume ${fm(n,2)} mol gas ${f(z)} pada STP = … L`, a:String(Math.round(n*22.4*100)/100), hint:'V = n × 22,4', ex:`${fm(n,2)} × 22,4 = ${fm(n*22.4,2)} L`}; const Mr=CH.Mr(z); return {q:`Volume ${fm(n*Mr,2)} g gas ${f(z)} pada STP = … L`, a:String(Math.round(n*22.4*100)/100), hint:'Ubah ke mol dulu, lalu × 22,4.', ex:`${fm(n*Mr,2)}/${Mr} = ${fm(n,2)} mol → ${fm(n*22.4,2)} L`}; }},
+ {name:'Pereaksi pembatas', gen(){ const a=rand(2,12)/2, b=rand(1,8)/2; const p=Math.min(a/2,b)*2; return {q:`${fm(a,1)} mol H₂ direaksikan dengan ${fm(b,1)} mol O₂: 2H₂ + O₂ → 2H₂O. Mol H₂O yang terbentuk = …`, a:String(p), hint:'Bagi mol dengan koefisien; yang terkecil adalah pembatas.', ex:`H₂: ${fm(a/2,2)}, O₂: ${fm(b,2)} → pembatas ${a/2<b?'H₂':a/2>b?'O₂':'keduanya'}; H₂O = ${fm(p,2)} mol`}; }},
+ {name:'Persen hasil', gen(){ const th=rand(10,40)*2, ac=Math.round(th*rand(55,95))/100; return {q:`Hasil teoretis ${th} g, hasil nyata ${fm(ac,2)} g. Persen hasil = … %`, a:String(Math.round(ac/th*1000)/10), hint:'nyata ÷ teoretis × 100%', ex:`${fm(ac,2)} ÷ ${th} × 100% = ${fm(ac/th*100,1)}%`}; }}
+]);
+
+/* KUIS */
+VML.quiz($('#quiz'),[
+ {q:'Massa 0,5 mol CaCO₃ (Mr = 100) adalah …', o:['50 g','100 g','200 g','25 g'], a:0, ex:'0,5 × 100.'},
+ {q:'Jumlah molekul dalam 2 mol air adalah …', o:['1,204 × 10²⁴','6,02 × 10²³','3,01 × 10²³','1,204 × 10²³'], a:0, ex:'2 × 6,02 × 10²³.'},
+ {q:'Volume 8,8 g CO₂ (Mr 44) pada STP adalah …', o:['4,48 L','2,24 L','8,96 L','22,4 L'], a:0, ex:'0,2 mol × 22,4.'},
+ {q:'Senyawa dengan rumus empiris CH₂O dan Mr 60 memiliki rumus molekul …', o:['C₂H₄O₂','CH₂O','C₃H₆O₃','C₆H₁₂O₆'], a:0, ex:'60/30 = 2.'},
+ {q:'Pada 2H₂ + O₂ → 2H₂O, 3 mol H₂ dan 2 mol O₂ menghasilkan air sebanyak …', o:['3 mol','4 mol','2 mol','5 mol'], a:0, ex:'H₂ pembatas (3/2 < 2).'},
+ {q:'Dari soal sebelumnya, sisa O₂ adalah …', o:['0,5 mol','1 mol','1,5 mol','0 mol'], a:0, ex:'O₂ bereaksi 1,5 mol.'},
+ {q:'Molaritas 4 g NaOH (Mr 40) dalam 500 mL larutan adalah …', o:['0,2 M','0,1 M','2 M','0,4 M'], a:0, ex:'0,1 mol ÷ 0,5 L.'},
+ {q:'Persen massa C dalam CH₄ (C = 12, H = 1) adalah …', o:['75%','25%','80%','12%'], a:0, ex:'12/16.'},
+ {q:'Hasil teoretis 20 g, diperoleh 16 g. Persen hasil = …', o:['80%','16%','125%','20%'], a:0, ex:'16/20 × 100%.'},
+ {q:'Pada keadaan RTP, volume molar gas adalah …', o:['24 L/mol','22,4 L/mol','1 L/mol','0,082 L/mol'], a:0, ex:'25 °C, 1 atm.'},
+ {q:'Massa 0,25 mol H₂SO₄ (Mr 98) = … g', input:true, a:['24,5','24.5'], show:'24,5', ex:'0,25 × 98.'},
+ {q:'Sampel batu kapur 50 g mengandung 40 g CaCO₃. Kemurniannya = … %', input:true, a:['80'], ex:'40/50 × 100%.'}
+],'xi3');
+</script>
+<script src="../shared/nav.js"></script>
+</body></html>

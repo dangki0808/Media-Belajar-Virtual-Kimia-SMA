@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ringkasan Rumus Kimia SMA · Virtual Chem Lab</title>
+<style>
+:root{--bg:#eef1f7;--bg2:#f7efe9;--card:#fff;--ink:#1b2236;--muted:#5d6479;--line:#dfe3ee;--navy:#0f3b30;--coral:#c2410c;--x:#11885f;--xi:#2a62d4;--xii:#a23a8f}
+@media (prefers-color-scheme:dark){:root{--bg:#11151f;--bg2:#171b27;--card:#1c2231;--ink:#eef1f8;--muted:#a8afc4;--line:#2e364b;--navy:#6fe0b5;--coral:#ffa36b;--x:#4fd1a0;--xi:#8fb4ff;--xii:#f08bd6}}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;color:var(--ink);font-size:16px;line-height:1.55;background:linear-gradient(160deg,var(--bg),var(--bg2));background-attachment:fixed;min-height:100vh}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;letter-spacing:-.3px}
+.hero{padding:28px 0 6px}.hero h1{font-size:clamp(1.9rem,5vw,2.8rem);margin:.2em 0}.hero p{color:var(--muted);max-width:680px}
+.eyebrow{font-size:.75rem;font-weight:900;letter-spacing:1.4px;text-transform:uppercase;color:var(--coral)}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0 4px;position:sticky;top:0;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);padding:8px 0;z-index:5}
+.bar input{font:inherit;padding:9px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);flex:1;min-width:200px}
+.bar button{font:inherit;font-weight:800;padding:8px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.bar button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+@media (prefers-color-scheme:dark){.bar button.on{color:#111}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px;margin:12px 0 24px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:14px 16px;border-top:6px solid var(--c)}
+.box h3{margin:.1em 0 .4em;font-size:1.15rem}.box h3 small{display:block;font-family:"Segoe UI",system-ui,sans-serif;font-size:.72rem;font-weight:900;letter-spacing:1px;color:var(--c);text-transform:uppercase}
+.box ul{margin:0;padding-left:1.1em}.box li{margin:3px 0}
+.m{font-family:"Cambria Math","STIX Two Math",Georgia,serif;font-size:1.05em}
+.box a{color:var(--c);font-weight:700;font-size:.9rem}
+h2.sec{margin:26px 0 0;color:var(--c)}
+footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding:18px 0 30px}
+@media print{.bar,.vnav{display:none}.box{break-inside:avoid}body{background:#fff}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero"><span class="eyebrow">Ringkasan rumus kimia · Kelas X–XII</span><h1>Satu halaman untuk semua rumus dan konsep kimia</h1><p>Cocok dibaca sebelum kuis, tryout, atau UTBK. Ketik kata kunci untuk mencari, atau cetak halaman ini sebagai lembar ringkasan. Setiap kotak terhubung ke modul lab-nya.</p></section>
+<div class="bar"><input type="search" id="q" placeholder="🔍 Cari rumus, misalnya pH atau Faraday" aria-label="Cari rumus"><button data-k="all" class="on">Semua</button><button data-k="x">Kelas X</button><button data-k="xi">Kelas XI</button><button data-k="xii">Kelas XII</button><button onclick="window.print()">🖨️ Cetak</button></div>
+<div id="out"></div>
+</div>
+<div class="wrap"><footer>Virtual Chem Lab SMA · Ringkasan Rumus Kimia</footer></div>
+<script>
+const D=[
+ ['x','Kerja Ilmiah & Pengukuran','../kimia-kelas-10/01-kerja-ilmiah.html',['Metode ilmiah: masalah → hipotesis → percobaan → analisis → simpulan → komunikasi','Variabel bebas (diubah), terikat (diukur), kontrol (dibuat sama)','Ketelitian alat = ½ × skala terkecil','Kali/bagi: hasil mengikuti AP paling sedikit','Tambah/kurang: desimal paling sedikit','ρ = m / V']],
+ ['x','Pemanasan Global & Kimia Hijau','../kimia-kelas-10/02-pemanasan-global.html',['Gas rumah kaca: CO₂, CH₄, N₂O, CFC, uap air','Pembakaran sempurna: CₓHᵧ + O₂ → CO₂ + H₂O','Pembakaran tak sempurna menghasilkan CO','Ekonomi atom = Mr produk diinginkan ÷ Σ Mr pereaksi × 100%','1% = 10.000 ppm']],
+ ['x','Struktur Atom','../kimia-kelas-10/03-struktur-atom.html',['Notasi <sup>A</sup><sub>Z</sub>X: Z = proton, A = proton + neutron','neutron = A − Z; atom netral: e = p','Kation Xⁿ⁺: e = Z − n · Anion Xⁿ⁻: e = Z + n','Isotop (Z sama), isobar (A sama), isoton (n sama)','Ar = Σ(% × massa isotop) ÷ 100','Kapasitas kulit = 2n²']],
+ ['x','Nanoteknologi','../kimia-kelas-10/04-nanoteknologi.html',['1 nm = 10⁻⁹ m; skala nano 1–100 nm','Luas kubus terpotong = 6 × L² × n','Top-down (memperkecil) dan bottom-up (menyusun)']],
+ ['x','Tata Nama & Persamaan Reaksi','../kimia-kelas-10/05-persamaan-reaksi.html',['Senyawa ion: muatan total = 0 (silang muatan)','Nama ion: kation + anion; logam multivalensi pakai angka Romawi','Nonlogam: mono, di, tri, tetra, penta, heksa, hepta','Wujud: (s), (l), (g), (aq)','Setarakan koefisien, bukan indeks']],
+ ['x','Hukum Dasar Kimia','../kimia-kelas-10/06-hukum-dasar.html',['Lavoisier: massa sebelum = massa sesudah','Proust: perbandingan massa unsur tetap (H:O = 1:8; Fe:S = 7:4)','Dalton: perbandingan berganda bilangan bulat sederhana','Gay-Lussac: V₁ : V₂ = koefisien₁ : koefisien₂','Avogadro: V sama (P, T sama) → jumlah molekul sama']],
+ ['x','Larutan Elektrolit & Nonelektrolit','../kimia-kelas-10/07-larutan-elektrolit.html',['Elektrolit kuat (α = 1): asam kuat, basa kuat, garam','Elektrolit lemah (0 < α < 1): CH₃COOH, NH₃, HF','Nonelektrolit (α = 0): gula, urea, alkohol','α = mol terion ÷ mol mula-mula','Senyawa ion: padat tidak menghantar, lelehan/larutan menghantar']],
+ ['x','Konsep Reaksi Redoks','../kimia-kelas-10/08-konsep-redoks.html',['Oksidasi: ikat O / lepas e⁻ / biloks naik','Reduksi: lepas O / terima e⁻ / biloks turun','Oksidator = zat yang tereduksi; reduktor = zat yang teroksidasi','Autoredoks: satu zat teroksidasi dan tereduksi','Tata nama Stock: besi(III) klorida = feri klorida']],
+ ['xi','Konfigurasi Elektron & SPU','../kimia-kelas-11/01-konfigurasi-spu.html',['Urutan: 1s 2s 2p 3s 3p 4s 3d 4p 5s 4d 5p 6s 4f 5d 6p','s = 2, p = 6, d = 10, f = 14 elektron','Bilangan kuantum n, l (0…n−1), m (−l…+l), s (±½)','Periode = n terbesar; Gol A = ns+np; Gol B = ns+(n−1)d','Cr: [Ar] 4s¹ 3d⁵ · Cu: [Ar] 4s¹ 3d¹⁰','Kiri→kanan: jari-jari ↓, EI ↑, KE ↑']],
+ ['xi','Ikatan Kimia & Bentuk Molekul','../kimia-kelas-11/02-ikatan-kimia.html',['ΔKE < 0,4 nonpolar · 0,4–1,7 polar · > 1,7 ion','PEB = (EV pusat − e⁻ dipakai) ÷ 2','AX₂ linear · AX₃ segitiga datar · AX₄ tetrahedral','AX₃E piramida trigonal · AX₂E₂ bentuk V','AX₅ bipiramida trigonal · AX₆ oktahedral · AX₄E₂ segiempat datar','Ikatan hidrogen: H–F, H–O, H–N']],
+ ['xi','Stoikiometri','../kimia-kelas-11/03-stoikiometri.html',['n = massa ÷ Mr','N = n × 6,02 × 10²³','V(STP) = n × 22,4 L · V(RTP) = n × 24 L','PV = nRT, R = 0,082 L atm mol⁻¹ K⁻¹','M = n ÷ V(L)','Pembatas: n/koefisien terkecil','% hasil = nyata ÷ teoretis × 100%']],
+ ['xi','Hidrokarbon & Minyak Bumi','../kimia-kelas-11/04-hidrokarbon.html',['Alkana CₙH₂ₙ₊₂ · alkena CₙH₂ₙ · alkuna CₙH₂ₙ₋₂','Rantai terpanjang; nomor terkecil untuk rangkap lalu cabang','Isomer struktur, posisi, geometri (cis-trans)','Reaksi: substitusi (alkana), adisi (alkena/alkuna), pembakaran','Bilangan oktan = % isooktana']],
+ ['xi','Termokimia','../kimia-kelas-11/05-termokimia.html',['Eksoterm ΔH < 0 · endoterm ΔH > 0','q = m · c · ΔT (c air = 4,18 J g⁻¹ °C⁻¹)','ΔH = −q ÷ n','ΔH = ΣΔHf° hasil − ΣΔHf° pereaksi','ΔH = Σ E ikatan diputus − Σ E ikatan dibentuk','Reaksi dibalik → tanda ΔH dibalik']],
+ ['xi','Laju Reaksi','../kimia-kelas-11/06-laju-reaksi.html',['v = −Δ[R]/Δt = +Δ[P]/Δt','v = k[A]ᵐ[B]ⁿ; orde dari data percobaan','Orde: (v₂/v₁) = ([A]₂/[A]₁)ᵐ','v₂ = v₁ · n^(ΔT/10) · t₂ = t₁ ÷ n^(ΔT/10)','Orde 1: t½ = 0,693/k','Katalis menurunkan Ea']],
+ ['xi','Kesetimbangan Kimia','../kimia-kelas-11/07-kesetimbangan.html',['Kc = [C]ᶜ[D]ᵈ / [A]ᵃ[B]ᵇ (tanpa s dan l)','Kp = Kc (RT)^Δn','Q < K → kanan · Q > K → kiri','α = mol terurai ÷ mol mula-mula','P naik → ke koefisien gas kecil','T naik → ke arah endoterm']],
+ ['xii','Asam Basa & pH','../kimia-kelas-12/01-asam-basa.html',['pH = −log[H⁺] · pOH = −log[OH⁻] · pH + pOH = 14','Asam kuat: [H⁺] = a · M','Basa kuat: [OH⁻] = b · M','Asam lemah: [H⁺] = √(Ka · M), α = √(Ka/M)','Basa lemah: [OH⁻] = √(Kb · M)','Pasangan konjugasi berbeda 1 H⁺']],
+ ['xii','Penyangga, Hidrolisis, Titrasi, Ksp','../kimia-kelas-12/02-kesetimbangan-larutan.html',['Penyangga asam: [H⁺] = Ka · n asam / n garam','Penyangga basa: [OH⁻] = Kb · n basa / n garam','Hidrolisis basa: [OH⁻] = √(Kw/Ka · [G])','Hidrolisis asam: [H⁺] = √(Kw/Kb · [G])','Titrasi: a · M₁ · V₁ = b · M₂ · V₂','AB: Ksp = s² · AB₂: Ksp = 4s³ · Qsp > Ksp mengendap']],
+ ['xii','Sifat Koligatif','../kimia-kelas-12/03-sifat-koligatif.html',['m = (g/Mr) × (1000/p)','ΔP = Xₜ · P°','ΔTb = Kb · m · i (Kb air 0,52)','ΔTf = Kf · m · i (Kf air 1,86)','π = M · R · T · i','i = 1 + (n − 1)α']],
+ ['xii','Sistem Koloid','../kimia-kelas-12/04-koloid.html',['Larutan < 1 nm · koloid 1–100 nm · suspensi > 100 nm','Sol (p/c), emulsi (c/c), buih (g/c), aerosol (p,c/g)','Sifat: Tyndall, Brown, adsorpsi, koagulasi, elektroforesis, dialisis','Kondensasi vs dispersi']],
+ ['xii','Redoks & Sel Volta','../kimia-kelas-12/05-redoks-sel-volta.html',['Oksidasi: biloks naik · reduksi: biloks turun','O = −2 (peroksida −1), H = +1 (hidrida −1)','E°sel = E°katode − E°anode','Notasi: anode | ion || ion | katode','KaRAOk: katode reduksi, anode oksidasi','Spontan bila E°sel > 0']],
+ ['xii','Elektrolisis & Faraday','../kimia-kelas-12/06-elektrolisis.html',['Katode (−): IA, IIA, Al, Mn (aq) → air: 2H₂O + 2e⁻ → H₂ + 2OH⁻','Anode inert: halida → X₂; oksianion → air: 2H₂O → O₂ + 4H⁺ + 4e⁻','Anode aktif ikut teroksidasi','w = (Ar/n) · I · t / 96.500','Sel seri: w₁ : w₂ = e₁ : e₂']],
+ ['xii','Gugus Fungsi & Polimer','../kimia-kelas-12/07-gugus-fungsi-polimer.html',['–OH alkanol · –O– alkoksialkana · –CHO alkanal · –CO– alkanon','–COOH asam alkanoat · –COO– alkil alkanoat','Isomer fungsi: alkohol–eter, aldehida–keton, asam–ester','Tollens/Fehling (+) aldehida','Adisi: monomer rangkap, tanpa hasil samping','Kondensasi: melepas H₂O (nilon, PET, protein)']],
+ ['xii','Kimia Unsur Golongan Utama','../kimia-kelas-12/08-kimia-unsur.html',['Gas mulia: stabil; titik didih naik He → Rn','Halogen: daya oksidasi F₂ > Cl₂ > Br₂ > I₂; halogen atas mendesak halida bawah','Alkali/alkali tanah: kereaktifan naik ke bawah','Uji nyala: Li merah, Na kuning, K ungu, Ca jingga, Sr merah, Ba hijau','Periode 3: basa → amfoter (Al) → asam']],
+ ['xii','Unsur Transisi & Radioaktif','../kimia-kelas-12/09-transisi-radioaktif.html',['Ion transisi: lepas 4s dahulu, lalu 3d','3d⁰ dan 3d¹⁰ tidak berwarna, diamagnetik','Kompleks negatif berakhiran -at (ferat, kuprat)','α: A − 4, Z − 2 · β⁻: Z + 1 · γ: tetap','N = N₀ (½)^(t/t½)']],
+ ['xii','Benzena & Turunannya','../kimia-kelas-12/10-benzena.html',['C₆H₆: elektron π terdelokalisasi (resonansi)','Reaksi khas: substitusi (halogenasi, nitrasi, sulfonasi, alkilasi)','o- (1,2) · m- (1,3) · p- (1,4)','Prioritas induk: –COOH > –SO₃H > –CHO > –OH > –NH₂ > –CH₃','Fenol, anilin, toluena, asam benzoat, benzaldehida']],
+ ['xii','Biomolekul','../kimia-kelas-12/11-biomolekul.html',['Sukrosa = glukosa + fruktosa; maltosa = 2 glukosa; laktosa = glukosa + galaktosa','Mr disakarida = 2 × 180 − 18 = 342','Mr peptida = Σ Mr asam amino − (n − 1) × 18','Iodin (amilum), Benedict (gula pereduksi), Biuret (protein), Sudan III (lemak)','Lemak + 3NaOH → gliserol + 3 sabun (saponifikasi)']]
+];
+const COL={x:'var(--x)',xi:'var(--xi)',xii:'var(--xii)'}, NM={x:'Kelas X',xi:'Kelas XI',xii:'Kelas XII'};
+let flt='all';
+function render(){
+  const q=document.getElementById('q').value.toLowerCase().trim(); let h='';
+  ['x','xi','xii'].forEach(k=>{ if(flt!=='all'&&flt!==k) return; const items=D.filter(d=>d[0]===k&&(!q||(d[1]+' '+d[3].join(' ')).toLowerCase().replace(/<[^>]+>/g,'').includes(q)));
+    if(!items.length) return; h+=`<h2 class="sec" style="--c:${COL[k]}">${NM[k]}</h2><div class="grid">`+items.map(d=>`<div class="box" style="--c:${COL[k]}"><h3><small>${NM[k]}</small>${d[1]}</h3><ul>${d[3].map(r=>`<li class="m">${r}</li>`).join('')}</ul><a href="${d[2]}">Buka lab →</a></div>`).join('')+'</div>'; });
+  document.getElementById('out').innerHTML=h||'<p class="muted">Tidak ada rumus yang cocok.</p>';
+}
+document.getElementById('q').oninput=render;
+document.querySelectorAll('.bar button[data-k]').forEach(b=>b.onclick=()=>{ document.querySelectorAll('.bar button[data-k]').forEach(x=>x.classList.toggle('on',x===b)); flt=b.dataset.k; render(); });
+render();
+</script>
+<script src="../shared/nav.js"></script>
+</body></html>

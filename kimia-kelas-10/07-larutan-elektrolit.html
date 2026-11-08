@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Larutan Elektrolit & Nonelektrolit · Kimia SMA Kelas X</title>
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body class="t10" data-store="kim10">
+<header class="top"><div class="wrap"><a class="back" href="index.html">← Kelas X</a><div class="brand">⚗ Kimia SMA <small>· Kelas X</small></div></div></header>
+<div class="wrap">
+<section class="hero">
+  <span class="chip">Modul 7 · Larutan <span class="lvl pemula">PEMULA</span></span>
+  <h1>Larutan Elektrolit dan Nonelektrolit</h1>
+  <div class="tp"><b>Setelah modul ini kamu bisa</b><ul><li>Membedakan larutan elektrolit kuat, elektrolit lemah, dan nonelektrolit dari hasil uji daya hantar listrik.</li><li>Menuliskan reaksi ionisasi senyawa ion dan senyawa kovalen polar.</li><li>Menghubungkan jenis ikatan dengan sifat elektrolit.</li><li>Menghitung derajat ionisasi (α).</li></ul></div>
+</section>
+<nav class="tabs"><button data-target="materi">📖 Cerita & Materi</button><button data-target="lab1">💡 Lab Uji Daya Hantar</button><button data-target="lab2">⚛️ Lab Ionisasi</button><button data-target="latihan">✏️ Latihan</button><button data-target="kuis">🏆 Kuis</button></nav>
+<main>
+<section id="materi" class="panel"><div class="card"><h2>Mulai dari cerita</h2>
+  <div class="story"><span class="t">Mengapa dilarang menyetrum ikan?</span><p style="margin:.3em 0">Di beberapa daerah, ada orang yang menangkap ikan dengan menyetrum sungai. Arus listrik bisa mengalir di air sungai karena air itu mengandung ion-ion terlarut dari mineral dan garam. Akibatnya semua makhluk di sekitarnya ikut mati, termasuk anak ikan. Air sungai adalah contoh <b>larutan elektrolit</b>: larutan yang dapat menghantarkan listrik karena mengandung ion yang bebas bergerak.</p></div>
+</div>
+<div class="card"><h2>1. Uji daya hantar listrik</h2>
+  <table class="t"><tr><th>Jenis larutan</th><th>Lampu</th><th>Gelembung gas</th><th>Partikel dalam larutan</th><th>Contoh</th></tr>
+  <tr><td>Elektrolit kuat</td><td>menyala terang</td><td>banyak</td><td>ion seluruhnya (α ≈ 1)</td><td>HCl, H₂SO₄, NaOH, KOH, NaCl</td></tr>
+  <tr><td>Elektrolit lemah</td><td>redup/tidak menyala</td><td>sedikit</td><td>ion dan molekul (0 &lt; α &lt; 1)</td><td>CH₃COOH, NH₃, HF, H₂CO₃</td></tr>
+  <tr><td>Nonelektrolit</td><td>tidak menyala</td><td>tidak ada</td><td>molekul (α = 0)</td><td>gula, urea, alkohol, glukosa</td></tr></table>
+  <div class="note">Air suling murni hampir tidak menghantarkan listrik. Air keran dan air sungai menghantarkan listrik karena mengandung garam mineral terlarut.</div>
+</div>
+<div class="card"><h2>2. Jenis ikatan dan sifat elektrolit</h2>
+  <div class="grid2"><div class="def"><b>Senyawa ion</b> (NaCl, KOH): padatannya tidak menghantarkan listrik karena ion terkunci dalam kisi; <b>lelehan</b> dan <b>larutannya</b> menghantarkan listrik.</div><div class="def"><b>Senyawa kovalen polar</b> (HCl, NH₃, CH₃COOH): murninya tidak menghantarkan listrik, tetapi bereaksi dengan air membentuk ion sehingga larutannya elektrolit.</div></div>
+  <div class="eqn">NaCl(s) → Na⁺(aq) + Cl⁻(aq)<br>HCl(g) + H₂O(l) → H₃O⁺(aq) + Cl⁻(aq)<br>CH₃COOH(aq) ⇌ CH₃COO⁻(aq) + H⁺(aq)</div>
+</div>
+<div class="card"><h2>3. Derajat ionisasi</h2>
+  <div class="eqn">α = mol zat yang terion ÷ mol zat mula-mula</div>
+  <p>α = 1 untuk elektrolit kuat, 0 &lt; α &lt; 1 untuk elektrolit lemah, dan α = 0 untuk nonelektrolit. Contoh: dari 0,2 mol CH₃COOH, terion 0,002 mol, maka α = 0,01.</p>
+  <div class="note">Penerapan: cairan oralit dan minuman isotonik mengganti elektrolit tubuh (Na⁺, K⁺, Cl⁻); aki memakai larutan elektrolit H₂SO₄.</div>
+</div></section>
+<section id="lab1" class="panel"><div class="card"><h2>Lab: Alat Uji Elektrolit</h2>
+  <p>Celupkan elektrode ke larutan yang dipilih. Amati nyala lampu, gelembung gas, dan partikel di dalam larutan.</p>
+  <div class="row" id="sm"></div>
+  <svg class="viz" id="g1" viewBox="0 0 640 320" style="margin-top:10px"></svg>
+  <div class="out" id="o1"></div>
+</div></section>
+<section id="lab2" class="panel"><div class="card"><h2>Lab: Seberapa Banyak yang Terion?</h2>
+  <p>Pilih zat dan atur derajat ionisasinya (untuk elektrolit lemah). Setiap bulatan mewakili satu partikel di dalam larutan.</p>
+  <div class="row" id="zt"></div>
+  <div class="ctrl"><label id="la">Derajat ionisasi α <span class="v" id="al-v"></span><input type="range" id="al" min="0.01" max="0.5" step="0.01" value="0.1"></label></div>
+  <svg class="viz" id="g2" viewBox="0 0 640 240"></svg>
+  <div class="out" id="o2"></div>
+</div></section>
+<section id="latihan" class="panel"><div id="prac"></div><p class="muted">Jawab dengan kata (kuat/lemah/non) atau angka. α ditulis desimal, mis. <code>0,25</code>.</p></section>
+<section id="kuis" class="panel"><p class="muted">12 soal, urutan soal dan pilihan diacak. Nilai terbaik tersimpan di perangkat ini.</p><div id="quiz"></div></section>
+</main>
+</div>
+<footer><div class="wrap">Virtual Chem Lab SMA · Kelas X · Modul 7 · Rujukan: BSE Kimia X (Larutan Elektrolit); K13 KD 3.8 Kelas X</div></footer>
+<script src="../shared/core.js"></script>
+<script src="../shared/graph.js"></script>
+<script src="../shared/chem.js"></script>
+<script>
+const {$, $$, s, txt, clear, rand, pick, shuffle} = VML; const G=GR, CH=CHEM, f=VML.f, fm=G.fmt;
+/* LAB 1 */
+const SM=[['HCl 1 M','kuat'],['NaOH 1 M','kuat'],['NaCl 1 M','kuat'],['H₂SO₄ 1 M','kuat'],['CH₃COOH 1 M (cuka)','lemah'],['NH₃ 1 M','lemah'],['Air sumur','lemah'],['Larutan gula','non'],['Larutan urea','non'],['Alkohol 70%','non'],['Air suling','non'],['Kristal NaCl padat','padat']];
+let si=0;
+$('#sm').innerHTML=SM.map((x,i)=>`<button class="chipbtn ${i?'':'on'}" data-i="${i}">${x[0]}</button>`).join('');
+$$('#sm .chipbtn').forEach(b=>b.onclick=()=>{ $$('#sm .chipbtn').forEach(x=>x.classList.toggle('on',x===b)); si=+b.dataset.i; d1(); });
+function d1(){
+  const [n,t]=SM[si]; const lvl=t==='kuat'?1:t==='lemah'?0.25:0;
+  const g=$('#g1'); clear(g); s('rect',{x:0,y:0,width:640,height:320,fill:'var(--card)'},g);
+  s('rect',{x:40,y:30,width:70,height:40,rx:6,fill:'#495057'},g); txt(g,75,55,'baterai',{'font-size':11,fill:'#fff'});
+  s('path',{d:'M110,50 H318 M362,50 H521 V140',fill:'none',stroke:'var(--ink)','stroke-width':2},g);
+  s('path',{d:'M40,50 H20 V110 H231 V140',fill:'none',stroke:'var(--ink)','stroke-width':2},g);
+  if(lvl>0){ s('circle',{cx:340,cy:50,r:30+lvl*28,fill:'#ffe066','fill-opacity':.25+lvl*0.4},g); }
+  s('circle',{cx:340,cy:50,r:22,fill:lvl>0?`rgba(255,212,59,${0.35+lvl*0.65})`:'var(--card)',stroke:'var(--ink)','stroke-width':2},g);
+  s('path',{d:'M330,58 q10,-18 20,0',fill:'none',stroke:lvl>0?'#e67700':'var(--muted)','stroke-width':2},g);
+  s('path',{d:'M200,150 V290 H560 V150',fill:'none',stroke:'var(--ink)','stroke-width':3},g);
+  s('rect',{x:202,y:180,width:356,height:108,fill:t==='padat'?'var(--card)':'rgba(165,216,255,.3)'},g);
+  if(t==='padat'){ for(let i=0;i<8;i++) for(let j=0;j<3;j++) s('circle',{cx:250+i*14+(j%2)*7,cy:260+j*10,r:5,fill:(i+j)%2?'#1c7ed6':'#e03131'},g); }
+  s('rect',{x:224,y:140,width:14,height:130,fill:'#495057'},g); s('rect',{x:514,y:140,width:14,height:130,fill:'#495057'},g);
+  const nIon=Math.round(lvl*14), nMol=t==='non'?12:t==='lemah'?10:0;
+  for(let i=0;i<nIon;i++){ const x=262+(i%7)*38+(Math.floor(i/7)%2)*18, y=200+Math.floor(i/7)*30; s('circle',{cx:x,cy:y,r:6,fill:i%2?'#1c7ed6':'#e03131'},g); txt(g,x,y+4,i%2?'−':'+',{'font-size':10,fill:'#fff','font-weight':800}); }
+  for(let i=0;i<nMol&&t!=='padat';i++){ const x=272+(i%6)*42+(Math.floor(i/6)%2)*20, y=215+Math.floor(i/6)*32+ (nIon?12:0); s('ellipse',{cx:x,cy:y,rx:10,ry:6,fill:'#adb5bd'},g); }
+  if(lvl>0) for(let i=0;i<Math.round(lvl*12);i++){ s('circle',{cx:240+(i%2)*4,cy:250-i*7,r:3,fill:'none',stroke:'var(--a)'},g); s('circle',{cx:512-(i%2)*4,cy:250-i*7,r:3,fill:'none',stroke:'var(--a)'},g); }
+  txt(g,380,310,n,{'font-size':13,'font-weight':800});
+  txt(g,630,180,'● ion +/−',{'font-size':11,fill:'var(--muted)','text-anchor':'end'}); txt(g,630,197,'⬭ molekul',{'font-size':11,fill:'var(--muted)','text-anchor':'end'});
+  const res={kuat:'<b>Elektrolit kuat</b>: lampu menyala terang dan banyak gelembung. Zat terion sempurna sehingga larutan penuh ion bebas.',lemah:'<b>Elektrolit lemah</b>: lampu redup atau tidak menyala, tetapi ada sedikit gelembung. Hanya sebagian kecil zat yang terion; sisanya tetap molekul.',non:'<b>Nonelektrolit</b>: lampu mati dan tidak ada gelembung. Zat larut sebagai molekul, tidak membentuk ion.',padat:'<b>Padatan ion tidak menghantarkan listrik</b>: ion terkunci dalam kisi kristal dan tidak bebas bergerak. Jika dilarutkan atau dilelehkan, barulah menghantarkan listrik.'};
+  $('#o1').innerHTML=`<p>${res[t]}</p>`;
+}
+d1();
+
+/* LAB 2 */
+const ZT=[{n:'NaCl',eq:'NaCl -> Na^+ + Cl^-',ion:2,t:'kuat'},{n:'CaCl₂',eq:'CaCl2 -> Ca^2+ + 2Cl^-',ion:3,t:'kuat'},{n:'H₂SO₄',eq:'H2SO4 -> 2H^+ + SO4^2-',ion:3,t:'kuat'},{n:'Al₂(SO₄)₃',eq:'Al2(SO4)3 -> 2Al^3+ + 3SO4^2-',ion:5,t:'kuat'},{n:'CH₃COOH',eq:'CH3COOH <=> CH3COO^- + H^+',ion:2,t:'lemah'},{n:'NH₄OH',eq:'NH4OH <=> NH4^+ + OH^-',ion:2,t:'lemah'},{n:'C₆H₁₂O₆ (glukosa)',eq:'C6H12O6(s) -> C6H12O6(aq)',ion:1,t:'non'}];
+let zi=0;
+$('#zt').innerHTML=ZT.map((z,i)=>`<button class="chipbtn ${i?'':'on'}" data-i="${i}">${z.n}</button>`).join('');
+$$('#zt .chipbtn').forEach(b=>b.onclick=()=>{ $$('#zt .chipbtn').forEach(x=>x.classList.toggle('on',x===b)); zi=+b.dataset.i; d2(); });
+function d2(){
+  const Z=ZT[zi]; const al=Z.t==='kuat'?1:Z.t==='non'?0:+$('#al').value; $('#la').style.display=Z.t==='lemah'?'':'none'; $('#al-v').textContent=fm(al,2);
+  const N=20, ionized=Math.round(N*al), mol=N-ionized;
+  const g=$('#g2'); clear(g); s('rect',{x:0,y:0,width:640,height:240,fill:'var(--card)'},g);
+  let k=0; const pos=()=>{ const x=30+(k%26)*23, y=40+Math.floor(k/26)*30; k++; return [x,y]; };
+  for(let i=0;i<mol;i++){ const [x,y]=pos(); s('ellipse',{cx:x,cy:y,rx:9,ry:6,fill:'#adb5bd'},g); }
+  for(let i=0;i<ionized;i++){ for(let j=0;j<Z.ion;j++){ const [x,y]=pos(); const cat=j===0||(Z.ion===3&&Z.n.startsWith('H')&&j<2)||(Z.ion===5&&j<2); s('circle',{cx:x,cy:y,r:7,fill:cat?'#e03131':'#1c7ed6'},g); } }
+  const total=mol+ionized*Z.ion;
+  $('#o2').innerHTML=`<div class="eqn">${f(Z.eq)}</div><div class="kv"><div><small>Jenis</small><b>elektrolit ${Z.t==='non'?'— (nonelektrolit)':Z.t}</b></div><div><small>α</small><b>${fm(al,2)}</b></div><div><small>Molekul tersisa</small><b>${mol} dari ${N}</b></div><div><small>Jumlah partikel total</small><b>${total}</b></div><div><small>Ion per satuan rumus (n)</small><b>${Z.ion}</b></div></div>
+   <p class="muted">Makin banyak ion bebas, makin kuat daya hantar listriknya. Jumlah partikel total ini nanti dipakai pada faktor van ’t Hoff (sifat koligatif, Kelas XII): i = 1 + (n − 1)α = ${fm(1+(Z.ion-1)*al,2)}.</p>`;
+}
+$('#al').oninput=d2; d2();
+
+/* LATIHAN */
+const JL=[['HCl','kuat'],['NaOH','kuat'],['KNO3','kuat'],['H2SO4','kuat'],['Ba(OH)2','kuat'],['CH3COOH','lemah'],['NH3','lemah'],['HF','lemah'],['HCN','lemah'],['C6H12O6','non'],['CO(NH2)2','non'],['C2H5OH','non'],['C12H22O11','non']];
+VML.practice($('#prac'),[
+ {name:'Jenis larutan', gen(){ const J=pick(JL); return {q:`Larutan ${f(J[0])} termasuk elektrolit … (kuat/lemah/non)`, a:[J[1],J[1]==='non'?'nonelektrolit':'elektrolit '+J[1]], strict:true, hint:'Asam/basa kuat dan garam → kuat; asam/basa lemah → lemah; senyawa organik netral → non.', ex:`${f(J[0])} → ${J[1]==='non'?'nonelektrolit':'elektrolit '+J[1]}`}; }},
+ {name:'Derajat ionisasi', gen(){ const n=pick([0.1,0.2,0.5,1,2]), a=pick([0.01,0.02,0.05,0.1,0.2,0.25]); return {q:`Dari ${fm(n,1)} mol asam lemah, sebanyak ${fm(n*a,4)} mol terion. Derajat ionisasinya = …`, a:String(a), hint:'α = mol terion ÷ mol mula-mula', ex:`${fm(n*a,4)} ÷ ${fm(n,1)} = ${fm(a,2)}`}; }},
+ {name:'Jumlah ion', gen(){ const Z=pick(ZT.filter(z=>z.t==='kuat')); return {q:`Satu satuan rumus ${Z.n} terionisasi sempurna menghasilkan … ion`, a:String(Z.ion), hint:'Tulis reaksi ionisasinya.', ex:f(Z.eq)}; }}
+]);
+
+/* KUIS */
+VML.quiz($('#quiz'),[
+ {q:'Larutan yang dapat menghantarkan listrik disebut larutan …', o:['elektrolit','nonelektrolit','koloid','suspensi'], a:0, ex:'Mengandung ion bebas.'},
+ {q:'Pada uji daya hantar, lampu menyala terang dan banyak gelembung. Larutan tersebut adalah …', o:['elektrolit kuat','elektrolit lemah','nonelektrolit','air suling'], a:0, ex:'Terion sempurna.'},
+ {q:'Larutan berikut yang termasuk nonelektrolit adalah …', o:['urea','asam cuka','amonia','garam dapur'], a:0, ex:'Urea larut sebagai molekul.'},
+ {q:'Larutan asam cuka menyalakan lampu redup karena …', o:['hanya sebagian kecil molekulnya terion','tidak mengandung ion','terion sempurna','bersifat basa'], a:0, ex:'Elektrolit lemah.'},
+ {q:'Kristal NaCl tidak menghantarkan listrik, tetapi larutannya menghantarkan. Penyebabnya adalah …', o:['ion dalam kristal tidak bebas bergerak','NaCl adalah senyawa kovalen','kristal tidak mengandung ion','larutan mengandung elektron bebas'], a:0, ex:'Ion terkunci dalam kisi.'},
+ {q:'HCl cair murni tidak menghantarkan listrik, tetapi larutannya menghantarkan. Hal ini karena HCl …', o:['senyawa kovalen polar yang terion dalam air','senyawa ion','logam','nonelektrolit'], a:0, ex:'HCl + H₂O → H₃O⁺ + Cl⁻.'},
+ {q:'Reaksi ionisasi H₂SO₄ yang benar adalah …', o:['H₂SO₄ → 2H⁺ + SO₄²⁻','H₂SO₄ → H₂⁺ + SO₄⁻','H₂SO₄ → 2H⁺ + S²⁻ + 4O','H₂SO₄ → H⁺ + SO₄⁻'], a:0, ex:'Ion sulfat bermuatan 2−.'},
+ {q:'Jumlah ion dari ionisasi sempurna Al₂(SO₄)₃ adalah …', o:['5','2','3','7'], a:0, ex:'2Al³⁺ + 3SO₄²⁻.'},
+ {q:'Derajat ionisasi elektrolit kuat adalah …', o:['α = 1','α = 0','0 < α < 1','α > 1'], a:0, ex:'Terion sempurna.'},
+ {q:'Air sungai dapat menghantarkan listrik karena …', o:['mengandung garam mineral terlarut','mengandung gula','berupa air murni','bersuhu dingin'], a:0, ex:'Ion dari mineral.'},
+ {q:'Dari 0,5 mol HF, terion 0,05 mol. Derajat ionisasinya = …', input:true, a:['0,1','0.1'], show:'0,1', ex:'0,05/0,5.'},
+ {q:'Larutan glukosa termasuk (elektrolit kuat/elektrolit lemah/nonelektrolit)?', input:true, a:['nonelektrolit','non'], strict:true, show:'nonelektrolit', ex:'Molekul tidak terion.'}
+],'x7');
+</script>
+<script src="../shared/nav.js"></script>
+</body></html>
